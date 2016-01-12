@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<selector xmlns:android="http://schemas.android.com/apk/res/android">
-
-    <item android:drawable="@drawable/custom_select_pic_detail_image_press" android:state_pressed="true"/>
-    <item android:drawable="@drawable/custom_select_pic_detail_image_normal" android:state_pressed="false"/>
-
-</selector><!-- From: file:/Users/Wuquancheng/Documents/workspace/ChEdu/Android/Express/Library/src/main/res/drawable/custom_select_image_bottom_selecter.xml -->

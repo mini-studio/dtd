@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<selector xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:drawable="@color/wrm_bg_white" android:state_pressed="false"/>
-    <item android:drawable="@color/list_item_press" android:state_pressed="true"/>
-</selector><!-- From: file:/Users/Wuquancheng/Documents/workspace/ChEdu/Android/Express/Library/src/main/res/drawable/list_setting_item_selector.xml -->

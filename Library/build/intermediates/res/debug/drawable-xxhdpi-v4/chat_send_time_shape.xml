@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<shape xmlns:android="http://schemas.android.com/apk/res/android" >
-    <stroke />
-    <solid android:color="#CECECE" />
-    <corners android:radius="3dp" />
-</shape><!-- From: file:/Users/Wuquancheng/Documents/workspace/ChEdu/Android/Express/Library/src/main/res/drawable-xxhdpi/chat_send_time_shape.xml -->

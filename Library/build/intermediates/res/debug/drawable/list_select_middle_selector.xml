@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<selector xmlns:android="http://schemas.android.com/apk/res/android">
-
-    <item android:drawable="@drawable/list_select_middle_pressed" android:state_pressed="true"/>
-    <item android:drawable="@drawable/list_select_middle_normal"/>
-
-</selector><!-- From: file:/Users/Wuquancheng/Documents/workspace/ChEdu/Android/Express/Library/src/main/res/drawable/list_select_middle_selector.xml -->

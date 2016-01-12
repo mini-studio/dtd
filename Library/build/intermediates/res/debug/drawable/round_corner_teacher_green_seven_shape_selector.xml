@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<selector xmlns:android="http://schemas.android.com/apk/res/android">
-
-    <item android:drawable="@drawable/round_corner_teacher_green_seven_shape_sel" android:state_pressed="true"></item>
-    <item android:drawable="@drawable/round_corner_teacher_green_seven_shape_nor" android:state_pressed="false"></item>
-
-</selector>
-<!-- From: file:/Users/Wuquancheng/Documents/workspace/ChEdu/Android/Express/Library/src/main/res/drawable/round_corner_teacher_green_seven_shape_selector.xml -->

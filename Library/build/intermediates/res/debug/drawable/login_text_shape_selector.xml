@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<selector xmlns:android="http://schemas.android.com/apk/res/android" >
-    <item android:color="@color/login_text_color" android:state_pressed="true"></item>
-    <item android:color="@color/tab_background" android:state_pressed="false"></item>
-
-</selector>
-<!-- From: file:/Users/Wuquancheng/Documents/workspace/ChEdu/Android/Express/Library/src/main/res/drawable/login_text_shape_selector.xml -->
