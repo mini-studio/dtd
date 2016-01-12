@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<org.mini.frame.view.MiniLoadingRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ptr="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/chat_list_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <com.handmark.pulltorefresh.library.PullToRefreshListView
+        android:id="@+id/pull_to_refresh_list_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="48dp"
+        android:overScrollMode="never"
+        ptr:ptrShowIndicator="false"
+        ptr:ptrDrawable="@drawable/listview_loading_image1"
+        ptr:ptrDrawableStart="@drawable/list_refresh_loading"/>
+    <include layout="@layout/activity_title" />
+</org.mini.frame.view.MiniLoadingRelativeLayout><!-- From: file:/Users/Wuquancheng/Documents/workspace/ChEdu/Android/Express/Library/src/main/res/layout/activity_chat_list.xml -->

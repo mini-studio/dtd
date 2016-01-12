@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:weightSum="1">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="48dp"
+        >
+    <org.mini.frame.view.MiniSelectableTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText"
+        android:text="http://www.baidu.com fjdshfjsahfkjshfkjshfdjshfkjasdhfjkdshafjdshfjsdahfdsjkahf"/>
+    </LinearLayout>
+    <include layout="@layout/activity_title"/>
+</RelativeLayout>

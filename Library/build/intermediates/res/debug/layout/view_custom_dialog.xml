@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/mini_loading_view_bg"
+    android:maxWidth="200dip"
+    android:minWidth="200dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/custom_dialog_title_bg_top"
+        android:minHeight="2dp">
+
+        <LinearLayout
+            android:id="@+id/dialog_top_layout"
+            android:layout_width="match_parent"
+            android:layout_height="57dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/dialog_title"
+                android:layout_width="fill_parent"
+                android:layout_height="55.0dip"
+                android:layout_marginLeft="17dp"
+                android:gravity="center|left"
+                android:textColor="@color/common_green"
+                android:textSize="21sp" />
+
+            <View
+                android:id="@+id/dialog_line"
+                android:layout_width="match_parent"
+                android:layout_height="2dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/dialog_content"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/custom_dialog_title_bg_top"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/dialog_message"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:minHeight="55dp"
+            android:paddingBottom="19dp"
+            android:paddingLeft="14dp"
+            android:paddingRight="14dp"
+            android:paddingTop="19dp"
+            android:textColor="#464646"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/custom_dialog_divider"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#dcdcdc" />
+
+    <LinearLayout
+        android:id="@+id/dialog_button_bg"
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:layout_weight="2"
+        android:background="@drawable/custom_dialog_button_layout_bg"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/dialog_back"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="@drawable/custom_dialog_left_button_selector"
+            android:textColor="@color/common_green"
+            android:textSize="18sp" />
+
+        <View
+            android:id="@+id/dialog_button_div"
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:background="#dcdcdc" />
+
+        <Button
+            android:id="@+id/dialog_confirm"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="@drawable/custom_dialog_right_button_selector"
+            android:textColor="@color/common_green"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+</LinearLayout><!-- From: file:/Users/Wuquancheng/Documents/workspace/ChEdu/Android/Express/Library/src/main/res/layout/view_custom_dialog.xml -->

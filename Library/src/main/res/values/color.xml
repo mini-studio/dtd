@@ -1,0 +1,116 @@
+<resources>
+    <!--begin mini frame work-->
+    <color name="activity_background_color">#eeeeee</color>
+    <color name="mini_tab_text_default">#999999</color>
+    <color name="mini_tab_text_selected">#65b629</color>
+    <color name="mini_tab_background_color">#1e1d22</color>
+    <color name="navi_title_background_color">#1e1d22</color>
+    <color name="navi_title_font_color">#FFFFFF</color>
+    <color name="navi_right_title_font_color">#FF333333</color>
+    <!--end mini frame work-->
+
+    <color name="signin_button_background_color">#ff01aef2</color>
+    <color name="blue">#4079c0</color>
+    <color name="wrm_black">#434c51</color>
+    <color name="pure_white">#ffffff</color>
+    <color name="wrm_blue">#1572c2</color>
+    <color name="wrm_grey_white">#aab5bf</color>
+    <color name="wrm_red">#ff5f5f</color>
+    <color name="mini_hint">#e2e2e2</color>
+    <color name="ex_black">#030000</color>
+
+    <color name="wrm_bg_white">#ffffff</color>
+    <color name="chedu_bg_grey">#f8f8f8</color>
+    <color name="wrm_pressed">#f0f3f4</color>
+    <color name="chat_time_bg_color">#CECECE</color>
+    <color name="wrm_divider">#dce0e1</color>
+    <color name="wrm_semi_transparent">#88000000</color>
+
+    <color name="pure_black">#000000</color>
+    <color name="app_theme_color">#33b5e5</color>
+
+    <color name="translucent">#00000000</color>
+    <color name="translucent_white">#00FFFFFF</color>
+    <color name="translucent_background">#00000000</color>
+    <color name="translucent_banner_text_background">#33000000</color>
+
+    <color name="text1">#434c51</color>
+    <color name="text2">#aab5bf</color>
+    <color name="text3">#ffffff</color>
+    <color name="text4">#f3f3f3</color>
+    <color name="text5">#dce0e1</color>
+    <color name="text6">#222222</color>
+    <color name="text7">#1572c2</color>
+    <color name="text8">#ffa524</color>
+    <color name="text9">#ff5f5f</color>
+    <color name="text10">#5ec305</color>
+    <color name="text11">#777777</color>
+    <color name="text12">#333333</color>
+    <color name="profile_bg_desc">#9ea8b1</color>
+    <color name="tab_background">#FFFFFF</color>
+
+    <color name="vip">#ff5f5f</color>
+    <color name="common_white">#e0e0e0</color>
+    <color name="common_black">#030303</color>
+    <color name="common_grey">#d1d1d1</color>
+    <color name="common_yellow">#e3c9a4</color>
+    <color name="common_brown">#978e89</color>
+    <color name="common_blue">#ff01aef2</color>
+    <color name="common_light_yellow">#fffdf4</color>
+    <color name="common_light_blue">#e8f1f8</color>
+    <color name="common_navi_left_title">#e8f1f8</color>
+    <color name="common_dark_red">#925b58</color>
+    <color name="common_green">#65b729</color>
+    <color name="common_teacher_blue">#00a99d</color>
+    <color name="common_red">#cf5445</color>
+    <color name="common_list_view_background">#DCDCDC</color>
+    <color name="common_dark">#F0F0F0</color>
+    <color name="common_text_read_finish">#b9b9b9</color>
+    <color name="common_pic_color">#b4b4b4</color>
+
+    <color name="list_item_press">#dcdcdc</color>
+    <color name="common_line_color">#e8e8e8</color>
+    <color name="top_list_item_press">#eaeaea</color>
+
+    <color name="common_silver">#dad2d0</color>
+    <color name="black">#3e3e3e</color>
+    <color name="text_color">#333333</color>
+    <color name="fu_text_color">#999999</color>
+    <color name="status_text_color">#666666</color>
+    <color name="time_text_color">#BEBEBE</color>
+    <color name="all_background">#f8f8f8</color>
+    <color name="profile_blue">#3f7bc0</color>
+    <color name="bmm_teacher_text_color">#79baea</color>
+    <color name="copy_text_color">#aaaaaa</color>
+    <color name="line_color">#c5ccd1</color>
+    <color name="red">#ff0000</color>
+    <color name="orange">#ffff00</color>
+    <color name="white">#FFFFFF</color>
+    <color name="me_background_color">#ffffff</color>
+    <color name="common_action_view_text">#464646</color>
+    <color name="common_action_view_no_nick">#ff3333</color>
+    <color name="common_action_view_code">#fe9602</color>
+    <color name="common_green_name">#378200</color>
+    <color name="green">#378200</color>
+    <color name="orange_yellow">#fe9602</color>
+    <color name="tinge_orange">#fffde5</color>
+    <color name="common_darker_white">#f9f9f9</color>
+    <color name="feed_detail">#ebebeb</color>
+    <color name="comment_text_normal">#999999</color>
+    <color name="comment_text_press">#7a7a7a</color>
+    <color name="common_item_white">#f9f9f9</color>
+    <color name="praise">#ff9a2d</color>
+    <color name="menu_text_color_gray">#ff9a2d</color>
+    <color name="menu_text_color_white">#ffffff</color>
+    <color name="praise_press">#2f3538</color>
+    <color name="praise_normal">#363b3d</color>
+    <color name="home_work_completion">#65b629</color>
+    <color name="unread_color">#b9b9b9</color>
+    <color name="read_color">#464646</color>
+    <color name="login_text_color">#f0f0f0</color>
+    <color name="common_teacher_green">#007068</color>
+    <color name="common_text_green">#00a99d</color>
+    <color name="plaza_person_gray">#cccccc</color>
+    <color name="teacher_center_info">#00a99d</color>
+    <color name="parents_center_info">#80c24c</color>
+</resources>

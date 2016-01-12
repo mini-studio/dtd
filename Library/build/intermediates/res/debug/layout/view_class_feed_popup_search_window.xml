@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/search_window_layout_all"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#7F000000"
+    android:gravity="top"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:clickable="true"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@drawable/grey_line" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="35dp"
+            android:layout_below="@id/view1"
+            android:background="#F1F2F2"
+            android:gravity="center_vertical"
+            android:paddingLeft="12dp"
+            android:paddingRight="10dp"
+            android:text="高级筛选"
+            android:textColor="#999999"
+            android:textSize="13sp" />
+
+        <View
+            android:id="@+id/view2"
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@drawable/grey_line" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/view2"
+            android:layout_marginTop="22dp"
+            android:gravity="center"
+            android:paddingLeft="12dp"
+            android:paddingRight="14dp">
+
+            <TextView
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:text="发送人"
+                android:textColor="#464646"
+                android:textSize="15sp" />
+
+
+            <TextView
+                android:id="@+id/search_window_tv_select_contact"
+                android:layout_width="fill_parent"
+                android:layout_height="30dp"
+                android:layout_marginLeft="12dp"
+                android:background="@drawable/activity_feed_detail_comment_bg"
+                android:gravity="center|left"
+                android:hint="选中发送人"
+                android:paddingLeft="10dp"
+                android:paddingRight="20dp"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textSize="13sp" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/ll_time"
+            android:layout_width="fill_parent"
+            android:layout_height="30dp"
+            android:layout_marginTop="34dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingLeft="12dp"
+            android:paddingRight="14dp">
+
+            <TextView
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:text="时间"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="12dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/search_window_tv_start_time"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginRight="7dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/activity_feed_detail_comment_bg"
+                    android:gravity="center"
+                    android:hint="无"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:textSize="13sp" />
+
+
+                <View
+                    android:layout_width="16dp"
+                    android:layout_height="1dp"
+                    android:background="@color/black" />
+
+
+                <TextView
+                    android:id="@+id/search_window_tv_end_time"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="7dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/activity_feed_detail_comment_bg"
+                    android:gravity="center"
+                    android:hint="无"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:textSize="13sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/search_window_bt_submit"
+            android:layout_width="match_parent"
+            android:layout_height="39dp"
+            android:layout_marginBottom="47dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="47dp"
+            android:gravity="center"
+            android:text="提交"
+            android:textColor="@color/feed_detail"
+            android:textSize="16sp" />
+
+
+    </LinearLayout>
+
+</LinearLayout><!-- From: file:/Users/Wuquancheng/Documents/workspace/ChEdu/Android/Express/Library/src/main/res/layout/view_class_feed_popup_search_window.xml -->

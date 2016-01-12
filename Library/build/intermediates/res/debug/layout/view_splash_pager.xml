@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+                android:background="@color/translucent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/translucent"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/translucent"
+            android:layout_gravity="center">
+            <ImageView
+                android:id="@+id/introduce_content_bg"
+                android:background="@color/translucent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:layout_gravity="center" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/login_main_login_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="42dp"
+        android:text="立即体验"
+        android:textColor="#ffffff"
+        android:textSize="21sp"
+        android:visibility="gone" />
+
+</RelativeLayout><!-- From: file:/Users/Wuquancheng/Documents/workspace/ChEdu/Android/Express/Library/src/main/res/layout/view_splash_pager.xml -->

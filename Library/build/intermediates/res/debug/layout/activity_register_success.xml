@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f9f9f9">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="48dp"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="22dp"
+                android:layout_marginRight="22dp"
+                android:orientation="vertical">
+                <View android:layout_width="fill_parent"
+                      android:layout_height="80dp"
+                    />
+                <TextView android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:text="注册成功"
+                          android:drawableLeft="@drawable/register_check_press"
+                          android:textSize="26sp"
+                          android:layout_gravity="center"
+                    />
+                <View android:layout_width="fill_parent"
+                      android:layout_height="10dp"
+                    />
+                <TextView android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:text="这里是注册成功的提示信息"
+                          android:textSize="16sp"
+                          android:layout_gravity="center"
+                    />
+
+                <View android:layout_width="fill_parent"
+                      android:layout_height="50dp"
+                    />
+
+                <Button android:id="@+id/button_login"
+                        android:layout_height="36dp"
+                        android:layout_width="fill_parent"
+                        android:text="登 录"
+                        android:background="@color/signin_button_background_color"
+                        android:textColor="@drawable/login_text_shape_selector"
+                    />
+                </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+    <include layout="@layout/activity_title"/>
+</RelativeLayout><!-- From: file:/Users/Wuquancheng/Documents/workspace/ChEdu/Android/Express/Library/src/main/res/layout/activity_register_success.xml -->

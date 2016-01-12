@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="infoKey">1000</integer>
+    <integer name="groupPositionKey">1001</integer>
+    <integer name="infoDataKey">1002</integer>
+</resources>

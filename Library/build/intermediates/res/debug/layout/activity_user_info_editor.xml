@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/activity_background_color">
+
+    <ScrollView android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="48dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical">
+            <LinearLayout
+                android:id="@+id/layout_name"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@color/white"
+                android:orientation="vertical">
+                <LinearLayout android:layout_height="match_parent"
+                              android:layout_width="match_parent"
+                              android:orientation="horizontal"
+                              android:layout_marginLeft="10dp"
+                              android:layout_marginRight="10dp">
+                    <TextView android:id="@+id/ori_title_view"
+                              android:layout_width="100dp"
+                              android:layout_height="match_parent"
+                              android:textSize="20dp"
+                              android:gravity="center_vertical"
+                              android:text="姓名"/>
+                    <EditText android:id="@+id/edit_text_name"
+                              android:layout_marginLeft="20dp"
+                              android:layout_height="match_parent"
+                              android:textSize="20dp"
+                              android:gravity="center_vertical|left"
+                              android:background="@drawable/signin_text_field_background"
+                              android:textColor="@color/plaza_person_gray"
+                              android:layout_width="match_parent"/>
+                </LinearLayout>
+            </LinearLayout>
+            <View android:layout_height="10dp"
+                android:layout_width="match_parent"/>
+            <LinearLayout
+                android:id="@+id/layout_mobile"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@color/white"
+                android:orientation="vertical">
+                <LinearLayout android:layout_height="match_parent"
+                              android:layout_width="match_parent"
+                              android:orientation="horizontal"
+                              android:layout_marginLeft="10dp"
+                              android:layout_marginRight="10dp">
+                    <TextView android:id="@+id/new_title_view"
+                              android:layout_width="100dp"
+                              android:layout_height="match_parent"
+                              android:gravity="center_vertical"
+                              android:textSize="20dp"
+                              android:text="手机号码"/>
+                    <EditText android:id="@+id/edit_text_mobile"
+                              android:layout_marginLeft="20dp"
+                              android:layout_height="match_parent"
+                              android:textSize="20dp"
+                              android:gravity="center_vertical|left"
+                              android:background="@drawable/signin_text_field_background"
+                              android:textColor="@color/plaza_person_gray"
+                              android:layout_width="match_parent"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <View android:layout_height="10dp"
+                  android:layout_width="match_parent"/>
+            <LinearLayout
+                android:id="@+id/layout_city"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@color/white"
+                android:orientation="vertical">
+                <LinearLayout android:layout_height="fill_parent"
+                              android:layout_width="match_parent"
+                              android:orientation="horizontal"
+                              android:layout_marginLeft="10dp"
+                              android:layout_marginRight="10dp">
+                    <TextView android:layout_width="100dp"
+                              android:layout_height="fill_parent"
+                              android:gravity="center_vertical"
+                              android:textSize="20dp"
+                              android:text="所在城市"/>
+                    <TextView android:id="@+id/text_view_city"
+                              android:layout_marginLeft="20dp"
+                              android:layout_height="match_parent"
+                              android:textSize="20dp"
+                              android:gravity="center_vertical|left"
+                              android:background="@drawable/signin_text_field_background"
+                              android:textColor="@color/plaza_person_gray"
+                              android:layout_width="match_parent"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <View android:layout_height="10dp"
+                  android:layout_width="match_parent"/>
+
+            <LinearLayout android:id="@+id/layout_address"
+                          android:layout_width="match_parent"
+                          android:layout_height="60dp"
+                          android:layout_marginRight="10dp"
+                          android:layout_marginLeft="10dp"
+                          android:background="@color/white"
+                          android:orientation="vertical">
+                <LinearLayout android:layout_height="match_parent"
+                              android:layout_width="match_parent"
+                              android:orientation="horizontal"
+                              android:layout_marginLeft="10dp"
+                              android:layout_marginRight="10dp">
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:textSize="20dp"
+                        android:text="详细地址"/>
+                    <TextView android:id="@+id/text_view_address"
+                              android:layout_marginLeft="20dp"
+                              android:layout_height="wrap_content"
+                              android:textSize="20dp"
+                              android:gravity="center_vertical|left"
+                              android:background="@drawable/signin_text_field_background"
+                              android:textColor="@color/plaza_person_gray"
+                              android:layout_width="match_parent"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <View android:layout_height="10dp"
+                  android:layout_width="match_parent"/>
+            <LinearLayout
+                android:id="@+id/layout_time"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@color/white"
+                android:orientation="vertical">
+                <LinearLayout android:layout_height="match_parent"
+                              android:layout_width="match_parent"
+                              android:orientation="horizontal"
+                              android:layout_marginLeft="10dp"
+                              android:layout_marginRight="10dp">
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="fill_parent"
+                        android:gravity="center_vertical"
+                        android:textSize="20dp"
+                        android:text="取件时间"/>
+                    <TextView android:id="@+id/text_view_time"
+                              android:layout_marginLeft="20dp"
+                              android:layout_marginTop="5dp"
+                              android:layout_height="match_parent"
+                              android:textSize="20dp"
+                              android:gravity="center_vertical|left"
+                              android:background="@drawable/signin_text_field_background"
+                              android:textColor="@color/plaza_person_gray"
+                              android:layout_width="match_parent"/>
+                </LinearLayout>
+                <View android:layout_width="fill_parent"
+                      android:layout_height="0.5dp"
+                      android:background="@color/plaza_person_gray"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+    <include
+        android:id="@+id/profile_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        layout="@layout/activity_title" />
+</RelativeLayout><!-- From: file:/Users/Wuquancheng/Documents/workspace/ChEdu/Android/Express/Library/src/main/res/layout/activity_user_info_editor.xml -->

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/signin_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/activity_background_color"
+    android:baselineAligned="false"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/content_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="48dp">
+
+        <ScrollView
+            android:id="@+id/scroll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:baselineAligned="false"
+                android:orientation="vertical"
+                android:weightSum="1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp" />
+
+                <LinearLayout
+                    android:id="@+id/input_text_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="20dp"
+                    android:layout_weight="0.12"
+                    android:clickable="true"
+                    android:layoutMode="clipBounds"
+                    android:orientation="vertical">
+
+
+                    <org.mini.frame.view.MiniCustomDeleteEdit
+                        android:id="@+id/phone_view"
+                        android:layout_width="fill_parent"
+                        android:layout_height="44dp"
+                        android:layout_marginLeft="37dp"
+                        android:layout_marginRight="37dp"
+                        android:layout_marginTop="33dp"
+                        android:drawableLeft="@drawable/xd_10"
+                        android:background="@color/white"
+                        android:clickable="false"
+                        android:hint="手机号"
+                        android:paddingLeft="8dp"
+                        android:paddingRight="8dp"
+                        android:singleLine="true"
+                        android:phoneNumber="true"
+                        android:textColor="#666666"
+                        android:textColorHint="#e2e2e2" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="30dp">
+
+                    <Button
+                        android:id="@+id/sms_code_button"
+                        android:layout_width="match_parent"
+                        android:layout_height="44dp"
+                        android:layout_gravity="center_vertical|center"
+                        android:layout_marginLeft="37dp"
+                        android:layout_marginRight="37dp"
+                        android:layout_weight="2"
+                        android:background="@drawable/btn2"
+                        android:textColor="@drawable/login_text_shape_selector"
+                        android:text="获取短信验证码"
+                        android:textSize="17sp" />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </RelativeLayout>
+    <include layout="@layout/activity_title" />
+</RelativeLayout>
+<!-- From: file:/Users/Wuquancheng/Documents/workspace/ChEdu/Android/Express/Library/src/main/res/layout/activity_forgot_passwd.xml -->

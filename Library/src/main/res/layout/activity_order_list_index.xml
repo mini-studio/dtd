@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/activity_background_color"
+                android:gravity="center">
+
+    <LinearLayout
+        android:id="@+id/content_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="48dp"
+        android:orientation="vertical">
+        <View android:layout_height="20dp"
+            android:layout_width="fill_parent"/>
+        <LinearLayout android:id="@+id/send_order_view"
+                      android:layout_width="fill_parent"
+                      android:orientation="horizontal"
+                      android:background="@color/white"
+                      android:layout_marginLeft="10dp"
+                      android:layout_marginRight="10dp"
+                      android:layout_height="48dp">
+            <TextView android:layout_height="fill_parent"
+                      android:layout_width="fill_parent"
+                      android:text="我发送的快件"
+                      android:layout_marginLeft="10dp"
+                      android:gravity="left|center_vertical"
+                      android:textSize="18dp"
+                      android:textColor="@color/common_black"/>
+            <ImageView android:layout_height="wrap_content"
+                       android:layout_width="wrap_content"
+                       android:layout_marginLeft="-30dp"
+                       android:layout_gravity="center_vertical"
+                       android:src="@drawable/icon_arrow_right"/>
+        </LinearLayout>
+        <View android:layout_height="20dp"
+              android:layout_width="fill_parent"/>
+        <LinearLayout android:id="@+id/receive_order_view"
+                      android:layout_width="fill_parent"
+                      android:orientation="horizontal"
+                      android:background="@color/white"
+                      android:layout_marginLeft="10dp"
+                      android:layout_marginRight="10dp"
+                      android:layout_height="48dp">
+            <TextView android:layout_height="fill_parent"
+                      android:layout_width="fill_parent"
+                      android:text="我接收的快件"
+                      android:layout_marginLeft="10dp"
+                      android:gravity="left|center_vertical"
+                      android:textSize="18dp"
+                      android:textColor="@color/common_black"/>
+            <ImageView android:layout_height="wrap_content"
+                       android:layout_width="wrap_content"
+                       android:layout_marginLeft="-30dp"
+                       android:layout_gravity="center_vertical"
+                       android:src="@drawable/icon_arrow_right"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <include layout="@layout/activity_title" />
+</RelativeLayout>

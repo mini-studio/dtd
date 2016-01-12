@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/all_background"
+    android:visibility="gone">
+
+    <ImageView
+        android:id="@+id/cancel_button"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_margin="20dp"
+        android:background="@drawable/cancel_button_selector" />
+
+    <ImageView
+        android:id="@+id/confirm_button"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentRight="true"
+        android:layout_margin="20dp"
+        android:background="@drawable/confirm_button_selector" />
+
+
+    <TextView
+        android:id="@+id/text_label"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_centerHorizontal="true"
+        android:text=""
+        android:singleLine="true"
+        android:gravity="center"
+        android:layout_alignTop="@id/confirm_button"
+        android:textColor="@color/text_color"
+        android:textSize="15sp" />
+
+    <EditText
+        android:id="@+id/text_view"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/cancel_button"
+        android:background="@drawable/chat_edit_normal"
+        android:focusable="true"
+        android:layout_marginLeft="20dp"
+        android:focusableInTouchMode="true"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="-8dp"
+        android:singleLine="true"
+      />
+    <LinearLayout
+        android:layout_below="@id/text_view"
+        android:layout_width="fill_parent"
+        android:layout_height="20dp"
+        />
+</RelativeLayout>

@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/signin_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login_bg"
+    android:baselineAligned="false"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/content_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="48dp">
+
+        <ScrollView
+            android:id="@+id/scroll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:baselineAligned="false"
+                android:orientation="vertical"
+                android:weightSum="1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp" />
+
+                <LinearLayout
+                    android:id="@+id/signin_input"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="20dp"
+                    android:layout_weight="0.12"
+                    android:clickable="true"
+                    android:layoutMode="clipBounds"
+                    android:orientation="vertical">
+
+
+                    <org.mini.frame.view.MiniCustomDeleteEdit
+                        android:id="@+id/sigin_user_name"
+                        android:layout_width="fill_parent"
+                        android:layout_height="38dp"
+                        android:layout_marginLeft="37dp"
+                        android:layout_marginRight="37dp"
+                        android:layout_marginTop="33dp"
+                        android:background="@drawable/signin_text_field_background"
+                        android:clickable="false"
+                        android:drawableLeft="@drawable/xd_10"
+                        android:hint="手机号"
+                        android:paddingLeft="8dp"
+                        android:paddingRight="8dp"
+                        android:singleLine="true"
+                        android:phoneNumber="true"
+                        android:textColor="#666666"
+                        android:textColorHint="#e2e2e2" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_weight="0.12"
+                    android:orientation="vertical">
+
+                    <RelativeLayout android:layout_height="wrap_content"
+                        android:layout_width="fill_parent">
+                    <org.mini.frame.view.MiniCustomDeleteEdit
+                        android:id="@+id/sigin_passwd"
+                        android:layout_width="match_parent"
+                        android:layout_height="38dp"
+                        android:layout_marginLeft="37dp"
+                        android:layout_marginRight="37dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="1"
+                        android:drawableLeft="@drawable/password"
+                        android:background="@drawable/signin_text_field_background"
+                        android:hint="请输入密码"
+                        android:inputType="textPassword"
+                        android:paddingLeft="8dp"
+                        android:paddingRight="8dp"
+                        android:password="true"
+                        android:singleLine="true"
+                        android:textColor="#666666"
+                        android:textColorHint="#e2e2e2" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="30dp">
+
+                    <Button
+                        android:id="@+id/sigin_button"
+                        android:layout_width="match_parent"
+                        android:layout_height="38dp"
+                        android:layout_gravity="center_vertical|center"
+                        android:layout_marginBottom="20dp"
+                        android:layout_marginLeft="37dp"
+                        android:layout_marginRight="37dp"
+                        android:layout_marginTop="25dp"
+                        android:layout_weight="2"
+                        android:background="@drawable/btn2"
+                        android:textColor="@drawable/login_text_shape_selector"
+                        android:text="登录"
+                        android:textSize="17sp" />
+                    <TextView android:id="@+id/forgot_passwd"
+                              android:layout_width="100dp"
+                              android:layout_height="30dp"
+                              android:textSize="18dp"
+                              android:textColor="#32d630"
+                              android:text="忘记密码?"
+                              android:gravity="right"
+                              android:layout_gravity="right"
+                              android:layout_marginTop="10dp"
+                              android:layout_marginRight="37dp"
+                        />
+
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </RelativeLayout>
+    <include layout="@layout/activity_title" />
+</RelativeLayout>
+<!-- From: file:/Users/Wuquancheng/Documents/workspace/ChEdu/Android/Express/Library/src/main/res/layout/activity_signin.xml -->

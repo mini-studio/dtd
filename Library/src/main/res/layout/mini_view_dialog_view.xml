@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="30dp"
+    android:background="@drawable/relayout_redivious">
+
+    <TextView
+        android:id="@+id/dialog_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:gravity="center_horizontal"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:text=""
+        android:textColor="@color/text_color"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/dialog_message"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dialog_title"
+        android:layout_centerHorizontal="true"
+        android:gravity="left"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:textColor="@color/text_color"
+        android:textSize="15sp"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/dialog_title_bottom_line"
+        android:layout_width="fill_parent"
+        android:layout_height="0.3dp"
+        android:layout_below="@id/dialog_message"
+        android:layout_marginTop="10dp"
+        android:background="@color/line_color" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/dialog_title_bottom_line"
+        android:layout_margin="10dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/dialog_cancel_button"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="1"
+            android:background="@color/wrm_bg_white"
+            android:text="取消"
+            android:textColor="@color/status_text_color"
+            android:textSize="15sp" />
+
+
+        <Button
+            android:id="@+id/dialog_confirm_button"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="1"
+            android:background="@color/wrm_bg_white"
+            android:text="确定"
+            android:textColor="@color/status_text_color"
+            android:textSize="15sp" />
+
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/dialog_vertical_line"
+        android:layout_width="0.3dp"
+        android:layout_height="40dp"
+        android:layout_below="@id/dialog_title_bottom_line"
+        android:layout_centerHorizontal="true"
+        android:layout_weight="0"
+        android:background="@color/line_color" />
+
+</RelativeLayout>

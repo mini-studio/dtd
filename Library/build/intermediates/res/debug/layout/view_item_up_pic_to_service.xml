@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="90dp"
+    android:background="@color/all_background"
+    android:orientation="horizontal" 
+    android:gravity="center_vertical"
+    >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="70dp"
+        android:layout_margin="10dp"
+        android:layout_weight="1"
+        android:background="@drawable/relayout_redivious" >
+
+        <ImageView
+            android:id="@+id/item_up_pic_to_services_pic"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:scaleType="centerCrop" />
+
+        <EditText
+            android:id="@+id/item_up_pic_to_services_edittext"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="15dp"
+            android:layout_toRightOf="@id/item_up_pic_to_services_pic"
+            android:background="@drawable/signin_text_field_background"
+            android:layout_centerVertical="true"
+            android:hint="请输入照片描述"
+            />
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/upload_deleteimage"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/item_uploaderdeleteing" />
+
+</LinearLayout><!-- From: file:/Users/Wuquancheng/Documents/workspace/ChEdu/Android/Express/Library/src/main/res/layout/view_item_up_pic_to_service.xml -->

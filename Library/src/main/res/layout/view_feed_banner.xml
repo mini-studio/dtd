@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/view_feed_banner"
+    android:layout_width="fill_parent"
+    android:layout_height="120dip"
+    android:background="@drawable/list_item_selector"
+    android:clickable="true"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/view_feed_banner_inner"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <org.mini.frame.view.MiniBannerViewPager
+            android:id="@+id/bannerViewPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="0dp"
+            android:layout_marginLeft="0dp"
+
+            android:layout_marginRight="0dp"
+            android:layout_marginTop="0dp"
+            android:clickable="true" />
+
+        <RelativeLayout
+            android:id="@+id/banner_relayout_layout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/translucent_banner_text_background">
+
+
+            <TextView
+                android:id="@+id/banner_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_toRightOf="@+id/banner_layout"
+                android:singleLine="true"
+                android:layout_marginRight="30dp"
+                android:layout_centerVertical="true"
+                android:textColor="@color/pure_white"
+                android:textSize="14sp" />
+
+            <LinearLayout
+                android:id="@+id/banner_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:orientation="horizontal" />
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+</LinearLayout>

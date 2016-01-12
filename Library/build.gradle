@@ -1,0 +1,74 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 21
+    buildToolsVersion "21.1.2"
+
+    defaultConfig {
+        applicationId "com.dtdinc.dtd"
+        minSdkVersion 8
+        targetSdkVersion 16
+        versionCode 15
+        versionName "3.2.0"
+    }
+
+    signingConfigs {
+        teacher{
+            storeFile file("EduTeacherKey")
+            storePassword "000000"
+            keyAlias "eduteacherkey"
+            keyPassword "000000"
+        }
+
+        parents{
+            storeFile file("EduParentKey")
+            storePassword "000000"
+            keyAlias "eduparentkey"
+            keyPassword "000000"
+        }
+    }
+
+    buildTypes {
+        release {
+            signingConfig  signingConfigs.teacher
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+
+        debug {
+            signingConfig  signingConfigs.teacher
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    sourceSets {
+        main {
+            manifest.srcFile 'src/main/AndroidManifest.xml'
+            res.srcDirs = ['src/main/res']
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+}
+
+repositories {
+    flatDir {
+        dirs 'libs'
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile(name: 'page-indicator', ext: 'aar')
+    compile(name: 'pull-to-refresh', ext: 'aar')
+    compile(name: 'ToggleButtonLib', ext: 'aar')
+    compile(name: 'swipe_layout', ext: 'aar')
+    compile files('libs/pinyin4j-2.5.0.jar')
+    compile files('libs/java-unrar.jar')
+    compile files('libs/cyberplayer-sdk.jar')
+    compile files('libs/jg_filter_sdk_1.1.jar')
+    compile files('libs/mid-sdk-2.20.jar')
+    compile files('libs/wup-1.0.0-SNAPSHOT.jar')
+    compile files('libs/Xg_sdk_v2.39_20150915_1121.jar')
+    compile files('libs/TencentLocationSDK_v4.4.6_r206631_151119_1441.jar')
+}

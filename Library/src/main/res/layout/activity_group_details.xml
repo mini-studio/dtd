@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/all_background"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/group_details_rl_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <org.mini.frame.view.MiniCustomDeleteEdit
+            android:id="@+id/group_details_et_search"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:background="#F9F9F9"
+            android:drawableLeft="@drawable/contacts_search_prompt"
+            android:drawablePadding="12dp"
+            android:hint="@string/search"
+            android:imeOptions="actionSearch"
+            android:paddingLeft="18dp"
+            android:paddingRight="18dp"
+            android:singleLine="true"
+            android:textColor="#464646"
+            android:textColorHint="#999999"
+            android:textSize="16sp" />
+
+        <View
+            android:layout_below="@id/group_details_et_search"
+            android:background="@drawable/bottom_line"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"/>
+
+    </RelativeLayout>
+
+    <com.handmark.pulltorefresh.library.PullToRefreshGridView
+        android:id="@+id/group_details_gridView"
+        android:layout_below="@id/group_details_rl_top"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:verticalSpacing="10dp"
+        android:numColumns="5"
+        android:columnWidth="50dp" 
+        android:horizontalSpacing="5dp">
+    </com.handmark.pulltorefresh.library.PullToRefreshGridView>
+
+    <TextView
+        android:id="@+id/group_details_no_search_content"
+        android:layout_below="@id/group_details_rl_top"
+        android:layout_width="fill_parent"
+        android:gravity="center"
+        android:textColor="@android:color/darker_gray"
+        android:text="@string/no_search_to_the_matching_results"
+        android:textSize="17sp"
+        android:visibility="gone"
+        android:layout_height="fill_parent" />
+
+    <include layout="@layout/activity_title" />
+
+</RelativeLayout>

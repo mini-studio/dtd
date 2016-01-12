@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <stroke
+
+        />
+    <solid android:color="#009f94" />
+
+    
+    <corners android:radius="7dp" />
+
+</shape>
+<!-- From: file:/Users/Wuquancheng/Documents/workspace/ChEdu/Android/Express/Library/src/main/res/drawable/round_teacher_corner_green_seven_shape_sel.xml -->

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/me_background_color">
+    <LinearLayout android:id="@+id/content_layout"
+                  android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:orientation="vertical"
+                  android:background="@color/white"
+                  android:layout_marginTop="48dp">
+        <ScrollView  android:layout_width="match_parent"
+                     android:layout_height="match_parent">
+            <LinearLayout
+                          android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:layout_marginLeft="20dp"
+                          android:layout_marginRight="20dp"
+                          android:layout_marginTop="10dp"
+                          android:layout_marginBottom="10dp"
+                          android:orientation="vertical">
+                <LinearLayout
+                              android:layout_width="match_parent"
+                              android:layout_height="match_parent"
+                              android:layout_marginTop="10dp"
+                              android:layout_marginBottom="10dp"
+                              android:background="@color/common_grey"
+                              android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="0.5dp"
+                        android:layout_marginRight="0.5dp"
+                        android:layout_marginTop="0.5dp"
+                        android:layout_marginBottom="0.5dp"
+                        android:background="@color/white"
+                        android:orientation="vertical">
+                        <LinearLayout android:layout_width="match_parent"
+                                      android:layout_height="100dp"
+                                      android:gravity="center_horizontal"
+                                      android:orientation="horizontal">
+                        </LinearLayout>
+                        <LinearLayout android:layout_width="match_parent"
+                                      android:layout_height="40dp"
+                                      android:gravity="center_horizontal"
+                                      android:orientation="horizontal">
+                            <TextView android:layout_width="wrap_content"
+                                      android:layout_height="22dp"
+                                      android:text="支付金额"
+                                      android:layout_gravity="center_horizontal|center_vertical"
+                                      android:textColor="@color/red"
+                                      android:textSize="18sp"/>
+                            <TextView android:layout_width="wrap_content"
+                                      android:layout_height="40dp"
+                                      android:text="100元"
+                                      android:layout_marginTop="0dp"
+                                      android:textColor="@color/red"
+                                      android:layout_gravity="center_horizontal"
+                                      android:textSize="30sp"/>
+                        </LinearLayout>
+                        <LinearLayout android:layout_width="match_parent"
+                                      android:layout_height="wrap_content"
+                                      android:layout_marginTop="60dp"
+                                      android:layout_marginBottom="20dp"
+                                      android:layout_marginLeft="20dp"
+                                      android:layout_marginRight="20dp"
+                                      android:orientation="vertical">
+                            <TextView android:layout_width="wrap_content"
+                                      android:layout_height="wrap_content"
+                                      android:text="提示信息:"
+                                      android:layout_marginTop="0dp"
+                                      android:textSize="16sp"/>
+                            <TextView android:layout_width="wrap_content"
+                                      android:layout_height="wrap_content"
+                                      android:text="提示信息:提示信息:提示信息:"
+                                      android:layout_marginTop="0dp"
+                                      android:textSize="16sp"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+                <Button android:id="@+id/next_button"
+                        android:layout_width="match_parent"
+                        android:layout_height="38dp"
+                        android:background="@color/signin_button_background_color"
+                        android:textColor="@drawable/login_text_shape_selector"
+                        android:text="下一步"/>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+    <include
+        android:id="@+id/profile_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        layout="@layout/activity_title" />
+</RelativeLayout>

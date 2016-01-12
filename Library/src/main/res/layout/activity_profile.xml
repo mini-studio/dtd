@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/me_background_color">
+   <ScrollView android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:layout_marginTop="46dp"
+               android:scrollbars="none">
+    <LinearLayout
+        android:id="@+id/profile_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/activity_background_color"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:id="@+id/profile_avatar_item"
+            android:layout_width="fill_parent"
+            android:layout_height="180dp"
+            android:background="@drawable/xd_02">
+            <View android:layout_width="match_parent"
+                  android:layout_height="0.5dp"
+                  android:background="@color/common_line_color" />
+            <org.mini.frame.view.MiniImageView
+                android:id="@+id/avatar_image_view"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="40dp"
+                android:src="@drawable/default_avatar"
+                android:layout_centerHorizontal="true"/>
+            <TextView android:id="@+id/profile_name_view"
+                      android:layout_height="30dp"
+                      android:layout_width="match_parent"
+                      android:textSize="18sp"
+                      android:gravity="center"
+                      android:textColor="#f5f5f7"
+                      android:layout_below="@id/avatar_image_view"
+                      android:layout_marginTop="10dp"
+                      android:text="@string/app_name"/>
+        </RelativeLayout>
+
+        <View android:layout_height="20dp"
+              android:layout_width="match_parent"/>
+
+        <LinearLayout
+            android:id="@+id/become_dispatcher_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="60dp"
+            android:orientation="vertical"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@color/wrm_bg_white">
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/common_line_color"/>
+            <LinearLayout android:layout_width="fill_parent"
+                          android:layout_height="fill_parent"
+                          android:orientation="horizontal">
+                <ImageView android:layout_height="30dp"
+                           android:layout_width="30dp"
+                           android:layout_gravity="center_vertical"
+                           android:layout_marginLeft="10dp"
+                           android:src="@drawable/xd_05"/>
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="58dp"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:gravity="left|center"
+                    android:layout_marginLeft="10dp"
+                    android:text="成为自由投递人"
+                    android:textColor="@color/common_grey"
+                    android:textSize="20sp" />
+                <ImageView android:layout_height="30dp"
+                           android:layout_width="30dp"
+                           android:layout_gravity="center_vertical"
+                           android:layout_marginLeft="-40dp"
+                           android:src="@drawable/icon_arrow_right"/>
+            </LinearLayout>
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/common_line_color" />
+        </LinearLayout>
+        <View android:layout_height="20dp"
+              android:layout_width="match_parent"/>
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="60dp"
+            android:orientation="vertical"
+            android:id="@+id/order_list_layout"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@color/wrm_bg_white">
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/common_line_color" />
+            <LinearLayout android:layout_width="fill_parent"
+                          android:layout_height="fill_parent"
+                          android:orientation="horizontal">
+                <ImageView android:layout_height="30dp"
+                           android:layout_width="30dp"
+                           android:layout_gravity="center_vertical"
+                           android:layout_marginLeft="10dp"
+                           android:src="@drawable/xd_08"/>
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="58dp"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:gravity="center|left"
+                    android:layout_marginLeft="10dp"
+                    android:text="我的快件"
+                    android:textColor="@color/common_grey"
+                    android:textSize="20sp" />
+                <ImageView android:layout_height="30dp"
+                           android:layout_width="30dp"
+                           android:layout_gravity="center_vertical"
+                           android:layout_marginLeft="-40dp"
+                           android:src="@drawable/icon_arrow_right"/>
+            </LinearLayout>
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/common_line_color" />
+        </LinearLayout>
+        <View android:layout_height="20dp"
+              android:layout_width="match_parent"/>
+        <!--联系客服-->
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="60dp"
+            android:orientation="vertical"
+            android:id="@+id/layout_contact_waiter"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@color/wrm_bg_white">
+            <LinearLayout android:layout_width="fill_parent"
+                          android:layout_height="fill_parent"
+                          android:orientation="horizontal">
+                <ImageView android:layout_height="30dp"
+                           android:layout_width="30dp"
+                           android:layout_gravity="center_vertical"
+                           android:layout_marginLeft="10dp"
+                           android:src="@drawable/xd_10"/>
+                <RelativeLayout android:layout_width="fill_parent"
+                              android:layout_height="fill_parent"
+                              android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="58dp"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center_vertical|center_horizontal"
+                        android:gravity="center|left"
+                        android:layout_marginLeft="10dp"
+                        android:text="联系客服"
+                        android:textColor="@color/common_grey"
+                        android:textSize="20sp" />
+                    <TextView
+                        android:id="@+id/waiter_mobile_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="58dp"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center_vertical"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="40dp"
+                        android:gravity="center|right"
+                        android:layout_marginLeft="10dp"
+                        android:text="010-65675716"
+                        android:textColor="@color/common_grey"
+                        android:textSize="20sp" />
+                </RelativeLayout>
+
+                <ImageView android:layout_height="30dp"
+                           android:layout_width="30dp"
+                           android:layout_gravity="center_vertical"
+                           android:layout_marginLeft="-40dp"
+                           android:src="@drawable/icon_arrow_right"/>
+            </LinearLayout>
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/common_line_color" />
+        </LinearLayout>
+        <View android:layout_height="20dp"
+              android:layout_width="match_parent"/>
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="60dp"
+            android:orientation="vertical"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:id="@+id/setting_layout"
+            android:background="@color/wrm_bg_white">
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/common_line_color" />
+            <LinearLayout android:layout_width="fill_parent"
+                          android:layout_height="fill_parent"
+                          android:orientation="horizontal">
+                <ImageView android:layout_height="30dp"
+                           android:layout_width="30dp"
+                           android:layout_gravity="center_vertical"
+                           android:layout_marginLeft="10dp"
+                           android:src="@drawable/xd_12"/>
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="58dp"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:gravity="center|left"
+                    android:layout_marginLeft="10dp"
+                    android:text="设置"
+                    android:textColor="@color/common_grey"
+                    android:textSize="20sp" />
+                <ImageView android:layout_height="30dp"
+                           android:layout_width="30dp"
+                           android:layout_gravity="center_vertical"
+                           android:layout_marginLeft="-40dp"
+                           android:src="@drawable/icon_arrow_right"/>
+            </LinearLayout>
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/common_line_color" />
+        </LinearLayout>
+        <View android:layout_height="20dp"
+              android:layout_width="match_parent"/>
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="46dp"
+            android:orientation="vertical">
+            <Button android:id="@+id/button_logout"
+                    android:layout_height="match_parent"
+                    android:layout_width="fill_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:text="退出当前账号"
+                    android:textSize="20dp"
+                    android:background="@drawable/btn_gray"
+                    android:textColor="#979797"/>
+        </LinearLayout>
+        <View android:layout_height="20dp"
+              android:layout_width="match_parent"/>
+    </LinearLayout>
+  </ScrollView>
+    <include
+        android:id="@+id/profile_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        layout="@layout/activity_title" />
+</RelativeLayout>

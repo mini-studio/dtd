@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:drawable="@drawable/checkbox_teacher_press" android:state_checked="true"/>
+    <item android:drawable="@drawable/checkbox_normal" android:state_checked="false"/>
+
+</selector><!-- From: file:/Users/Wuquancheng/Documents/workspace/ChEdu/Android/Express/Library/src/main/res/drawable/checkbox_teacher_selector.xml -->

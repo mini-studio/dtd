@@ -1,0 +1,6 @@
+#build-parent.gradle,AndroidManifest-parent.xml,Sandbox,CHEdu-Android-Parent,21,3.2.9
+#build-teacher.gradle,AndroidManifest-teacher.xml,Sandbox,CHEdu-Android-Teacher,21,3.2.9
+#build-parent.gradle,AndroidManifest-parent.xml,Release,CHEdu-Android-Parent,21,3.2.9
+#build-teacher.gradle,AndroidManifest-teacher.xml,Release,CHEdu-Android-Teacher,21,3.2.9
+#build-teacher-hd.gradle,AndroidManifest-teacher.xml,Release,CHEdu-Android-Teacher,18,3.2.8,330成长管家,app_teacher_name,hd,20151020
+build-teacher-hd.gradle,AndroidManifest-teacher.xml,Debug,CHEdu-Android-Teacher,18,3.2.8,330成长管家,app_teacher_name,hd,20151020

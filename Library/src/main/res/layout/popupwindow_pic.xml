@@ -1,0 +1,90 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@null" >
+
+    <TextView
+        android:id="@+id/text1"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/relayout_up_redivious"
+        android:gravity="center"
+        android:textColor="@color/fu_text_color"
+        android:textSize="12sp"
+        android:text="请选择图片资源" />
+
+    <ImageView
+        android:id="@+id/imageview1"
+        android:layout_width="fill_parent"
+        android:layout_height="0.3dp"
+        android:layout_below="@id/text1"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@color/line_color" />
+  <TextView
+        android:id="@+id/get_form_album"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="#ffffff"
+        android:layout_below="@id/imageview1"
+        android:textSize="15sp"
+        android:gravity="center"
+        android:textColor="@color/blue"
+        android:text="从相册中选取" />
+    <ImageView
+        android:id="@+id/imageview2"
+        android:layout_width="fill_parent"
+        android:layout_height="0.3dp"
+        android:layout_below="@id/get_form_album"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@color/line_color" />
+    <TextView
+        android:id="@+id/get_form_camera"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/imageview2"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+         android:textColor="@color/blue"
+        android:padding="10dp"
+        android:textSize="15sp"
+        android:background="@drawable/relayout_down_redivious"
+        android:gravity="center"
+        android:text="拍照" />
+    
+
+  
+
+    <TextView
+        android:id="@+id/text3"
+        android:layout_width="fill_parent"
+        android:layout_height="3dp"
+        android:layout_below="@id/get_form_camera"
+        android:background="@null" />
+
+    <TextView
+        android:id="@+id/not_select"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/text3"
+         android:textColor="@color/blue"
+        android:layout_margin="10dp"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:background="@drawable/relayout_redivious"
+        android:gravity="center"
+        android:text="放弃" />
+     <TextView
+        android:id="@+id/text5"
+        android:layout_width="fill_parent"
+        android:layout_height="3dp"
+        android:layout_below="@id/not_select"
+        android:background="@null" />
+
+</RelativeLayout>

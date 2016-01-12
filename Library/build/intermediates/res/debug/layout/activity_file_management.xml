@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/class_feed_mini_loading_rl"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/me_background_color"
+    android:orientation="vertical">
+
+    <ListView
+        android:id="@+id/file_management_list_view"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="48dp"
+        android:divider="@drawable/grey_line"
+        android:dividerHeight="1dp" />
+
+    <include
+        android:id="@+id/class_feed_include"
+        layout="@layout/activity_title" />
+
+</RelativeLayout><!-- From: file:/Users/Wuquancheng/Documents/workspace/ChEdu/Android/Express/Library/src/main/res/layout/activity_file_management.xml -->

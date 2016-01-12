@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?><!-- 分享底部的pop分享的布局文件 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/share_popup_relativelayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#443C3D3F"
+    android:orientation="vertical"
+   >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/all_background"
+        android:orientation="vertical">
+
+        <View
+            android:id="@+id/share_popup_view"
+            android:layout_width="fill_parent"
+            android:layout_height="3dp"
+            android:background="#00a8e2" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="12dp"
+            android:layout_weight="1"
+            android:background="@android:color/white"
+            android:orientation="horizontal"
+            android:paddingBottom="15dp"
+            android:paddingTop="25dp">
+
+            <LinearLayout
+                android:layout_width="86dp"
+                android:gravity="center"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/share_popup_iv_wx_friend"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/share_wx_normal" />
+
+                <TextView
+                    android:layout_marginTop="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="微信" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="76dp"
+                android:gravity="center"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/share_popup_iv_pyq"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/share_pyq_normal" />
+
+                <TextView
+                    android:layout_marginTop="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="朋友圈" />
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/share_popup_bt_cancel"
+            android:layout_width="fill_parent"
+            android:layout_height="57dp"
+            android:background="@android:color/white"
+            android:gravity="center"
+            android:text="取消"
+            android:textColor="@color/text_color"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+</RelativeLayout><!-- From: file:/Users/Wuquancheng/Documents/workspace/ChEdu/Android/Express/Library/src/main/res/layout/share_popup_main.xml -->

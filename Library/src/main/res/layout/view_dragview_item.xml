@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    android:descendantFocusability="blocksDescendants"
+    android:gravity="center_horizontal">
+
+    <RelativeLayout
+        android:id="@+id/item_layout"
+        android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp">
+
+        <org.mini.frame.view.MiniCircleImageView
+            android:id="@+id/item_image"
+            android:layout_width="59dp"
+            android:layout_height="59dp"
+            android:layout_centerHorizontal="true"/>
+
+        <ImageView
+            android:id="@+id/item_image_subscription_tip"
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_toRightOf="@id/item_image"
+            android:background="@drawable/badge_bg"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/item_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/plaza_item_delete_nor"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/item_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/item_image"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="6dp"
+            android:ellipsize="middle"
+            android:singleLine="true"
+            android:textSize="14sp"></TextView>
+    </RelativeLayout>
+
+</LinearLayout>

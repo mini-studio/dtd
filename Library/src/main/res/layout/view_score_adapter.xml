@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/class_work_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/class_work_main_adapter_item_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="65.0dip"
+            android:layout_marginTop="10.0dip"
+            android:background="@drawable/common_list_item_selector">
+
+            <TextView
+                android:id="@+id/class_score_main_adapter_item_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="14.0dip"
+                android:layout_marginRight="14.0dip"
+                android:layout_marginTop="12dp"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:singleLine="true"
+                android:textColor="@color/common_action_view_text"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/class_score_main_adapter_item_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/class_score_main_adapter_item_title"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="12dp"
+                android:layout_marginLeft="14.0dip"
+                android:layout_marginRight="14.0dip"
+                android:layout_marginTop="10dp"
+                android:textColor="#999999"
+                android:textSize="12sp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/class_work_adapter_ll_loading"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:clickable="true"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <ProgressBar
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="130dp"
+            android:duration="30"
+            android:indeterminate="true"
+            android:indeterminateDrawable="@anim/pull_up_loading" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center_horizontal"
+            android:autoText="false"
+            android:ellipsize="end"
+            android:gravity="center_vertical|left"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:text=" 正在加载..."
+            android:textAlignment="center"
+            android:textColor="@color/fu_text_color"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+
+</LinearLayout>

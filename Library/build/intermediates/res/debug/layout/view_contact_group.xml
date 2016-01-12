@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/contact_group_content"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@drawable/list_group_selector">
+
+        <ImageView
+            android:id="@+id/contact_group_indicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="14dp"
+            android:adjustViewBounds="true"
+            android:src="@drawable/cell_arrow_down" />
+
+        <TextView
+            android:id="@+id/contact_group_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:layout_marginRight="40dp"
+            android:layout_toRightOf="@+id/contact_group_indicator" />
+
+        <TextView
+            android:id="@+id/child_item_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            />
+        <TextView
+            android:id="@+id/child_item_selected"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/child_item_count"
+            android:layout_marginRight="1dp"
+            android:textColor="@color/common_text_green"
+            android:visibility="gone"
+            />
+
+        <org.mini.frame.view.MiniImageView
+            android:id="@+id/contact_group_radiobox"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="6dp"
+            android:adjustViewBounds="true"
+            android:src="@drawable/radiobox_default" />
+
+        <View
+            android:id="@+id/contact_group_content_separator"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_alignParentBottom="true"
+            android:background="#ffffff" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_above="@+id/contact_group_content_separator"
+            android:background="#c8c8c8" />
+
+    </RelativeLayout>
+
+</LinearLayout><!-- From: file:/Users/Wuquancheng/Documents/workspace/ChEdu/Android/Express/Library/src/main/res/layout/view_contact_group.xml -->

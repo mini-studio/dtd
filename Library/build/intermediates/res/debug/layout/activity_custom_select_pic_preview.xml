@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <org.mini.frame.photo.HackyViewPager
+        android:id="@+id/custom_select_pic_preview_viewpager"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"></org.mini.frame.photo.HackyViewPager>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#44000000">
+
+        <LinearLayout
+            android:id="@+id/custom_select_pic_preview_left_layout"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="24dp"
+                android:layout_marginBottom="13dp"
+                android:layout_marginTop="13dp"
+                android:gravity="left"
+                android:paddingLeft="10dp"
+                android:src="@drawable/app_title_back_image" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/custom_select_pic_preview_check"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+           />
+
+        <LinearLayout
+            android:id="@+id/custom_select_pic_preview_center_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_centerHorizontal="true"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/custom_select_pic_preview_current"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textColor="@color/pure_white" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="/"
+                android:textColor="@color/pure_white" />
+
+            <TextView
+                android:id="@+id/custom_select_pic_preview_total"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/pure_white" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_alignParentBottom="true"
+        android:background="#77000000"
+        >
+        <LinearLayout
+            android:id="@+id/custom_select_pic_preview_bottom_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            >
+
+            <TextView
+                android:id="@+id/custom_select_pic_preview_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:text="100"
+                android:gravity="center"
+                android:textColor="@color/pure_white"
+                android:visibility="invisible"
+                />
+
+            <TextView
+                android:id="@+id/custom_select_pic_preview_complete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="完成"
+                android:gravity="center"
+                android:textSize="16sp"
+                />
+
+
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout><!-- From: file:/Users/Wuquancheng/Documents/workspace/ChEdu/Android/Express/Library/src/main/res/layout/activity_custom_select_pic_preview.xml -->

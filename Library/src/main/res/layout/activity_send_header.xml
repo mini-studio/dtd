@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/send_view_header"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@color/translucent">
+        <LinearLayout android:layout_height="wrap_content"
+                      android:layout_width="match_parent"
+                      android:layout_marginLeft="10dp"
+                      android:layout_marginRight="10dp"
+                      android:orientation="vertical">
+            <!--banner 图片-->
+            <View android:layout_width="fill_parent"
+                  android:layout_height="8dp"
+                />
+            <include android:id="@+id/viewBannerLayout"
+                     android:layout_width="match_parent"
+                     android:layout_height="200dp"
+                     layout="@layout/view_feed_banner"/>
+
+        </LinearLayout>
+</LinearLayout>

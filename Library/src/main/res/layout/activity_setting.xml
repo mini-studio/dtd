@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/activity_background_color">
+    <ScrollView android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:layout_marginTop="48dp">
+    <LinearLayout
+        android:id="@+id/profile_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <View android:layout_height="30dp"
+              android:layout_width="match_parent"/>
+        <LinearLayout
+            android:id="@+id/layout_clear_cache"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:orientation="horizontal"
+            android:background="@color/wrm_bg_white">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_gravity="center_vertical"
+                android:gravity="center|left"
+                android:layout_marginLeft="20dp"
+                android:text="关于我们"
+                android:textColor="@color/common_grey"
+                android:textSize="20sp" />
+            <ImageView android:layout_height="wrap_content"
+                       android:layout_width="wrap_content"
+                       android:layout_marginLeft="-30dp"
+                       android:src="@drawable/icon_arrow_right"
+                       android:layout_gravity="center_vertical|right"
+                />
+        </LinearLayout>
+
+        <View android:layout_width="match_parent"
+              android:layout_height="10dp"/>
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="44dp"
+            android:orientation="horizontal"
+            android:id="@+id/layout_feedback"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:background="@color/wrm_bg_white">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="58dp"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_vertical"
+                android:gravity="left|center_vertical"
+                android:layout_marginLeft="20dp"
+                android:text="用户反馈"
+                android:textColor="@color/common_grey"
+                android:textSize="20sp" />
+            <ImageView android:layout_height="wrap_content"
+                       android:layout_width="wrap_content"
+                       android:layout_marginLeft="-30dp"
+                       android:src="@drawable/icon_arrow_right"
+                       android:layout_gravity="center_vertical|right"
+                />
+        </LinearLayout>
+
+    </LinearLayout>
+    </ScrollView>
+    <include
+        android:id="@+id/profile_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        layout="@layout/activity_title" />
+</RelativeLayout>
