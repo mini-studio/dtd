@@ -49,25 +49,19 @@ public class CEApplication extends MiniApplication {
             MiniLogger.get().e(e);
         }
         MiniTLocationManager.instanceOf(this).start();
-        //String token = MiniSharedPreferences.instance().getString("token",null);
-        //if (token == null) {
-            XGPushManager.registerPush(this, new XGIOperateCallback() {
-                @Override
-                public void onSuccess(Object o, int i) {
-                    String token = o.toString();
-                    MiniSharedPreferences.instance().setString("token", token);
-                    MiniLogger.get().d("token is :" + token);
-                    new CEApi().uploadToken();
-                }
-                @Override
-                public void onFail(Object o, int i, String s) {
-                    MiniLogger.get().e("token error: %s", o.toString());
-                }
-            });
-        //}
-        //else {
-        //    new CEApi().uploadToken();
-        //}
+        XGPushManager.registerPush(this, new XGIOperateCallback() {
+            @Override
+            public void onSuccess(Object o, int i) {
+                String token = o.toString();
+                MiniSharedPreferences.instance().setString("token", token);
+                MiniLogger.get().d("token is :" + token);
+                new CEApi().uploadToken();
+            }
+            @Override
+            public void onFail(Object o, int i, String s) {
+                MiniLogger.get().e("token error: %s", o.toString());
+            }
+        });
     }
 
     public void onTerminate() {

@@ -106,9 +106,12 @@ public class CEApi {
                 User user = null;
                 if (error == null) {
                     user = User.fromString(data,phone);
+                    listener.onResponse(user, error);
                     uploadToken();
                 }
-                listener.onResponse(user, error);
+                else {
+                    listener.onResponse(user, error);
+                }
             }
         }, loginInfo);
         this.requestQueue.add(request);
