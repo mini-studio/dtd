@@ -161,7 +161,7 @@ public class ExBecomeDispatcherActivity extends MNActivityBase {
     @Action(R.id.line_bank_card_layout)
     public void actionForUploadBankCard() {
         User user = WHO();
-        if ("1".equals(user.getCard())) {
+        if ("1".equals(user.getBankCard())) {
         pickImage(new MiniPickImageListener() {
             @Override
             public void onPickImage(String file) {
