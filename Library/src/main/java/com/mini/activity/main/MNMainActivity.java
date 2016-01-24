@@ -3,6 +3,7 @@ package com.mini.activity.main;
 import android.annotation.TargetApi;
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
@@ -100,27 +101,31 @@ public class MNMainActivity extends Activity {
             return;
         }
         int[] pics = new int[]{R.drawable.one, R.drawable.two, R.drawable.three};
+        String[] colors = new String[] {"#0c1623","#038dc0","#e8b013"};
         for (int i = 0; i < pics.length; i++) {
             View page = LayoutInflater.from(this).inflate(R.layout.view_splash_pager, null);
+            page.setBackgroundColor(Color.parseColor(colors[i]));
             ImageView pageBg = (ImageView) (page.findViewById(R.id.introduce_content_bg));
             pageBg.setBackgroundResource(pics[i]);
+            if (i == pics.length - 1) {
+                View view = page.findViewById(R.id.login_main_login_btn);
+                view.setVisibility(View.VISIBLE);
+                view.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        MiniSharedPreferences.instance().setInt("first_run",1);
+                        dispatch();
+                    }
+                });
+            }
             imageViews.add(page);
         }
-        View page = LayoutInflater.from(this).inflate(R.layout.view_splash_pager, null);
-        ImageView pageBg = (ImageView) (page.findViewById(R.id.introduce_content_bg));
-        pageBg.setBackgroundResource(pics[2]);
-        pageBg.setImageAlpha(100);
-        imageViews.add(page);
     }
 
     class SplashPageChangeListener implements ViewPager.OnPageChangeListener {
 
         @Override
         public void onPageScrolled(int i, float v, int i1) {
-            if ((i == imageViews.size() - 2) && (v > 0)) {
-                MiniSharedPreferences.instance().setInt("first_run",1);
-                dispatch();
-            }
         }
 
         @Override

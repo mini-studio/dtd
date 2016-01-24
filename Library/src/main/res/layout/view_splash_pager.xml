@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-                android:background="@color/translucent"
+    android:background="@color/translucent"
     android:orientation="vertical">
 
     <LinearLayout
@@ -10,30 +10,29 @@
         android:layout_height="match_parent"
         android:background="@color/translucent"
         android:orientation="vertical">
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+        <org.mini.frame.view.MiniSmartImageView
+            android:id="@+id/introduce_content_bg"
             android:background="@color/translucent"
-            android:layout_gravity="center">
-            <ImageView
-                android:id="@+id/introduce_content_bg"
-                android:background="@color/translucent"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:scaleType="fitXY"
-                android:layout_gravity="center" />
-        </LinearLayout>
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center"
+            android:scaleType="fitXY"/>
     </LinearLayout>
 
     <Button
         android:id="@+id/login_main_login_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
         android:layout_alignParentBottom="true"
         android:layout_centerInParent="true"
-        android:layout_marginBottom="42dp"
-        android:text="立即体验"
+        android:layout_marginBottom="80dp"
+        android:text="开始赚钱"
         android:textColor="#ffffff"
+        android:background="@drawable/round_corner_white_shape"
         android:textSize="21sp"
         android:visibility="gone" />
 

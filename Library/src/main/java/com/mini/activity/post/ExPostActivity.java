@@ -62,7 +62,8 @@ public class ExPostActivity extends MNActivityBase {
     @Override
     protected void loadView() {
         this.setContentView(R.layout.activity_post);
-        this.setTitle("发件");
+        //this.setTitle("发件");
+        this.setTitleMidImage(R.drawable.asf_03);
         city = CESystem.instance().getCurrentCity();
         this.setLeftTitleImage(R.drawable.location);
         this.setNaviLeftTitle(city.getName());

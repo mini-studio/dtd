@@ -38,7 +38,8 @@ public class ExProfileActivity extends MNActivityBase {
     @Override
     protected void loadView() {
         this.setContentView(R.layout.activity_profile);
-        this.setTitle("我的");
+        //this.setTitle("我的");
+        this.setTitleMidImage(R.drawable.asf_03);
         this.hiddenLeftBackButton();
         this.initView();
     }
