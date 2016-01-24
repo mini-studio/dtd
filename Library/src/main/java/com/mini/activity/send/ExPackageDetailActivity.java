@@ -7,6 +7,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import com.mini.R;
+import com.mini.activity.comm.ExPayActivity;
 import com.mini.activity.comm.MNActivityBase;
 import com.mini.activity.main.MNSigninActivity;
 import com.mini.activity.profile.ExBecomeDispatcherActivity;
@@ -83,6 +84,7 @@ public class ExPackageDetailActivity extends MNActivityBase {
     private void initView() {
         this.findViewById(R.id.button_contact, this);
         this.findViewById(R.id.button_task, this);
+        this.findViewById(R.id.button_pay, this);
         this.get_time_view = (TextView)this.findViewById(R.id.get_time_view, this);
         this.get_dest_view = (TextView)this.findViewById(R.id.get_dest_view, this);
         this.income_view = (TextView)this.findViewById(R.id.income_view, this);
@@ -164,6 +166,7 @@ public class ExPackageDetailActivity extends MNActivityBase {
             }
             else if ("1".equals(status)) {
                 message = "提示：您的快件已生成，请耐心等待送件人联系您。";
+                this.findViewById(R.id.status_e_0).setVisibility(View.VISIBLE);
             }
             else if ("2".equals(status)) {
                 message = "提示：当您的送件人完成此笔快件后，您需要将送件码"+this.packageInfo.getKey()+"发送给他，同时他将得到"+this.packageInfo.getIncoming()+"送件费。";
@@ -213,6 +216,11 @@ public class ExPackageDetailActivity extends MNActivityBase {
     @Action(R.id.button_contact)
     public void actionContact() {
         MiniSystemHelper.call(packageInfo.getSource_phone(), ExPackageDetailActivity.this);
+    }
+
+    @Action(R.id.button_pay)
+    public void actionPay() {
+        startActivity(ExPayActivity.class, packageInfo);
     }
 
     @ActivityResult(REQ_LOGIN)

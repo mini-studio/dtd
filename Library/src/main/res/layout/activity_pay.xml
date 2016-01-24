@@ -88,7 +88,7 @@
                         android:layout_height="fill_parent"
                         android:layout_width="wrap_content"/>
                     <TextView
-                        android:id="@+id/package_pay"
+                        android:id="@+id/package_price"
                         android:text="120元"
                         android:textColor="@color/red"
                         android:textSize="20dp"
@@ -122,6 +122,7 @@
                     android:layout_width="fill_parent"
                     android:layout_height="0.5dp"/>
                 <RelativeLayout
+                    android:id="@+id/layout_wx_pay"
                     android:layout_marginTop="10dp"
                     android:orientation="horizontal"
                     android:layout_width="fill_parent"
@@ -132,13 +133,13 @@
                         android:textColor="@color/black"
                         android:layout_height="fill_parent"
                         android:layout_width="wrap_content"/>
-                    <Button
+                    <ImageView
                         android:layout_width="25dp"
                         android:layout_height="25dp"
                         android:layout_alignParentEnd="true"
                         android:layout_centerVertical="true"
                         android:id="@+id/wx_pay"
-                        android:background="@drawable/pay_btn_background"
+                        android:background="@drawable/a"
                         />
                 </RelativeLayout>
                 <View
@@ -147,6 +148,7 @@
                     android:layout_width="fill_parent"
                     android:layout_height="0.5dp"/>
                 <RelativeLayout
+                    android:id="@+id/layout_ali_pay"
                     android:layout_marginTop="10dp"
                     android:orientation="horizontal"
                     android:layout_width="fill_parent"
@@ -157,16 +159,28 @@
                         android:textColor="@color/black"
                         android:layout_height="fill_parent"
                         android:layout_width="wrap_content"/>
-                    <Button
+                    <ImageView
                         android:layout_width="25dp"
                         android:layout_height="25dp"
                         android:layout_alignParentEnd="true"
                         android:layout_centerVertical="true"
                         android:id="@+id/ali_pay"
-                        android:background="@drawable/pay_btn_background"
+                        android:background="@drawable/s"
                         />
                 </RelativeLayout>
             </LinearLayout>
+
+            <Button
+                android:id="@+id/button_pay"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:text="确认支付"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                android:background="@drawable/btn2"/>
         </LinearLayout>
     </ScrollView>
     <include

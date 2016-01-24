@@ -209,6 +209,10 @@
             android:name=".activity.post.ExEditorActivity"
             android:screenOrientation="portrait" />
 
+        <activity
+            android:name=".activity.comm.ExPayActivity"
+            android:screenOrientation="portrait" />
+
         <!--信鸽-->
         <activity
             android:name="com.tencent.android.tpush.XGPushActivity"
