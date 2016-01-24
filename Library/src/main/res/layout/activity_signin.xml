@@ -45,7 +45,7 @@
                     <org.mini.frame.view.MiniCustomDeleteEdit
                         android:id="@+id/sigin_user_name"
                         android:layout_width="fill_parent"
-                        android:layout_height="38dp"
+                        android:layout_height="44dp"
                         android:layout_marginLeft="37dp"
                         android:layout_marginRight="37dp"
                         android:layout_marginTop="33dp"
@@ -74,7 +74,7 @@
                     <org.mini.frame.view.MiniCustomDeleteEdit
                         android:id="@+id/sigin_passwd"
                         android:layout_width="match_parent"
-                        android:layout_height="38dp"
+                        android:layout_height="44dp"
                         android:layout_marginLeft="37dp"
                         android:layout_marginRight="37dp"
                         android:layout_marginTop="5dp"
@@ -96,12 +96,12 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:layout_marginTop="30dp">
+                    android:layout_marginTop="20dp">
 
                     <Button
                         android:id="@+id/sigin_button"
                         android:layout_width="match_parent"
-                        android:layout_height="38dp"
+                        android:layout_height="44dp"
                         android:layout_gravity="center_vertical|center"
                         android:layout_marginBottom="20dp"
                         android:layout_marginLeft="37dp"
@@ -111,7 +111,7 @@
                         android:background="@drawable/btn2"
                         android:textColor="@drawable/login_text_shape_selector"
                         android:text="登录"
-                        android:textSize="17sp" />
+                        android:textSize="22sp" />
                     <TextView android:id="@+id/forgot_passwd"
                               android:layout_width="100dp"
                               android:layout_height="30dp"

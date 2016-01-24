@@ -151,8 +151,9 @@ public class ExPackageDetailActivity extends MNActivityBase {
             currentUid = user.getUid();
         }
         String status = this.packageInfo.getStatus();
-        String message = "";
-        if (this.from == 0) {
+        String message;
+        //从首页列表跳转过来、并且不是当前用户发送的快件
+        if (user == null) {
             message = "提示：完成此笔订单，您将得到" + this.packageInfo.getIncoming()+"送件费";
             this.findViewById(R.id.status_ne_10).setVisibility(View.VISIBLE);
         }
@@ -181,7 +182,11 @@ public class ExPackageDetailActivity extends MNActivityBase {
             }
         }
         else {
-            if ("2".equals(status)) {
+            if ("1".equals(status)) {
+                message = "提示：完成此笔订单，您将得到" + this.packageInfo.getIncoming()+"送件费";
+                this.findViewById(R.id.status_ne_10).setVisibility(View.VISIBLE);
+            }
+            else if ("2".equals(status)) {
                 message = "提示：目前订单为未付费状态，请尽快联系发件人付费，只有在发件人付费并且您成功把快件送达后您才能得到"+this.packageInfo.getIncoming()+"送件费";
                 this.findViewById(R.id.status_ne_1).setVisibility(View.VISIBLE);
                 this.findViewById(R.id.button_ne_complete, this);
