@@ -13,30 +13,23 @@ android {
     }
 
     signingConfigs {
-        teacher{
-            storeFile file("EduTeacherKey")
-            storePassword "000000"
-            keyAlias "eduteacherkey"
-            keyPassword "000000"
-        }
-
-        parents{
-            storeFile file("EduParentKey")
-            storePassword "000000"
-            keyAlias "eduparentkey"
-            keyPassword "000000"
+        dtd{
+            storeFile file("express")
+            storePassword "123456"
+            keyAlias "express"
+            keyPassword "123456"
         }
     }
 
     buildTypes {
         release {
-            signingConfig  signingConfigs.teacher
+            signingConfig  signingConfigs.dtd
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
 
         debug {
-            signingConfig  signingConfigs.teacher
+            signingConfig  signingConfigs.dtd
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
