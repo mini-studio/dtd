@@ -5,8 +5,8 @@ import java.net.URLDecoder;
 
 import android.content.Context;
 
-import com.mini.core.pay.CEPayConstants;
-import com.mini.core.pay.CEPayListener;
+import com.mini.core.pay.PayConstants;
+import com.mini.core.pay.PayListener;
 import com.tencent.mm.sdk.modelpay.PayReq;
 import com.tencent.mm.sdk.openapi.IWXAPI;
 import com.tencent.mm.sdk.openapi.WXAPIFactory;
@@ -18,7 +18,7 @@ public class CHWxpayManager{
 	
 	private IWXAPI wxApi = null;
 	
-	public CEPayListener listener = null;
+	public PayListener listener = null;
 	//-----------------------------------------------------------------
 	//单例
 	private volatile static CHWxpayManager wx_share = null;
@@ -59,7 +59,7 @@ public class CHWxpayManager{
 			{
 				if(this.listener != null)
 				{
-					this.listener.chPayDidCompleted(CEPayConstants.kCHPayTypeWeixin, CEPayConstants.kCHPayResultNotInstall,0, "");
+					this.listener.onPayCompleted(PayConstants.kCHPayTypeWeixin, PayConstants.kCHPayResultNotInstall, 0, "");
 				}
 		
 				return ;
@@ -68,7 +68,7 @@ public class CHWxpayManager{
 			{
 				if(this.listener != null)
 				{
-					this.listener.chPayDidCompleted(CEPayConstants.kCHPayTypeWeixin, CEPayConstants.kCHPayResultNotSupportApi,0, "");
+					this.listener.onPayCompleted(PayConstants.kCHPayTypeWeixin, PayConstants.kCHPayResultNotSupportApi, 0, "");
 				}
 	
 				return ;

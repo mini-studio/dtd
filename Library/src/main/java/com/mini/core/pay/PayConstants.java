@@ -1,6 +1,6 @@
 package com.mini.core.pay;
 
-public class CEPayConstants {
+public class PayConstants {
 	
 	//支付宝支付
 	public static int kCHPayTypeAlipay = 0;

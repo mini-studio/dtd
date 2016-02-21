@@ -4,8 +4,8 @@ import android.content.Intent;
 
 import com.mini.R;
 import com.mini.activity.comm.MNActivityBase;
-import com.mini.core.pay.CEPayConstants;
-import com.mini.core.pay.alipay.CEAlipayManager;
+import com.mini.core.pay.PayConstants;
+import com.mini.core.pay.alipay.Alipay;
 import com.mini.core.pay.wxpay.CHWxpayManager;
 import com.tencent.mm.sdk.modelbase.BaseReq;
 import com.tencent.mm.sdk.modelbase.BaseResp;
@@ -56,9 +56,9 @@ public class WXPayEntryActivity extends MNActivityBase implements IWXAPIEventHan
         errStr = "";
 
       if (resp.errCode == 0) {
-        CEAlipayManager.shard().listener.chPayDidCompleted(CEPayConstants.kCHPayTypeWeixin, CEPayConstants.kCHPayResultSuccess, resp.errCode, errStr);
+        //Alipay.shard().listener.chPayDidCompleted(PayConstants.kCHPayTypeWeixin, PayConstants.kCHPayResultSuccess, resp.errCode, errStr);
       } else {
-        CEAlipayManager.shard().listener.chPayDidCompleted(CEPayConstants.kCHPayTypeWeixin, CEPayConstants.kCHPayResultFailure, resp.errCode, errStr);
+        //Alipay.shard().listener.chPayDidCompleted(PayConstants.kCHPayTypeWeixin, PayConstants.kCHPayResultFailure, resp.errCode, errStr);
       }
     }
     finish();

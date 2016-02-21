@@ -22,6 +22,10 @@ import com.mini.core.api.data.PackageInfoWrapper;
 import com.mini.core.api.engine.CEApi;
 import com.mini.core.exception.CEDataException;
 import com.mini.core.kit.LocationKit;
+import com.mini.core.pay.PayConstants;
+import com.mini.core.pay.PayListener;
+import com.mini.core.pay.alipay.Alipay;
+import com.mini.core.pay.alipay.Order;
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
 
 import org.mini.frame.activity.base.MiniIntent;
@@ -51,6 +55,8 @@ public class ExPayActivity extends MNActivityBase {
     private TextView package_price;
     private ImageView wx_pay;
     private ImageView ali_pay;
+    // 0 微信 1 支付宝
+    private int payMethod = 0;
 
     @Override
     protected void loadView() {
@@ -94,9 +100,11 @@ public class ExPayActivity extends MNActivityBase {
     private void setPayMethod(ImageView imageView) {
         imageView.setBackgroundResource(R.drawable.a);
         if (imageView == wx_pay) {
+            payMethod = 0;
             imageView = ali_pay;
         }
         else {
+            payMethod = 1;
             imageView = wx_pay;
         }
         imageView.setBackgroundResource(R.drawable.s);
@@ -114,7 +122,33 @@ public class ExPayActivity extends MNActivityBase {
 
     @Action(R.id.button_pay)
     public void actionPay() {
+        if (0 == payMethod) { //微信支付
 
+        }
+        else  { //支付宝支付
+            Order order = new Order();
+            order.setProductName("当天到快件订单");
+            order.setProductDescription("当天到快件订单");
+            order.setAmount("0.01");
+            order.setTradeNO(this.packageInfo.getOrder_number());
+            order.setNotifyURL("http://api.dtd.la/index.php/gindex/alipay");
+            try {
+                new Alipay().pay(this, order, new PayListener() {
+                    @Override
+                    public void onPayCompleted(int type, int result, int errcode, String desc) {
+                        if (result == PayConstants.kCHPayResultSuccess) {
+                            showMessage("支付成功");
+                        }
+                        else {
+                            showMessage(desc);
+                        }
+                    }
+                });
+            }
+            catch (Exception e) {
+                showError(e);
+            }
+        }
     }
 
 }

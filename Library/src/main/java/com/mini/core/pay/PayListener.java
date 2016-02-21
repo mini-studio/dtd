@@ -1,7 +1,7 @@
 package com.mini.core.pay;
 
 //支付完成侦听接口
-public interface CEPayListener {
+public interface PayListener {
 	//支付完成
 	/*
 	 * @param
@@ -10,5 +10,5 @@ public interface CEPayListener {
 	 * errcode 返回错误码
 	 * desc    返回错误描述
 	 */
-	 void chPayDidCompleted(int type, int result, int errcode, String desc);
+	 void onPayCompleted(int type, int result, int errcode, String desc);
 }
