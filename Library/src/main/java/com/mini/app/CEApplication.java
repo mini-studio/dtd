@@ -48,7 +48,6 @@ public class CEApplication extends MiniApplication {
         } catch (Exception e) {
             MiniLogger.get().e(e);
         }
-        MiniTLocationManager.instanceOf(this).start();
         XGPushManager.registerPush(this, new XGIOperateCallback() {
             @Override
             public void onSuccess(Object o, int i) {

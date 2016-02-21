@@ -1,6 +1,5 @@
 package com.mini.activity.post;
 
-import android.app.Dialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.view.View;
@@ -13,7 +12,6 @@ import com.mini.app.CESystem;
 import com.mini.core.api.data.City;
 import com.mini.core.api.data.User;
 import com.mini.core.exception.CEDataException;
-import com.mini.core.kit.LocationKit;
 import com.mini.core.model.PostPackageInfo;
 import com.mini.core.model.PostUserInfo;
 
@@ -33,6 +31,7 @@ import static com.mini.app.CESystem.WHO;
 
 /**
  * Created by Wuquancheng on 15/10/25.
+ * 发件页面
  */
 public class ExPostActivity extends MNActivityBase {
 
@@ -93,18 +92,6 @@ public class ExPostActivity extends MNActivityBase {
         recipientInfoAddressView =(TextView)this.findViewById(R.id.recipient_info_address) ;
 
         this.package_price_text_view = (TextView)this.findViewById(R.id.package_price_text_view);
-    }
-
-    public void locateCity() {
-        if (city == null || city.isInvalid()) {
-            showWaiting("正在定位当前城市");
-            new LocationKit().locate(new LocationKit.LocationListener() {
-                @Override
-                public void locateCity(City city) {
-                    ExPostActivity.this.setCity(city);
-                }
-            });
-        }
     }
 
     @Action(R.id.poster_info)

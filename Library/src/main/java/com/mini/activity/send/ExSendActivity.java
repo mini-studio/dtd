@@ -55,7 +55,6 @@ public class ExSendActivity extends MNActivityBase {
     @Override
     protected void loadView() {
         this.setContentView(R.layout.activity_send);
-        //this.setTitle("送件");
         this.setTitleMidImage(R.drawable.asf_03);
         this.initView();
         setNaviLeftTitle("定位");
@@ -147,8 +146,14 @@ public class ExSendActivity extends MNActivityBase {
             showWaiting("正在定位当前城市");
             new LocationKit().locate(new LocationKit.LocationListener() {
                 @Override
-                public void locateCity(City city) {
-                    ExSendActivity.this.setCity(city);
+                public void locateCity(City city, String reason) {
+                    dismissWaiting();
+                    if (city != null) {
+                        ExSendActivity.this.setCity(city);
+                    }
+                    else {
+                        showMessage("定位失败，请确认打开了定位服务");
+                    }
                 }
             });
         }

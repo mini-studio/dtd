@@ -13,26 +13,29 @@ import org.mini.frame.toolkit.location.MiniTLocationManager;
 public class LocationKit {
 
     public interface LocationListener {
-        void locateCity(City city);
+        void locateCity(City city, String reason);
     }
-
-    private MiniTLocationManager miniTLocationManager = MiniTLocationManager.instanceOf();
 
     public void locate(final LocationListener locationListener) {
         MiniTLocationManager.MiniTLocationListener listener = new MiniTLocationManager.MiniTLocationListener() {
             @Override
-            public void onLocation(final MiniTLocationManager.MiniTLocationListener listener, Double longitude, Double latitude) {
-                new CEApi().currentCity(longitude, latitude, new MiniDataListener<City>() {
-                    @Override
-                    public void onResponse(City data, CEDataException error) {
-                        if (data != null) {
-                            locationListener.locateCity(data);
+            public void onLocation(final MiniTLocationManager manager, final MiniTLocationManager.MiniTLocationListener listener, Double longitude, Double latitude, int error, String reason) {
+                if (manager.hasError(error)) {
+                    locationListener.locateCity(null, manager.errorReason(error));
+                }
+                else {
+                    new CEApi().currentCity(longitude, latitude, new MiniDataListener<City>() {
+                        @Override
+                        public void onResponse(City data, CEDataException error) {
+                            if (data != null) {
+                                locationListener.locateCity(data, null);
+                            }
+                            manager.stop();
                         }
-                        miniTLocationManager.removeListener(listener);
-                    }
-                });
+                    });
+                }
             }
         };
-        miniTLocationManager.addListener(listener);
+        MiniTLocationManager.newInstance(listener).start();
     }
 }

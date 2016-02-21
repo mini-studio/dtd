@@ -10,6 +10,8 @@ import org.mini.frame.toolkit.manager.MiniAppManager;
  */
 public class MiniApplication extends Application {
 
+    public static MiniApplication sharedAppplication;
+
     protected MiniActivityManager.APP_STATUS appStatus;
 
     private String mode = null;
@@ -22,9 +24,11 @@ public class MiniApplication extends Application {
 
     public void onCreate() {
         super.onCreate();
+        sharedAppplication = this;
     }
 
     public void onTerminate() {
+        sharedAppplication = null;
         super.onTerminate();
     }
 

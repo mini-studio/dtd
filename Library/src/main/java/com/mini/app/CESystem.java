@@ -30,6 +30,8 @@ public class CESystem implements Serializable {
 
     private City currentCity;
 
+    private Double longitude, latitude;
+
     private static User user;
 
     private CESystem(CEApplication application, String appTypeConfig) {
@@ -50,6 +52,10 @@ public class CESystem implements Serializable {
         return message;
     }
 
+    public static CESystem sharedInstance() {
+        return instance;
+    }
+
     private void init() {
         MiniFramework.appShortName = "mini-express";
         ImageLoader.getInstance().init(ImageLoaderConfiguration.createDefault(application));
@@ -67,6 +73,8 @@ public class CESystem implements Serializable {
         }
         return instance;
     }
+
+
 
     private void deinit() {
         this.application = null;
@@ -142,5 +150,21 @@ public class CESystem implements Serializable {
 
     public void setCurrentCity(City currentCity) {
         this.currentCity = currentCity;
+    }
+
+    public Double getLongitude() {
+        return longitude;
+    }
+
+    public void setLongitude(Double longitude) {
+        this.longitude = longitude;
+    }
+
+    public Double getLatitude() {
+        return latitude;
+    }
+
+    public void setLatitude(Double latitude) {
+        this.latitude = latitude;
     }
 }

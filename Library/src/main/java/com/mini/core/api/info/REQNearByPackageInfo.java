@@ -1,6 +1,7 @@
 package com.mini.core.api.info;
 
 import com.mini.activity.comm.MNCityPickerActivity;
+import com.mini.app.CESystem;
 import com.mini.core.api.data.City;
 import com.mini.core.api.data.Location;
 
@@ -17,9 +18,13 @@ import java.util.Map;
 public class REQNearByPackageInfo extends MiniREQBaseInfo {
 
     City city;
+    Double longitude;
+    Double latitude;
 
     public REQNearByPackageInfo(City city) {
         this.city = city;
+        this.longitude = CESystem.sharedInstance().getLongitude();
+        this.latitude = CESystem.sharedInstance().getLatitude();
     }
 
     @Override
@@ -31,9 +36,6 @@ public class REQNearByPackageInfo extends MiniREQBaseInfo {
         else {
             stringBuilder.append(city.getCode());
         }
-        MiniTLocationManager locationManager = MiniTLocationManager.instanceOf();
-        Double longitude = locationManager.getLongitude();
-        Double latitude = locationManager.getLatitude();
         if (latitude != null && longitude != null) {
             stringBuilder.append("/").append(longitude).append("/").append(latitude);
         }

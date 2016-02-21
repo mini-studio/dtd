@@ -1,5 +1,6 @@
 package com.mini.core.api.info;
 
+import com.mini.app.CESystem;
 import com.mini.core.api.data.City;
 import com.mini.core.api.data.Location;
 
@@ -16,9 +17,12 @@ import java.util.Map;
 public class REQPackageDetailInfo extends MiniREQBaseInfo {
 
     String id;
+    Double longitude, latitude;
 
     public REQPackageDetailInfo(String id) {
         this.id = id;
+        this.longitude = CESystem.sharedInstance().getLongitude();
+        this.latitude = CESystem.sharedInstance().getLatitude();
     }
 
     @Override
@@ -29,9 +33,6 @@ public class REQPackageDetailInfo extends MiniREQBaseInfo {
         if (lng != -1) {
             stringBuilder.append("/").append(lng);
         }
-        MiniTLocationManager locationManager = MiniTLocationManager.instanceOf();
-        Double longitude = locationManager.getLongitude();
-        Double latitude = locationManager.getLatitude();
         if (latitude != null && longitude != null) {
             stringBuilder.append("/").append(longitude).append("/").append(latitude);
         }
