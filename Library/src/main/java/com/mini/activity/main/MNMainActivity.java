@@ -44,7 +44,6 @@ public class MNMainActivity extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         this.setContentView(R.layout.activity_main);
-        MiniSharedPreferences.instance().setInt("first_run", 0);
         mSplashImage = (ImageView) findViewById(R.id.splash_image);
         mSplashImage.setImageResource(R.drawable.default_image);
         mViewPager = (ViewPager)findViewById(R.id.splash_viewpager);

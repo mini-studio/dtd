@@ -240,7 +240,7 @@
                               android:layout_width="match_parent"
                               android:gravity="center_vertical|left"
                               android:text="送货时间："
-                              android:textColor="@color/common_black"
+                              android:textColor="#6d6d6d"
                               android:textSize="20dp"
                         />
                 </LinearLayout>
@@ -280,7 +280,7 @@
                         android:orientation="horizontal">
                         <TextView android:layout_height="40dp"
                                   android:layout_width="wrap_content"
-                                  android:text="快件信息:"
+                                  android:text="快件信息："
                                   android:gravity="center_vertical|left"
                                   android:textSize="20dp"
                                   android:textColor="@color/common_black"/>
@@ -298,7 +298,7 @@
                                   android:orientation="horizontal">
                         <TextView android:layout_height="40dp"
                                   android:layout_width="wrap_content"
-                                  android:text="物品重量:"
+                                  android:text="物品重量："
                                   android:gravity="center_vertical|left"
                                   android:textSize="20dp"
                                   android:textColor="@color/common_black"/>
@@ -308,6 +308,64 @@
                                   android:text="5.00kg"
                                   android:gravity="center_vertical|left"
                                   android:textColor="#6d6d6d"
+                                  android:textSize="20dp"/>
+                    </LinearLayout>
+                    <LinearLayout android:layout_height="40dp"
+                                  android:layout_width="fill_parent"
+                                  android:layout_marginTop="6dp"
+                                  android:orientation="horizontal">
+                        <TextView android:layout_height="40dp"
+                                  android:layout_width="wrap_content"
+                                  android:text="订单号："
+                                  android:gravity="center_vertical|left"
+                                  android:textSize="20dp"
+                                  android:textColor="@color/common_black"/>
+                        <TextView android:id="@+id/order_no"
+                                  android:layout_height="40dp"
+                                  android:layout_width="match_parent"
+                                  android:text=""
+                                  android:gravity="center_vertical|left"
+                                  android:textColor="#6d6d6d"
+                                  android:textSize="20dp"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <View android:layout_width="match_parent"
+                  android:layout_height="10dp"/>
+            <!--送件方式-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/white"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@color/white"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp">
+                    <LinearLayout android:layout_height="30dp"
+                                  android:layout_width="fill_parent"
+                                  android:orientation="horizontal">
+                        <TextView android:layout_height="30dp"
+                                  android:layout_width="wrap_content"
+                                  android:text="送件方式："
+                                  android:gravity="center_vertical|left"
+                                  android:textSize="20dp"
+                                  android:textColor="#ECA127"/>
+                        <TextView android:id="@+id/deliver_info"
+                                  android:layout_height="30dp"
+                                  android:layout_width="match_parent"
+                                  android:text=""
+                                  android:gravity="center_vertical|left"
+                                  android:textColor="#ECA127"
                                   android:textSize="20dp"/>
                     </LinearLayout>
 
@@ -450,6 +508,34 @@
                         android:layout_height="40dp"
                         android:layout_width="fill_parent"
                         android:text="付款"
+                        android:layout_weight="1"
+                        android:textSize="20dp"
+                        android:background="@drawable/btn1"
+                        android:textColor="@drawable/login_text_shape_selector"/>
+            </LinearLayout>
+            <!--我的订单 已接单未付款-->
+            <LinearLayout android:id="@+id/status_e_2"
+                          android:visibility="gone"
+                          android:layout_height="wrap_content"
+                          android:layout_width="fill_parent"
+                          android:orientation="horizontal"
+                          android:weightSum="2.05"
+                          android:layout_marginTop="30dp"
+                          android:layout_marginLeft="10dp"
+                          android:layout_marginRight="10dp">
+                <Button android:id="@+id/button_contact_dispatcher_2"
+                        android:layout_height="40dp"
+                        android:layout_width="fill_parent"
+                        android:text="联系送件人"
+                        android:textSize="20dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/btn1"
+                        android:textColor="@drawable/login_text_shape_selector"/>
+                <Button android:id="@+id/button_pay_2"
+                        android:layout_height="40dp"
+                        android:layout_width="fill_parent"
+                        android:layout_marginLeft="10dp"
+                        android:text="付费"
                         android:layout_weight="1"
                         android:textSize="20dp"
                         android:background="@drawable/btn1"

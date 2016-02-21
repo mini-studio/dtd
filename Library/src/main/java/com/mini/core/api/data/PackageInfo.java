@@ -37,10 +37,11 @@ public class PackageInfo {
     private String destination_address;
     private String name;
     private String weight;
-    /**快件费用*/
+    /**
+     * 快件费用
+     */
     private String price;
     private String status;
-    private String receive_uid;
     private String key;
     private String order_number;
     private String create_time;
@@ -48,6 +49,24 @@ public class PackageInfo {
     private String finish_time;
     private String distance;
     private String incoming;
+
+    /**
+     * 接单人id
+     */
+    private String receive_uid;
+
+    /**
+     * 接单人电话
+     */
+    private String receive_phone;
+    /**
+     * 邮递方式
+     */
+    private String deliver_way;
+    /**
+     * 邮递信息
+     */
+    private String deliver_info;
 
     /**
      * 0 附近订单
@@ -296,6 +315,7 @@ public class PackageInfo {
 
     /**
      * 订单状态，0=提交未付费，1=发布已付费，2=已接单，3=已到货，4=已完成，5=已过期
+     *
      * @return
      */
     public String getStatusDesc(int orderType) {
@@ -313,8 +333,7 @@ public class PackageInfo {
             } else {
                 return "";
             }
-        }
-        else {//我发布的单
+        } else {//我发布的单
             if ("2".equals(this.status)) {
                 return "已接单";
             } else if ("0".equals(this.status)) {
@@ -348,5 +367,34 @@ public class PackageInfo {
 
     public void setOrderType(int orderType) {
         this.orderType = orderType;
+    }
+
+    public String getDeliver_way() {
+        return deliver_way;
+    }
+
+    public void setDeliver_way(String deliver_way) {
+        this.deliver_way = deliver_way;
+    }
+
+    public String getDeliver_info() {
+        return deliver_info;
+    }
+
+    public void setDeliver_info(String deliver_info) {
+        this.deliver_info = deliver_info;
+    }
+
+    public String getDeliverInfo() {
+        return ("1".equals(this.deliver_way)?"火车":"飞机") + this.deliver_info;
+
+    }
+
+    public String getReceive_phone() {
+        return receive_phone;
+    }
+
+    public void setReceive_phone(String receive_phone) {
+        this.receive_phone = receive_phone;
     }
 }

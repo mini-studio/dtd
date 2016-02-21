@@ -68,6 +68,10 @@ public class ExPackageDetailActivity extends MNActivityBase {
     private TextView package_weight;
     /**送货时间*/
     private TextView send_time_view;
+    /**订单号*/
+    private TextView order_no;
+    /**邮递方式*/
+    private TextView deliver_info;
 
     private int orderType = 0;
 
@@ -100,6 +104,10 @@ public class ExPackageDetailActivity extends MNActivityBase {
 
         this.message_view = (TextView)this.findViewById(R.id.message_view);
         this.message_view_layout = this.findViewById(R.id.message_view_layout);
+
+        this.order_no = (TextView)this.findViewById(R.id.order_no);
+
+        this.deliver_info = (TextView)this.findViewById(R.id.deliver_info);
         this.loadData();
     }
 
@@ -115,17 +123,21 @@ public class ExPackageDetailActivity extends MNActivityBase {
                 else {
                     this.income_view.setText(this.packageInfo.getPrice());
                 }
-                this.sender_info_name.setText(this.packageInfo.getSource_user());
+                this.sender_info_name.setText("发件人：" + this.packageInfo.getSource_user());
                 this.sender_info_mobile.setText(this.packageInfo.getPhone());
                 this.sender_info_address.setText("发货地址：" +this.packageInfo.getSource_city() + this.packageInfo.getSource_address());
 
-                this.recipient_info_name.setText(this.packageInfo.getDestination_user());
+                this.recipient_info_name.setText("收件人：" + this.packageInfo.getDestination_user());
                 this.recipient_info_mobile.setText(this.packageInfo.getDestination_phone());
                 this.recipient_info_address.setText("收货地址：" + this.packageInfo.getDestination_city() + this.packageInfo.getDestination_address());
 
                 this.package_weight.setText(this.packageInfo.getWeight());
                 this.package_name.setText(this.packageInfo.getName());
-                this.send_time_view.setText(this.packageInfo.getSource_time());
+                this.send_time_view.setText("送件时间:" + this.packageInfo.getArrive_time());
+                //设置订单号
+                this.order_no.setText(this.packageInfo.getOrder_number());
+                //设置运送方式信息
+                this.deliver_info.setText(this.packageInfo.getDeliverInfo());
                 setMessage();
             }
         }
@@ -146,6 +158,7 @@ public class ExPackageDetailActivity extends MNActivityBase {
     }
 
     private void setMessage() {
+        //邮件的发送人
         String uid = this.packageInfo.getUid();
         User user = WHO();
         String currentUid = null;
@@ -159,31 +172,36 @@ public class ExPackageDetailActivity extends MNActivityBase {
             message = "提示：完成此笔订单，您将得到" + this.packageInfo.getIncoming()+"送件费";
             this.findViewById(R.id.status_ne_10).setVisibility(View.VISIBLE);
         }
+        //邮件人为当前用户，则为发件
         else if (uid.equals(currentUid)) {
             if ("0".equals(status)) {
                 message = "提示：为了保证您的快件能如期到达，请及时付款。";
                 this.findViewById(R.id.status_e_0).setVisibility(View.VISIBLE);
             }
-            else if ("1".equals(status)) {
+            else if ("1".equals(status)) { //订单已经生成，还没有人接单
                 message = "提示：您的快件已生成，请耐心等待送件人联系您。";
                 this.findViewById(R.id.status_e_0).setVisibility(View.VISIBLE);
             }
-            else if ("2".equals(status)) {
-                message = "提示：当您的送件人完成此笔快件后，您需要将送件码"+this.packageInfo.getKey()+"发送给他，同时他将得到"+this.packageInfo.getIncoming()+"送件费。";
+            else if ("2".equals(status)) { //已接单，需付费
+                message = "提示：请联系您的送件人后尽快付费";
+                this.findViewById(R.id.status_e_2).setVisibility(View.VISIBLE);
+                this.findViewById(R.id.button_contact_dispatcher_2, this);
+                this.findViewById(R.id.button_pay_2, this);
             }
-            else if ("3".equals(status)) {
-                message = "提示：您的快件已经送到 "+this.packageInfo.getDestination_user()+" 手中，请将收货码"+this.packageInfo.getKey()+"发送给送件人完成订单，到货48小时后系统会自动将送件费打入送件人账户，如有问题请及时联系客服。";
+            else if ("3".equals(status)) { //已接单，已付费
+                message = "提示：请联系送件人送件，只有在送件人将快件送达并且提交您给的送货码："+this.packageInfo.getKey()+" 后送件人才能完成订单并且收到送件费，在送件人未送达快件前请勿将送货码给对方";
                 this.findViewById(R.id.status_e_3).setVisibility(View.VISIBLE);
             }
-            else if ("4".equals(status)) {
-                message = "提示：您的快件已经成功完成，如有问题请及时联系客服。";
+            else if ("4".equals(status)) {//已送达
+                message = "提示：您的快件已经送到 "+this.packageInfo.getDestination_user()+" 手中，系统将在24小时内自动将送件费打入送件人账户，如有问题请及时联系客服。";
                 this.findViewById(R.id.status_e_4_null).setVisibility(View.VISIBLE);
             }
             else {
-                message = "提示：您的快件在送件时间起72小时仍未完成，请重新发件或者联系客服。";
+                message = "提示：非常抱歉，由于您的快件在"+this.packageInfo.getArrive_time()+"前三小时没人接单，此快件已经过期，请您重新发送快件以便此时段送件人能看到订单。";
                 this.findViewById(R.id.status_e_4_null).setVisibility(View.VISIBLE);
             }
         }
+        //送件
         else {
             if ("1".equals(status)) {
                 message = "提示：完成此笔订单，您将得到" + this.packageInfo.getIncoming()+"送件费";
@@ -211,6 +229,19 @@ public class ExPackageDetailActivity extends MNActivityBase {
     }
 
     /**
+     * 联系送件人
+     */
+    @Action(R.id.button_contact_dispatcher)
+    public void actionContactDispatcher() {
+        MiniSystemHelper.call(packageInfo.getReceive_phone(), ExPackageDetailActivity.this);
+    }
+
+    @Action(R.id.button_contact_dispatcher_2)
+    public void actionContactDispatcher2() {
+        MiniSystemHelper.call(packageInfo.getReceive_phone(), ExPackageDetailActivity.this);
+    }
+
+    /**
      * 联系发件人
      */
     @Action(R.id.button_contact)
@@ -218,8 +249,19 @@ public class ExPackageDetailActivity extends MNActivityBase {
         MiniSystemHelper.call(packageInfo.getSource_phone(), ExPackageDetailActivity.this);
     }
 
+    /**
+     * 支付费用
+     */
     @Action(R.id.button_pay)
     public void actionPay() {
+        startActivity(ExPayActivity.class, packageInfo);
+    }
+
+    /**
+     * 支付费用
+     */
+    @Action(R.id.button_pay_2)
+    public void actionPay2() {
         startActivity(ExPayActivity.class, packageInfo);
     }
 

@@ -83,6 +83,12 @@ public class ExPayActivity extends MNActivityBase {
                 setPayMethod(ali_pay);
             }
         });
+        if (this.packageInfo != null) {
+            this.from_city.setText(this.packageInfo.getSource_city());
+            this.to_city.setText(this.packageInfo.getDestination_city());
+            this.package_name.setText(this.packageInfo.getName());
+            this.package_price.setText(this.packageInfo.getPrice());
+        }
     }
 
     private void setPayMethod(ImageView imageView) {
