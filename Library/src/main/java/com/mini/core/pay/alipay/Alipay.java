@@ -38,7 +38,7 @@ public class Alipay {
 					String resultStatus = payResult.getResultStatus();
 	
 					// 判断resultStatus 为“9000”则代表支付成功，具体状态码代表含义可参考接口文档
-					if (TextUtils.equals(resultStatus, "9000")) {
+					if ("9000".equals(resultStatus)) {
 						if (listener != null)
 							listener.onPayCompleted(PayConstants.kCHPayTypeAlipay, PayConstants.kCHPayResultSuccess, Integer.parseInt(resultStatus), resultInfo);
 					} 
