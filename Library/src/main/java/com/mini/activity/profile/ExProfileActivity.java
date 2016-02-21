@@ -2,15 +2,13 @@ package com.mini.activity.profile;
 
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
 import com.mini.R;
 import com.mini.activity.comm.MNActivityBase;
 import com.mini.activity.main.MNSigninActivity;
-import com.mini.activity.send.ExFeedbackActivity;
-import com.mini.app.CEAppConfig;
+import com.mini.activity.order.ExOrderListIndexActivity;
 import com.mini.app.CESystem;
 import com.mini.core.api.data.User;
 
@@ -19,7 +17,6 @@ import org.mini.frame.annotation.ActivityResult;
 import org.mini.frame.toolkit.MiniSystemHelper;
 import org.mini.frame.view.MiniCustomDialog;
 import org.mini.frame.view.MiniImageView;
-import org.w3c.dom.Text;
 
 import static com.mini.app.CESystem.WHO;
 

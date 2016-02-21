@@ -103,41 +103,6 @@
             android:screenOrientation="portrait" />
 
         <activity
-            android:name=".activity.send.ExDispatchActivity"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".activity.send.ExDispatchDetailActivity"
-            android:screenOrientation="portrait" />
-
-        <activity
-            android:name=".activity.send.ExOrderDetailActivity"
-            android:screenOrientation="portrait" />
-
-        <activity
-            android:name=".activity.send.ExOrderFinishDetailActivity"
-            android:screenOrientation="portrait" />
-
-        <activity
-            android:name=".activity.send.ExSendPackageActivity"
-            android:screenOrientation="portrait" />
-
-        <activity
-            android:name=".activity.send.ExSendPackageInfoActivity"
-            android:screenOrientation="portrait" />
-
-        <activity
-            android:name=".activity.send.ExSendPackageConfirmActivity"
-            android:screenOrientation="portrait" />
-
-        <activity
-            android:name=".activity.send.ExSendPackagePaymentActivity"
-            android:screenOrientation="portrait" />
-
-        <activity
-            android:name=".activity.send.ExSendPackageSuccessActivity"
-            android:screenOrientation="portrait" />
-
-        <activity
             android:name=".activity.profile.ExProfileInfoActivity"
             android:screenOrientation="portrait" />
 
@@ -146,11 +111,11 @@
             android:screenOrientation="portrait" />
 
         <activity
-            android:name=".activity.profile.ExOrderListIndexActivity"
+            android:name=".activity.order.ExOrderListIndexActivity"
             android:screenOrientation="portrait" />
 
         <activity
-            android:name=".activity.profile.ExOrderListActivity"
+            android:name=".activity.order.ExOrderListActivity"
             android:screenOrientation="portrait" />
 
         <activity

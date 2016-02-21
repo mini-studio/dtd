@@ -1,4 +1,4 @@
-package com.mini.activity.profile;
+package com.mini.activity.order;
 
 import android.view.View;
 import android.view.ViewGroup;

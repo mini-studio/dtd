@@ -1,26 +1,9 @@
-package com.mini.activity.profile;
+package com.mini.activity.order;
 
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.AdapterView;
-import android.widget.BaseAdapter;
-import android.widget.ListView;
-import android.widget.TextView;
-
-import com.handmark.pulltorefresh.library.PullToRefreshBase;
-import com.handmark.pulltorefresh.library.PullToRefreshListView;
 import com.mini.R;
 import com.mini.activity.comm.MNActivityBase;
-import com.mini.activity.send.ExPackageDetailActivity;
-import com.mini.core.api.data.PackageInfo;
-import com.mini.core.api.data.PackageInfoWrapper;
-import com.mini.core.api.engine.CEApi;
-import com.mini.core.exception.CEDataException;
 
 import org.mini.frame.annotation.Action;
-import org.mini.frame.http.request.MiniDataListener;
-
-import static com.mini.app.CESystem.WHO;
 
 /**
  * Created by Wuquancheng on 15/10/25.

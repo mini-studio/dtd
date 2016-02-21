@@ -8,7 +8,6 @@ import android.view.KeyEvent;
 import android.widget.Toast;
 
 import com.mini.R;
-import com.mini.activity.mess.ExMessActivity;
 import com.mini.activity.profile.ExProfileActivity;
 import com.mini.activity.post.ExPostActivity;
 import com.mini.activity.send.ExSendActivity;
