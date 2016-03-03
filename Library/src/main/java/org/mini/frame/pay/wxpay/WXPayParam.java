@@ -1,7 +1,11 @@
 package org.mini.frame.pay.wxpay;
 
+import com.google.gson.Gson;
+
 import java.io.UnsupportedEncodingException;
 import java.net.URLDecoder;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * Created by Wuquancheng on 16/3/3.
@@ -71,6 +75,20 @@ public class WXPayParam {
 
     public void setTimestamp(String timestamp) {
         this.timestamp = timestamp;
+    }
+
+    public static WXPayParam fromJsonString(String jsonString) {
+        WXPayParam payParam = new WXPayParam();
+        Gson gson = new Gson();
+        Map map = gson.fromJson(jsonString, HashMap.class);
+        payParam.appid = (String)map.get("appid");
+        payParam.partnerid = (String)map.get("partnerid");
+        payParam.prepayid = (String)map.get("prepayid");
+        payParam.noncestr = (String)map.get("noncestr");
+        payParam.timestamp = (String)map.get("timestamp");
+        payParam.packageValue = (String)map.get("package");
+        payParam.sign = (String)map.get("sign");
+        return payParam;
     }
 
     public static WXPayParam fromHttpQueryString(String queryString) {

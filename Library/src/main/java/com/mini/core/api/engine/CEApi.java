@@ -5,7 +5,6 @@ import com.android.volley.toolbox.Volley;
 import com.mini.app.CEApplication;
 import com.mini.app.CESystem;
 import com.mini.core.api.data.City;
-import com.mini.core.api.data.Location;
 import com.mini.core.api.data.PackageDetailWrapper;
 import com.mini.core.api.data.PackageInfoWrapper;
 import com.mini.core.api.data.User;
@@ -30,14 +29,15 @@ import com.mini.core.api.info.REQRegisterInfo;
 import com.mini.core.api.info.REQUpdatePasswdInfo;
 import com.mini.core.api.info.REQUploadTokenInfo;
 import com.mini.core.api.info.REQVCodeInfo;
+import com.mini.core.api.info.REQWXPrePay;
 import com.mini.core.exception.CEDataException;
 import com.mini.core.model.PostPackageInfo;
 
 import org.mini.frame.http.request.MiniDataListener;
 import org.mini.frame.http.request.MiniRequest;
 import org.mini.frame.log.MiniLogger;
+import org.mini.frame.pay.wxpay.WXPayParam;
 import org.mini.frame.toolkit.MiniSharedPreferences;
-import org.mini.frame.toolkit.location.MiniTLocationManager;
 
 import static com.mini.app.CESystem.WHO;
 
@@ -225,6 +225,29 @@ public class CEApi {
     public void changEmergencyPhone(String phone, String emergencyPhone, final MiniDataListener<String> listener) {
         REQChangeMobileInfo info = new REQChangeMobileInfo(phone, emergencyPhone);
         MiniRequest request = new MiniRequest(String.class, listener, info);
+        this.requestQueue.add(request);
+    }
+
+    /**
+     * 获取微信订单的信息
+     * @param orderId
+     * @param listener
+     */
+    public void wxPayInfo(String orderId, final MiniDataListener<WXPayParam> listener) {
+        REQWXPrePay info = new REQWXPrePay(orderId);
+        MiniRequest request = new MiniRequest(String.class, new MiniDataListener<String>() {
+
+            @Override
+            public void onResponse(String data, CEDataException error) {
+                if (error == null) {
+                    WXPayParam payParam = WXPayParam.fromJsonString(data);
+                    listener.onResponse(payParam, null);
+                }
+                else {
+                    listener.onResponse(null, error);
+                }
+            }
+        }, info);
         this.requestQueue.add(request);
     }
 
