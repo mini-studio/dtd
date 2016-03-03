@@ -5,7 +5,7 @@ import android.text.TextUtils;
 /**
  * Created by Wuquancheng on 16/2/22.
  */
-public class Order {
+public class AliPayParam {
 
     private String tradeNO;
     private String productName;

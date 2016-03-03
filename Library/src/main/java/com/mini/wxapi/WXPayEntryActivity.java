@@ -4,9 +4,7 @@ import android.content.Intent;
 
 import com.mini.R;
 import com.mini.activity.comm.MNActivityBase;
-import com.mini.core.pay.PayConstants;
-import com.mini.core.pay.alipay.Alipay;
-import com.mini.core.pay.wxpay.CHWxpayManager;
+import com.mini.core.pay.wxpay.WXPay;
 import com.tencent.mm.sdk.modelbase.BaseReq;
 import com.tencent.mm.sdk.modelbase.BaseResp;
 import com.tencent.mm.sdk.openapi.IWXAPI;
@@ -20,7 +18,7 @@ public class WXPayEntryActivity extends MNActivityBase implements IWXAPIEventHan
   @Override
   protected void loadView() {
     this.setContentView(R.layout.activity_title);
-    api = WXAPIFactory.createWXAPI(this, CHWxpayManager.WX_APPID);
+    api = WXAPIFactory.createWXAPI(this, WXPay.WX_APPID);
     api.handleIntent(getIntent(), this);
   }
 
@@ -50,7 +48,7 @@ public class WXPayEntryActivity extends MNActivityBase implements IWXAPIEventHan
   @Override
   public void onResp(BaseResp resp) {
     // 成功
-    if (CHWxpayManager.shard().listener != null) {
+    if (WXPay.shard().listener != null) {
       String errStr = resp.errStr;
       if (errStr == null)
         errStr = "";

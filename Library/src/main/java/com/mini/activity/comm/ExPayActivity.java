@@ -1,41 +1,19 @@
 package com.mini.activity.comm;
 
-import android.content.Intent;
-import android.view.MotionEvent;
 import android.view.View;
-import android.view.ViewGroup;
-import android.widget.AdapterView;
-import android.widget.BaseAdapter;
-import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.ListView;
 import android.widget.TextView;
 
-import com.handmark.pulltorefresh.library.PullToRefreshBase;
-import com.handmark.pulltorefresh.library.PullToRefreshListView;
 import com.mini.R;
-import com.mini.activity.send.ExPackageDetailActivity;
 import com.mini.core.api.data.City;
-import com.mini.core.api.data.ImageInfo;
 import com.mini.core.api.data.PackageInfo;
-import com.mini.core.api.data.PackageInfoWrapper;
 import com.mini.core.api.engine.CEApi;
-import com.mini.core.exception.CEDataException;
-import com.mini.core.kit.LocationKit;
 import com.mini.core.pay.PayConstants;
 import com.mini.core.pay.PayListener;
-import com.mini.core.pay.alipay.Alipay;
-import com.mini.core.pay.alipay.Order;
-import com.nostra13.universalimageloader.core.DisplayImageOptions;
+import com.mini.core.pay.alipay.AliPayM;
+import com.mini.core.pay.alipay.AliPayParam;
 
-import org.mini.frame.activity.base.MiniIntent;
 import org.mini.frame.annotation.Action;
-import org.mini.frame.annotation.ActivityResult;
-import org.mini.frame.http.request.MiniDataListener;
-import org.mini.frame.view.MiniBannerViewPager;
-
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * Created by Wuquancheng on 15/10/25.
@@ -126,14 +104,14 @@ public class ExPayActivity extends MNActivityBase {
 
         }
         else  { //支付宝支付
-            Order order = new Order();
+            AliPayParam order = new AliPayParam();
             order.setProductName("当天到快件订单");
-            order.setProductDescription("当天到快件订单");
+            order.setProductDescription("当天到快件订单("+this.packageInfo.getSource_city()+"-"+this.packageInfo.getDestination_city()+")");
             order.setAmount("0.01");
             order.setTradeNO(this.packageInfo.getOrder_number());
             order.setNotifyURL("http://api.dtd.la/index.php/gindex/alipay");
             try {
-                new Alipay().pay(this, order, new PayListener() {
+                new AliPayM().pay(this, order, new PayListener() {
                     @Override
                     public void onPayCompleted(int type, int result, int errcode, String desc) {
                         if (result == PayConstants.kCHPayResultSuccess) {

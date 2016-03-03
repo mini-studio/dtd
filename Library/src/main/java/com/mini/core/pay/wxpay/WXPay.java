@@ -12,26 +12,26 @@ import com.tencent.mm.sdk.openapi.IWXAPI;
 import com.tencent.mm.sdk.openapi.WXAPIFactory;
 
 
-public class CHWxpayManager{
+public class WXPay {
 
-	public final static String WX_APPID = "wxfc712d240690ec76";
+	public final static String WX_APPID = WXPayParam.WX_APPID;
 	
 	private IWXAPI wxApi = null;
 	
 	public PayListener listener = null;
 	//-----------------------------------------------------------------
 	//单例
-	private volatile static CHWxpayManager wx_share = null;
+	private volatile static WXPay wx_share = null;
 	//单例
-	public static CHWxpayManager shard() 
+	public static WXPay shard()
 	{
 		if(wx_share==null)
 		{
-			synchronized(CHWxpayManager.class)
+			synchronized(WXPay.class)
 			{
 				if(wx_share==null)
 				{
-					wx_share = new CHWxpayManager();
+					wx_share = new WXPay();
 				}
 			}
 		}
@@ -39,10 +39,14 @@ public class CHWxpayManager{
 	}
 		
 	//构造函数
-	private CHWxpayManager()
+	private WXPay()
 	{
 		
 	}
+
+    public void pay(Context context, WXPayParam payParam, PayListener listener) {
+
+    }
 	//-----------------------------------------------------------------
 	//初始化
 	public void initWxPay(Context context)

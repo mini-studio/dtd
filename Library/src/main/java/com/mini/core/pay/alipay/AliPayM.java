@@ -10,19 +10,17 @@ import com.alipay.sdk.app.PayTask;
 import com.mini.core.pay.PayConstants;
 import com.mini.core.pay.PayListener;
 
-import junit.framework.Test;
-
 import java.net.URLEncoder;
 
 
 @SuppressLint("HandlerLeak")
-public class Alipay {
+public class AliPayM {
 
 	private static final int SDK_PAY_FLAG = 1;
 	
 	public PayListener listener = null;
 
-	public Alipay() {
+	public AliPayM() {
     }
 
 	private Handler mHandler = new Handler() {
@@ -81,7 +79,7 @@ public class Alipay {
 		payThread.start();
 	}
 
-    public void pay(final Activity context, final Order order, PayListener listener) throws PayException{
+    public void pay(final Activity context, final AliPayParam order, PayListener listener) throws PayException{
         String orderInfo = order.description();
         String sign = SignUtils.sign(orderInfo, Config.RSA_PRIVATE);
         try {
