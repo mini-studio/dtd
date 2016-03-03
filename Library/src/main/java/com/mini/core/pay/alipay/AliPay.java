@@ -14,13 +14,13 @@ import java.net.URLEncoder;
 
 
 @SuppressLint("HandlerLeak")
-public class AliPayM {
+public class AliPay {
 
 	private static final int SDK_PAY_FLAG = 1;
 	
 	public PayListener listener = null;
 
-	public AliPayM() {
+	public AliPay() {
     }
 
 	private Handler mHandler = new Handler() {

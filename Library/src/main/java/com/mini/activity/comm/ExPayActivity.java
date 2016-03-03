@@ -10,7 +10,7 @@ import com.mini.core.api.data.PackageInfo;
 import com.mini.core.api.engine.CEApi;
 import com.mini.core.pay.PayConstants;
 import com.mini.core.pay.PayListener;
-import com.mini.core.pay.alipay.AliPayM;
+import com.mini.core.pay.alipay.AliPay;
 import com.mini.core.pay.alipay.AliPayParam;
 
 import org.mini.frame.annotation.Action;
@@ -111,7 +111,7 @@ public class ExPayActivity extends MNActivityBase {
             order.setTradeNO(this.packageInfo.getOrder_number());
             order.setNotifyURL("http://api.dtd.la/index.php/gindex/alipay");
             try {
-                new AliPayM().pay(this, order, new PayListener() {
+                new AliPay().pay(this, order, new PayListener() {
                     @Override
                     public void onPayCompleted(int type, int result, int errcode, String desc) {
                         if (result == PayConstants.kCHPayResultSuccess) {
