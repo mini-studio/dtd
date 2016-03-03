@@ -1,4 +1,4 @@
-package com.mini.core.pay;
+package org.mini.frame.pay;
 
 public class PayConstants {
 	

@@ -1,4 +1,4 @@
-package com.mini.core.pay.alipay;
+package org.mini.frame.pay.alipay;
 
 import android.text.TextUtils;
 

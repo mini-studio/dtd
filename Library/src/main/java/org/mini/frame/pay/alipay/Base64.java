@@ -1,4 +1,4 @@
-package com.mini.core.pay.alipay;
+package org.mini.frame.pay.alipay;
 
 public final class Base64 {
 

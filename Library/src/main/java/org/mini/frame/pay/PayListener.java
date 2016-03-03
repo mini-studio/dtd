@@ -1,4 +1,4 @@
-package com.mini.core.pay;
+package org.mini.frame.pay;
 
 //支付完成侦听接口
 public interface PayListener {

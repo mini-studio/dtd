@@ -1,10 +1,12 @@
-package com.mini.wxapi;
+package com.dtdinc.dtd.wxapi;
 
 import android.content.Intent;
 
 import com.mini.R;
 import com.mini.activity.comm.MNActivityBase;
-import com.mini.core.pay.wxpay.WXPay;
+
+import org.mini.frame.pay.PayConstants;
+import org.mini.frame.pay.wxpay.WXPay;
 import com.tencent.mm.sdk.modelbase.BaseReq;
 import com.tencent.mm.sdk.modelbase.BaseResp;
 import com.tencent.mm.sdk.openapi.IWXAPI;
@@ -47,16 +49,15 @@ public class WXPayEntryActivity extends MNActivityBase implements IWXAPIEventHan
 
   @Override
   public void onResp(BaseResp resp) {
-    // 成功
-    if (WXPay.shard().listener != null) {
+    //支付回调成功
+    if (WXPay.sharedInstance().listener != null) {
       String errStr = resp.errStr;
       if (errStr == null)
         errStr = "";
-
       if (resp.errCode == 0) {
-        //Alipay.shard().listener.chPayDidCompleted(PayConstants.kCHPayTypeWeixin, PayConstants.kCHPayResultSuccess, resp.errCode, errStr);
+          WXPay.sharedInstance().listener.onPayCompleted(PayConstants.kCHPayTypeWeixin, PayConstants.kCHPayResultSuccess, resp.errCode, errStr);
       } else {
-        //Alipay.shard().listener.chPayDidCompleted(PayConstants.kCHPayTypeWeixin, PayConstants.kCHPayResultFailure, resp.errCode, errStr);
+          WXPay.sharedInstance().listener.onPayCompleted(PayConstants.kCHPayTypeWeixin, PayConstants.kCHPayResultFailure, resp.errCode, errStr);
       }
     }
     finish();

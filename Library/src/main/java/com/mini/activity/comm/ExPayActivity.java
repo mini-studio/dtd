@@ -8,10 +8,10 @@ import com.mini.R;
 import com.mini.core.api.data.City;
 import com.mini.core.api.data.PackageInfo;
 import com.mini.core.api.engine.CEApi;
-import com.mini.core.pay.PayConstants;
-import com.mini.core.pay.PayListener;
-import com.mini.core.pay.alipay.AliPay;
-import com.mini.core.pay.alipay.AliPayParam;
+import org.mini.frame.pay.PayConstants;
+import org.mini.frame.pay.PayListener;
+import org.mini.frame.pay.alipay.AliPay;
+import org.mini.frame.pay.alipay.AliPayParam;
 
 import org.mini.frame.annotation.Action;
 

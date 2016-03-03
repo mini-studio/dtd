@@ -1,4 +1,4 @@
-package com.mini.wxapi.share;
+package com.mini.core.share;
 
 import android.content.Context;
 import android.graphics.Bitmap;
@@ -75,10 +75,10 @@ public class CEWeiXinShareUtils {
      */
     public static void sendWebPage(String url, Context context, String title, String description, File imageFile, String... otherInfo) {
         if (title == null || title.length() == 0) {
-            title = "陪育100";
+            title = "";
         }
         if (description == null || description.length() == 0) {
-            description = "陪育动态";
+            description = "";
         }
         if (description.length() > 50) {
             description = description.substring(0, 47) + "...";
@@ -109,10 +109,10 @@ public class CEWeiXinShareUtils {
      */
     public static void sendWebPage_circle(String url, Context context, String title, String description, File imageFile, String... otherInfo) {
         if (title == null || title.length() == 0) {
-            title = "陪育100";
+            title = "";
         }
         if (description == null || description.length() == 0) {
-            description = "陪育动态";
+            description = "";
         }
         if (description.length() > 50) {
             description = description.substring(0, 47) + "...";

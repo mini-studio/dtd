@@ -1,4 +1,4 @@
-package com.mini.wxapi.share;
+package com.mini.core.share;
 
 import android.content.Context;
 import android.graphics.Color;

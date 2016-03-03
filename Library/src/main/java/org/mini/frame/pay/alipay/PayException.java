@@ -1,4 +1,4 @@
-package com.mini.core.pay.alipay;
+package org.mini.frame.pay.alipay;
 
 /**
  * Created by Wuquancheng on 16/2/22.

@@ -1,4 +1,4 @@
-package com.mini.core.pay.alipay;
+package org.mini.frame.pay.alipay;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
@@ -7,8 +7,8 @@ import android.os.Message;
 import android.text.TextUtils;
 
 import com.alipay.sdk.app.PayTask;
-import com.mini.core.pay.PayConstants;
-import com.mini.core.pay.PayListener;
+import org.mini.frame.pay.PayConstants;
+import org.mini.frame.pay.PayListener;
 
 import java.net.URLEncoder;
 
