@@ -8,16 +8,12 @@ import android.view.KeyEvent;
 import android.widget.Toast;
 
 import com.mini.R;
-import com.mini.activity.profile.ExProfileActivity;
-import com.mini.activity.post.ExPostActivity;
-import com.mini.activity.send.ExSendActivity;
-import com.mini.core.api.data.City;
-import com.mini.core.api.engine.CEApi;
-import com.mini.core.exception.CEDataException;
+import com.mini.activity.profile.DTDProfileActivity;
+import com.mini.activity.post.DTDPostActivity;
+import com.mini.activity.send.DTDSendActivity;
 import com.mini.core.inter.CETabActivityInter;
 
 import org.mini.frame.activity.base.MiniTabBarActivity;
-import org.mini.frame.http.request.MiniDataListener;
 import org.mini.frame.notification.NotificationCenter;
 import org.mini.frame.view.MiniTabItemView;
 
@@ -75,19 +71,19 @@ public class MNMainTabActivity extends MiniTabBarActivity {
         MiniTabItemView itemView = new MiniTabItemView(
                 this, R.drawable.send_normal,
                 R.drawable.send_selected,
-                null, ExSendActivity.class);
+                null, DTDSendActivity.class);
         itemView.setTabId("1");
         list.add(itemView);
         itemView = new MiniTabItemView(
                 this, R.drawable.dispatch_normal,
                 R.drawable.dispatch_selected,
-                null, ExPostActivity.class);
+                null, DTDPostActivity.class);
         itemView.setTabId("2");
         list.add(itemView);
         itemView = new MiniTabItemView(
                 this, R.drawable.me_normal,
                 R.drawable.me_selected,
-                null, ExProfileActivity.class);
+                null, DTDProfileActivity.class);
         itemView.setTabId("4");
         list.add(itemView);
         return list;

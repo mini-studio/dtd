@@ -15,52 +15,47 @@ import static com.mini.app.CESystem.WHO;
 /**
  * Created by Wuquancheng on 15/10/25.
  */
-public class ExChangePasswdActivity extends MNActivityBase {
+public class DTDChangeMobileActivity extends MNActivityBase {
 
-    private TextView oriInputView;
-    private TextView newInputView;
+    private TextView inputView;
     private CEApi api = new CEApi();
-
     User user = WHO();
 
     @Override
     protected void loadView() {
-        this.setContentView(R.layout.activity_change_passwd);
-        this.setTitle("修改密码");
+        this.setContentView(R.layout.activity_change_text);
+        this.setTitle("修改联系电话");
         this.initView();
         this.setNaviRightStringAction("保存");
     }
 
     private void initView() {
-        this.oriInputView = (TextView)this.findViewById(R.id.ori_input_view);
-        this.newInputView = (TextView)this.findViewById(R.id.new_input_view);
+        this.inputView = (TextView)this.findViewById(R.id.change_input_view);
+        this.inputView.setText(user.getEmerPhone());
     }
 
     public void onNaviRightAction() {
-        final String oriPasswd = this.oriInputView.getText().toString();
-        if (oriPasswd == null || oriPasswd.length() == 0) {
-            showMessage("请输入新密码后保存");
-            return;
-        }
-        final String newPasswd = this.newInputView.getText().toString();
-        if (!oriPasswd.equals(newPasswd)) {
-            showMessage("请确保两次密码一样");
+        final String emerPhone = this.inputView.getText().toString();
+        if (emerPhone == null || emerPhone.length() == 0) {
+            showMessage("请输入电话后保存");
             return;
         }
         showWaiting();
-        api.changePassword(user.getPhone(), oriPasswd, new MiniDataListener<String>() {
+        api.changEmergencyPhone(user.getPhone(), emerPhone, new MiniDataListener<String>() {
             @Override
             public void onResponse(String data, CEDataException error) {
                 dismissWaiting();
                 if (error == null) {
                     if ("change_ok".equals(data)) {
-                        showMessage("密码修改成功");
+                        user.setEmerPhone(emerPhone);
                         user.save();
                         back();
-                    } else {
-                        showMessage("修改昵称失败[" + data + "]");
                     }
-                } else {
+                    else {
+                        showMessage("修改电话失败["+data+"]");
+                    }
+                }
+                else {
                     showError(error);
                 }
             }

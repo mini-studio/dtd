@@ -33,7 +33,7 @@ import static com.mini.app.CESystem.WHO;
  * Created by Wuquancheng on 15/10/25.
  * 发件页面
  */
-public class ExPostActivity extends MNActivityBase {
+public class DTDPostActivity extends MNActivityBase {
 
     private TextView packageNameTextView;
     private TextView packageWeightTextView;
@@ -99,7 +99,7 @@ public class ExPostActivity extends MNActivityBase {
         Map map = new HashMap();
         map.put("title", "发件人信息");
         map.put("userInfo", this.postPackageInfo.getPosterInfo());
-        startActivityForResult(ExUserInfoEditorActivity.class, map, 300);
+        startActivityForResult(DTDUserInfoEditorActivity.class, map, 300);
     }
 
     @ActivityResult(300)
@@ -126,7 +126,7 @@ public class ExPostActivity extends MNActivityBase {
         Map map = new HashMap();
         map.put("title", "收件人信息");
         map.put("userInfo", this.postPackageInfo.getRecipientsInfo());
-        startActivityForResult(ExUserInfoEditorActivity.class, map, 500);
+        startActivityForResult(DTDUserInfoEditorActivity.class, map, 500);
     }
 
     @ActivityResult(500)

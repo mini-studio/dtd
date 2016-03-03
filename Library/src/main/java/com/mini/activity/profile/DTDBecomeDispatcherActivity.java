@@ -1,35 +1,23 @@
 package com.mini.activity.profile;
 
-import android.content.DialogInterface;
-import android.graphics.Bitmap;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.mini.R;
 import com.mini.activity.comm.MNActivityBase;
-import com.mini.activity.main.MNSigninActivity;
 import com.mini.app.CEAppConfig;
 import com.mini.core.api.data.User;
 import com.mini.core.exception.CEDataException;
 
-import org.mini.frame.activity.base.MiniActivityBase;
 import org.mini.frame.annotation.Action;
 import org.mini.frame.http.request.MiniDataListener;
-import org.mini.frame.toolkit.MiniImageBitmapUtil;
-import org.mini.frame.toolkit.file.MiniFileManager;
 import org.mini.frame.toolkit.file.MiniFileUploadManager;
-import org.mini.frame.view.MiniActionSheetDialog;
-import org.mini.frame.view.MiniCustomDialog;
-
-import java.util.ArrayList;
-import java.util.List;
 
 import static com.mini.app.CESystem.WHO;
 
 /**
  * Created by Wuquancheng on 15/10/25.
  */
-public class ExBecomeDispatcherActivity extends MNActivityBase {
+public class DTDBecomeDispatcherActivity extends MNActivityBase {
 
     private TextView contactPhone;
 
@@ -94,7 +82,7 @@ public class ExBecomeDispatcherActivity extends MNActivityBase {
 
     @Action(R.id.contact_view)
     private void changeMobile() {
-        startActivity(ExChangeMobileActivity.class);
+        startActivity(DTDChangeMobileActivity.class);
     }
 
     @Action(R.id.upload_card_view)
@@ -173,6 +161,6 @@ public class ExBecomeDispatcherActivity extends MNActivityBase {
 
     @Action(R.id.line_layout)
     public void actionForLineLayout() {
-        startActivity(ExLinesActivity.class);
+        startActivity(DTDLinesActivity.class);
     }
 }

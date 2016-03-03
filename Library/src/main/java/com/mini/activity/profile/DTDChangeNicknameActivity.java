@@ -15,7 +15,7 @@ import static com.mini.app.CESystem.WHO;
 /**
  * Created by Wuquancheng on 15/10/25.
  */
-public class ExChangeNicknameActivity extends MNActivityBase {
+public class DTDChangeNicknameActivity extends MNActivityBase {
 
     private TextView inputView;
     private TextView changeTitleView;

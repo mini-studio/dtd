@@ -87,43 +87,51 @@
             android:screenOrientation="portrait" />
 
         <activity
-            android:name=".activity.profile.ExProfileActivity"
+            android:name=".activity.profile.DTDProfileActivity"
             android:screenOrientation="portrait" />
 
         <activity
-            android:name=".activity.post.ExPostActivity"
+            android:name=".activity.post.DTDPostActivity"
             android:screenOrientation="portrait" />
 
         <activity
-            android:name=".activity.send.ExSendActivity"
+            android:name=".activity.send.DTDSendActivity"
             android:screenOrientation="portrait" />
 
         <activity
-            android:name=".activity.profile.ExProfileInfoActivity"
+            android:name=".activity.profile.DTDProfileInfoActivity"
             android:screenOrientation="portrait" />
 
         <activity
-            android:name=".activity.profile.ExBecomeDispatcherActivity"
+            android:name=".activity.profile.DTDBecomeDispatcherActivity"
             android:screenOrientation="portrait" />
 
         <activity
-            android:name=".activity.order.ExOrderListIndexActivity"
+            android:name=".activity.order.DTDOrderListIndexActivity"
             android:screenOrientation="portrait" />
 
         <activity
-            android:name=".activity.order.ExOrderListActivity"
+            android:name=".activity.order.DTDOrderListActivity"
             android:screenOrientation="portrait" />
 
         <activity
-            android:name=".activity.profile.ExSettingActivity"
+            android:name=".activity.profile.DTDSettingActivity"
             android:screenOrientation="portrait" />
 
         <activity
-            android:name=".activity.profile.ExLinesActivity"
+            android:name=".activity.profile.DTDLinesActivity"
             android:screenOrientation="portrait" />
 
         <activity
-            android:name=".activity.profile.ExLinesSetActivity"
+            android:name=".activity.profile.DTDLinesSetActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".activity.profile.DTDBalanceActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".activity.profile.DTDAboutActivity"
             android:screenOrientation="portrait" />
 
         <activity
@@ -131,7 +139,7 @@
             android:screenOrientation="portrait" />
 
         <activity
-            android:name=".activity.send.ExPackageDetailActivity"
+            android:name=".activity.send.DTDPackageDetailActivity"
             android:screenOrientation="portrait" />
 
         <activity
@@ -147,31 +155,31 @@
             android:screenOrientation="portrait" />
 
         <activity
-            android:name=".activity.profile.ExChangeMobileActivity"
+            android:name=".activity.profile.DTDChangeMobileActivity"
             android:screenOrientation="portrait" />
 
         <activity
-            android:name=".activity.profile.ExChangeNicknameActivity"
+            android:name=".activity.profile.DTDChangeNicknameActivity"
             android:screenOrientation="portrait" />
 
         <activity
-            android:name=".activity.profile.ExChangePasswdActivity"
+            android:name=".activity.profile.DTDChangePasswdActivity"
             android:screenOrientation="portrait" />
 
         <activity
-            android:name=".activity.send.ExFeedbackActivity"
+            android:name=".activity.send.DTDFeedbackActivity"
             android:screenOrientation="portrait" />
 
          <activity
-            android:name=".activity.post.ExUserInfoEditorActivity"
+            android:name=".activity.post.DTDUserInfoEditorActivity"
             android:screenOrientation="portrait" />
 
         <activity
-            android:name=".activity.post.ExEditorActivity"
+            android:name=".activity.post.DTDEditorActivity"
             android:screenOrientation="portrait" />
 
         <activity
-            android:name=".activity.comm.ExPayActivity"
+            android:name=".activity.comm.DTDPayActivity"
             android:screenOrientation="portrait" />
 
         <!--信鸽-->
@@ -249,6 +257,7 @@
         <activity
             android:name="org.mini.frame.activity.MiniPhotoViewActivity"
             android:screenOrientation="portrait"/>
+
         <!--支付配置开始-->
         <!--支付宝支付-->
         <activity

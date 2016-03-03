@@ -14,17 +14,14 @@ import org.mini.frame.activity.base.MiniIntent;
 import org.mini.frame.annotation.Action;
 import org.mini.frame.annotation.ActivityResult;
 import org.mini.frame.toolkit.MiniTimePicker;
-import org.mini.frame.toolkit.MiniTimeUtil;
-import org.w3c.dom.Text;
 
 import java.util.Date;
 import java.util.Map;
-import java.util.logging.SimpleFormatter;
 
 /**
  * Created by Wuquancheng on 15/10/25.
  */
-public class ExUserInfoEditorActivity extends MNActivityBase {
+public class DTDUserInfoEditorActivity extends MNActivityBase {
 
     private PostUserInfo userInfo;
 
@@ -35,7 +32,7 @@ public class ExUserInfoEditorActivity extends MNActivityBase {
     private EditText editTextName;
     private EditText editTextMobile;
 
-    private ExEditorActivity.EditorObject addressObject = new ExEditorActivity.EditorObject();
+    private DTDEditorActivity.EditorObject addressObject = new DTDEditorActivity.EditorObject();
 
     @Override
     protected void loadView() {
@@ -85,7 +82,7 @@ public class ExUserInfoEditorActivity extends MNActivityBase {
 
     @Action(R.id.layout_address)
     public void pickAddress() {
-        startActivityForResult(ExEditorActivity.class, this.addressObject, 300);
+        startActivityForResult(DTDEditorActivity.class, this.addressObject, 300);
     }
 
     @ActivityResult(300)

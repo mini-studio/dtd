@@ -9,7 +9,7 @@ import org.mini.frame.annotation.Action;
  * Created by Wuquancheng on 15/10/25.
  * 我的快件
  */
-public class ExOrderListIndexActivity extends MNActivityBase {
+public class DTDOrderListIndexActivity extends MNActivityBase {
 
     @Override
     protected void loadView() {
@@ -25,12 +25,12 @@ public class ExOrderListIndexActivity extends MNActivityBase {
 
     @Action(R.id.send_order_view)
     public void actionSendOrder() {
-        startActivity(ExOrderListActivity.class, 1);
+        startActivity(DTDOrderListActivity.class, 1);
     }
 
     @Action(R.id.receive_order_view)
     public void actionReceiveOrderView() {
-        startActivity(ExOrderListActivity.class, 0);
+        startActivity(DTDOrderListActivity.class, 0);
     }
 
 }

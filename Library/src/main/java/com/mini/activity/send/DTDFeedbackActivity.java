@@ -17,7 +17,7 @@ import java.util.Map;
 /**
  * Created by Wuquancheng on 15/10/25.
  */
-public class ExFeedbackActivity extends MNActivityBase {
+public class DTDFeedbackActivity extends MNActivityBase {
 
     private TextView inputView;
     private CEApi api = new CEApi();

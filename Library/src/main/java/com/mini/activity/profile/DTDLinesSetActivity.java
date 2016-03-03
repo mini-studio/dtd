@@ -23,7 +23,7 @@ import static com.mini.app.CESystem.WHO;
 /**
  * Created by Wuquancheng on 15/10/25.
  */
-public class ExLinesSetActivity extends MNActivityBase {
+public class DTDLinesSetActivity extends MNActivityBase {
 
     LineInfo info;
 

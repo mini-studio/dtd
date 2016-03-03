@@ -7,11 +7,11 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import com.mini.R;
-import com.mini.activity.comm.ExPayActivity;
+import com.mini.activity.comm.DTDPayActivity;
 import com.mini.activity.comm.MNActivityBase;
 import com.mini.activity.main.MNSigninActivity;
-import com.mini.activity.profile.ExBecomeDispatcherActivity;
-import com.mini.activity.profile.ExProfileActivity;
+import com.mini.activity.profile.DTDBecomeDispatcherActivity;
+import com.mini.activity.profile.DTDProfileActivity;
 import com.mini.core.api.data.PackageDetailWrapper;
 import com.mini.core.api.data.PackageInfo;
 import com.mini.core.api.data.User;
@@ -31,7 +31,7 @@ import static com.mini.app.CESystem.WHO;
  * Created by Wuquancheng on 15/12/6.
  * 快件详情
  */
-public class ExPackageDetailActivity extends MNActivityBase {
+public class DTDPackageDetailActivity extends MNActivityBase {
 
     PackageInfo packageInfo;
     TextView message_view;
@@ -233,12 +233,12 @@ public class ExPackageDetailActivity extends MNActivityBase {
      */
     @Action(R.id.button_contact_dispatcher)
     public void actionContactDispatcher() {
-        MiniSystemHelper.call(packageInfo.getReceive_phone(), ExPackageDetailActivity.this);
+        MiniSystemHelper.call(packageInfo.getReceive_phone(), DTDPackageDetailActivity.this);
     }
 
     @Action(R.id.button_contact_dispatcher_2)
     public void actionContactDispatcher2() {
-        MiniSystemHelper.call(packageInfo.getReceive_phone(), ExPackageDetailActivity.this);
+        MiniSystemHelper.call(packageInfo.getReceive_phone(), DTDPackageDetailActivity.this);
     }
 
     /**
@@ -246,7 +246,7 @@ public class ExPackageDetailActivity extends MNActivityBase {
      */
     @Action(R.id.button_contact)
     public void actionContact() {
-        MiniSystemHelper.call(packageInfo.getSource_phone(), ExPackageDetailActivity.this);
+        MiniSystemHelper.call(packageInfo.getSource_phone(), DTDPackageDetailActivity.this);
     }
 
     /**
@@ -254,7 +254,7 @@ public class ExPackageDetailActivity extends MNActivityBase {
      */
     @Action(R.id.button_pay)
     public void actionPay() {
-        startActivity(ExPayActivity.class, packageInfo);
+        startActivity(DTDPayActivity.class, packageInfo);
     }
 
     /**
@@ -262,7 +262,7 @@ public class ExPackageDetailActivity extends MNActivityBase {
      */
     @Action(R.id.button_pay_2)
     public void actionPay2() {
-        startActivity(ExPayActivity.class, packageInfo);
+        startActivity(DTDPayActivity.class, packageInfo);
     }
 
     @ActivityResult(REQ_LOGIN)
@@ -274,12 +274,12 @@ public class ExPackageDetailActivity extends MNActivityBase {
 
     @Action(R.id.button_contact_service)
     public void buttonContactService() {
-        MiniSystemHelper.call(ExProfileActivity.mobile, ExPackageDetailActivity.this);
+        MiniSystemHelper.call(DTDProfileActivity.mobile, DTDPackageDetailActivity.this);
     }
 
     @Action(R.id.button_ne_contact_service)
     public void buttonNeContactService() {
-        MiniSystemHelper.call(ExProfileActivity.mobile, ExPackageDetailActivity.this);
+        MiniSystemHelper.call(DTDProfileActivity.mobile, DTDPackageDetailActivity.this);
     }
 
     @Action(R.id.button_dispatch_code)
@@ -350,7 +350,7 @@ public class ExPackageDetailActivity extends MNActivityBase {
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
                     dialog.dismiss();
-                    Intent intent = new Intent(ExPackageDetailActivity.this, MNSigninActivity.class);
+                    Intent intent = new Intent(DTDPackageDetailActivity.this, MNSigninActivity.class);
                     intent.putExtra(MNSigninActivity.TYPE,MNSigninActivity.TYPE_FOR_RESULT);
                     startActivityForResult(intent, REQ_LOGIN);
                 }
@@ -363,7 +363,7 @@ public class ExPackageDetailActivity extends MNActivityBase {
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
                     dialog.dismiss();
-                    final MiniInputDialog inputDialog = new MiniInputDialog(ExPackageDetailActivity.this);
+                    final MiniInputDialog inputDialog = new MiniInputDialog(DTDPackageDetailActivity.this);
                     inputDialog.setTitle("请输入火车信息");
                     inputDialog.setConfirmButtonListener(new View.OnClickListener() {
                         @Override
@@ -381,7 +381,7 @@ public class ExPackageDetailActivity extends MNActivityBase {
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
                     dialog.dismiss();
-                    final MiniInputDialog inputDialog = new MiniInputDialog(ExPackageDetailActivity.this);
+                    final MiniInputDialog inputDialog = new MiniInputDialog(DTDPackageDetailActivity.this);
                     inputDialog.setTitle("请输入飞机信息");
                     inputDialog.setConfirmButtonListener(new View.OnClickListener() {
                         @Override
@@ -431,7 +431,7 @@ public class ExPackageDetailActivity extends MNActivityBase {
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
                     dialog.dismiss();
-                    startActivity(ExBecomeDispatcherActivity.class);
+                    startActivity(DTDBecomeDispatcherActivity.class);
                 }
             });
         }

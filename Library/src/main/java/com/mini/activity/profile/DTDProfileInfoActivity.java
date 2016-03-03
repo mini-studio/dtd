@@ -4,7 +4,6 @@ import android.widget.TextView;
 
 import com.mini.R;
 import com.mini.activity.comm.MNActivityBase;
-import com.mini.app.CEAppConfig;
 import com.mini.core.api.data.User;
 import com.mini.core.exception.CEDataException;
 
@@ -18,7 +17,7 @@ import static com.mini.app.CESystem.WHO;
 /**
  * Created by Wuquancheng on 15/10/25.
  */
-public class ExProfileInfoActivity extends MNActivityBase {
+public class DTDProfileInfoActivity extends MNActivityBase {
 
     private TextView nicknameView;
     private MiniImageView imageView;
@@ -83,12 +82,12 @@ public class ExProfileInfoActivity extends MNActivityBase {
 
     @Action(R.id.layout_nickname)
     public void onClickLayoutNickname() {
-        startActivity(ExChangeNicknameActivity.class);
+        startActivity(DTDChangeNicknameActivity.class);
     }
 
     @Action(R.id.layout_passwd)
     public void onClickLayoutPasswd() {
-        startActivity(ExChangePasswdActivity.class);
+        startActivity(DTDChangePasswdActivity.class);
     }
 
 }

@@ -11,7 +11,7 @@ import com.handmark.pulltorefresh.library.PullToRefreshBase;
 import com.handmark.pulltorefresh.library.PullToRefreshListView;
 import com.mini.R;
 import com.mini.activity.comm.MNActivityBase;
-import com.mini.activity.send.ExPackageDetailActivity;
+import com.mini.activity.send.DTDPackageDetailActivity;
 import com.mini.core.api.data.PackageInfo;
 import com.mini.core.api.data.PackageInfoWrapper;
 import com.mini.core.api.engine.CEApi;
@@ -25,11 +25,11 @@ import static com.mini.app.CESystem.WHO;
  * Created by Wuquancheng on 15/10/25.
  * 我接收的快件和我要发送的快件
  */
-public class ExOrderListActivity extends MNActivityBase {
+public class DTDOrderListActivity extends MNActivityBase {
 
     private PullToRefreshListView listView;
     private PackageInfoWrapper  packageInfoWrapper;
-    private ExOrderListActivity.PackageInfoDataSourceAdapter packageInfoDataSourceAdapter;
+    private DTDOrderListActivity.PackageInfoDataSourceAdapter packageInfoDataSourceAdapter;
 
 
     private CEApi api = new CEApi();
@@ -124,7 +124,7 @@ public class ExOrderListActivity extends MNActivityBase {
 
     private void onClickItem(PackageInfo packageInfo) {
         packageInfo.setOrderType(orderType);
-        startActivityWithObject(ExPackageDetailActivity.class, packageInfo);
+        startActivityWithObject(DTDPackageDetailActivity.class, packageInfo);
     }
 
     /**

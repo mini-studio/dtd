@@ -17,7 +17,7 @@ import static com.mini.app.CESystem.WHO;
 /**
  * Created by Wuquancheng on 15/10/25.
  */
-public class ExEditorActivity extends MNActivityBase {
+public class DTDEditorActivity extends MNActivityBase {
 
     public static class EditorObject {
         private String title;

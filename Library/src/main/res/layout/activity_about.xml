@@ -26,11 +26,11 @@
                 android:orientation="vertical">
 
                 <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="180dp"
+                    android:layout_height="90dp"
                     android:layout_marginBottom="5dp"
                     android:layout_marginTop="5dp"
-                    android:src="@drawable/plaza_system_setting_app_name_bg" />
+                    android:src="@drawable/logo3" />
 
                 <TextView
                     android:id="@+id/about_activity_tv_version"
@@ -45,8 +45,11 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
                     android:textColor="@android:color/darker_gray"
-                    android:textSize="12sp" />
+                    android:text="当天到APP由北京当天到科技有限公司于2015年开发，公司以“专注应用，用心服务”为核心价值，希望通过我们的专业能力和不懈努力，帮助用户解决国内异地快递24小时内到达问题。"
+                    android:textSize="16sp" />
             </LinearLayout>
 
             <RelativeLayout
@@ -55,53 +58,13 @@
                 android:layout_weight="0.6"
                 android:gravity="center">
 
-                <View
-                    android:id="@+id/view_top_line"
-                    android:layout_width="match_parent"
-                    android:layout_height="0.5dp"
-                    android:layout_alignParentTop="true"
-                    android:background="#dcdcdc" />
-
-                <LinearLayout
-                    android:id="@+id/about_activity_phone"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/view_top_line"
-                    android:background="@drawable/class_feed_list_item_selector"
-                    android:gravity="center"
-                    android:padding="15dp">
-
-                    <TextView
-                        android:id="@+id/about_activity_tv_about_us"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textColor="@android:color/black"
-                        android:textSize="15sp" />
-
-                    <TextView
-                        android:id="@+id/about_activity_tv_phone_number"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="10dp"
-                        android:textColor="@color/common_green"
-                        android:textSize="16sp" />
-                </LinearLayout>
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="0.5dp"
-                    android:layout_below="@id/about_activity_phone"
-                    android:background="#dcdcdc" />
-
-
                 <TextView
                     android:id="@+id/text"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/about_activity_phone"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="25dp"
-                    android:text="北京慈航教育科技有限公司"
+                    android:text="Copyright©2015-2016"
                     android:textColor="#999999" />
 
                 <TextView
@@ -110,7 +73,7 @@
                     android:layout_below="@id/text"
                     android:layout_centerHorizontal="true"
                     android:layout_marginBottom="5dp"
-                    android:text="www.peiyu100.com"
+                    android:text="北京当天到科技有限公司"
                     android:textColor="#999999" />
             </RelativeLayout>
         </LinearLayout>

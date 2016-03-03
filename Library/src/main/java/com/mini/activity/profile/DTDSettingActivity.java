@@ -2,7 +2,7 @@ package com.mini.activity.profile;
 
 import com.mini.R;
 import com.mini.activity.comm.MNActivityBase;
-import com.mini.activity.send.ExFeedbackActivity;
+import com.mini.activity.send.DTDFeedbackActivity;
 
 import org.mini.frame.annotation.Action;
 
@@ -12,7 +12,7 @@ import java.util.Map;
 /**
  * Created by Wuquancheng on 15/10/25.
  */
-public class ExSettingActivity extends MNActivityBase {
+public class DTDSettingActivity extends MNActivityBase {
     @Override
     protected void loadView() {
         this.setContentView(R.layout.activity_setting);
@@ -21,13 +21,13 @@ public class ExSettingActivity extends MNActivityBase {
     }
 
     private void initView() {
-        this.findViewById(R.id.layout_clear_cache, this);
+        this.findViewById(R.id.layout_about, this);
         this.findViewById(R.id.layout_feedback, this);
     }
 
-    @Action(R.id.layout_clear_cache)
+    @Action(R.id.layout_about)
     public void clearCache() {
-
+        startActivity(DTDAboutActivity.class);
     }
 
     @Action(R.id.layout_feedback)
@@ -35,7 +35,7 @@ public class ExSettingActivity extends MNActivityBase {
         Map map = new HashMap();
         map.put("title", "用户反馈");
         map.put("hint", "您的建议是我们不断前进的动力");
-        startActivity(ExFeedbackActivity.class,map);
+        startActivity(DTDFeedbackActivity.class,map);
     }
 
 }

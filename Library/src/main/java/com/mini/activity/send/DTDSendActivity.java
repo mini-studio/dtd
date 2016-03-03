@@ -5,7 +5,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.BaseAdapter;
-import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -14,7 +13,6 @@ import com.handmark.pulltorefresh.library.PullToRefreshListView;
 import com.mini.R;
 import com.mini.activity.comm.MNActivityBase;
 import com.mini.activity.comm.MNCityPickerActivity;
-import com.mini.app.CESystem;
 import com.mini.core.api.data.City;
 import com.mini.core.api.data.ImageInfo;
 import com.mini.core.api.data.PackageInfo;
@@ -25,11 +23,8 @@ import com.mini.core.kit.LocationKit;
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
 
 import org.mini.frame.activity.base.MiniIntent;
-import org.mini.frame.annotation.Action;
 import org.mini.frame.annotation.ActivityResult;
 import org.mini.frame.http.request.MiniDataListener;
-import org.mini.frame.toolkit.location.MiniLocationListener;
-import org.mini.frame.toolkit.location.MiniLocationManager;
 import org.mini.frame.view.MiniBannerViewPager;
 
 import java.util.ArrayList;
@@ -39,7 +34,7 @@ import java.util.List;
  * Created by Wuquancheng on 15/10/25.
  * 送件的主界面
  */
-public class ExSendActivity extends MNActivityBase {
+public class DTDSendActivity extends MNActivityBase {
 
     private static final int REQ_CODE_FOR_CITY = 200;
     private MiniBannerViewPager bannerViewPager;
@@ -94,7 +89,7 @@ public class ExSendActivity extends MNActivityBase {
     private void onSelectPackage(PackageInfo packageInfo) {
         if (packageInfo != null) {
             packageInfo.setFrom(0);
-            startActivityWithObject(ExPackageDetailActivity.class, packageInfo);
+            startActivityWithObject(DTDPackageDetailActivity.class, packageInfo);
         }
         else {
             //加载更多
@@ -149,7 +144,7 @@ public class ExSendActivity extends MNActivityBase {
                 public void locateCity(City city, String reason) {
                     dismissWaiting();
                     if (city != null) {
-                        ExSendActivity.this.setCity(city);
+                        DTDSendActivity.this.setCity(city);
                     }
                     else {
                         showMessage("定位失败，请确认打开了定位服务");

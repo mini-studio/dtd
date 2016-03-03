@@ -5,25 +5,19 @@ import android.widget.TextView;
 
 import com.mini.R;
 import com.mini.activity.comm.MNActivityBase;
-import com.mini.app.CEAppConfig;
 import com.mini.core.api.data.User;
-import com.mini.core.exception.CEDataException;
 import com.mini.core.model.LineInfo;
 
 import org.mini.frame.activity.base.MiniIntent;
 import org.mini.frame.annotation.Action;
 import org.mini.frame.annotation.ActivityResult;
-import org.mini.frame.http.request.MiniDataListener;
-import org.mini.frame.toolkit.file.MiniFileUploadManager;
-
-import java.util.List;
 
 import static com.mini.app.CESystem.WHO;
 
 /**
  * Created by Wuquancheng on 15/10/25.
  */
-public class ExLinesActivity extends MNActivityBase {
+public class DTDLinesActivity extends MNActivityBase {
     private TextView line_a_view;
     private TextView line_b_view;
     private TextView line_c_view;
@@ -72,7 +66,7 @@ public class ExLinesActivity extends MNActivityBase {
     public void actionForUploadIdCard() {
         LineInfo lineInfo = new LineInfo();
         lineInfo.setName("C线路");
-        startActivityForResult(ExLinesSetActivity.class, lineInfo, 300);
+        startActivityForResult(DTDLinesSetActivity.class, lineInfo, 300);
     }
 
     @ActivityResult(300)
@@ -93,7 +87,7 @@ public class ExLinesActivity extends MNActivityBase {
     public void actionForUploadBankCard() {
         LineInfo lineInfo = new LineInfo();
         lineInfo.setName("B线路");
-        startActivityForResult(ExLinesSetActivity.class, lineInfo, 200);
+        startActivityForResult(DTDLinesSetActivity.class, lineInfo, 200);
     }
 
     @ActivityResult(200)
@@ -114,7 +108,7 @@ public class ExLinesActivity extends MNActivityBase {
     public void actionForLineLayout() {
         LineInfo lineInfo = new LineInfo();
         lineInfo.setName("A线路");
-        startActivityForResult(ExLinesSetActivity.class, lineInfo, 100);
+        startActivityForResult(DTDLinesSetActivity.class, lineInfo, 100);
     }
 
     @ActivityResult(100)

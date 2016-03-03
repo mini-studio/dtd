@@ -8,7 +8,7 @@ import android.widget.TextView;
 import com.mini.R;
 import com.mini.activity.comm.MNActivityBase;
 import com.mini.activity.main.MNSigninActivity;
-import com.mini.activity.order.ExOrderListIndexActivity;
+import com.mini.activity.order.DTDOrderListIndexActivity;
 import com.mini.app.CESystem;
 import com.mini.core.api.data.User;
 
@@ -23,7 +23,7 @@ import static com.mini.app.CESystem.WHO;
 /**
  * Created by Wuquancheng on 15/10/25.
  */
-public class ExProfileActivity extends MNActivityBase {
+public class DTDProfileActivity extends MNActivityBase {
 
     private TextView profile_name_view;
     private MiniImageView avatar_image_view;
@@ -111,14 +111,14 @@ public class ExProfileActivity extends MNActivityBase {
     @Action(R.id.profile_layout)
     public void onClickProfileLayout() {
         if (checkUser()) {
-            startActivity(ExProfileInfoActivity.class);
+            startActivity(DTDProfileInfoActivity.class);
         }
     }
 
     @Action(R.id.become_dispatcher_layout)
     public void onClickBecomeDispatcherLayout() {
         if (checkUser()) {
-            startActivity(ExBecomeDispatcherActivity.class);
+            startActivity(DTDBecomeDispatcherActivity.class);
         }
     }
 
@@ -128,7 +128,7 @@ public class ExProfileActivity extends MNActivityBase {
     @Action(R.id.order_list_layout)
     public void onClickOrderListLayout() {
         if (checkUser()) {
-            startActivity(ExOrderListIndexActivity.class);
+            startActivity(DTDOrderListIndexActivity.class);
         }
     }
 
@@ -145,7 +145,7 @@ public class ExProfileActivity extends MNActivityBase {
      */
     @Action(R.id.setting_layout)
     public void onClickSettingLayoutLayout() {
-        startActivity(ExSettingActivity.class);
+        startActivity(DTDSettingActivity.class);
     }
 
     /**
@@ -160,7 +160,7 @@ public class ExProfileActivity extends MNActivityBase {
             this.logoutButton.setText("登录");
         }
         else {
-            Intent intent = new Intent(ExProfileActivity.this, MNSigninActivity.class);
+            Intent intent = new Intent(DTDProfileActivity.this, MNSigninActivity.class);
             intent.putExtra(MNSigninActivity.TYPE, MNSigninActivity.TYPE_FOR_RESULT);
             startActivityForResult(intent, REQ_LOGIN);
         }
@@ -182,26 +182,28 @@ public class ExProfileActivity extends MNActivityBase {
     @Action(R.id.profile_name_view)
     public void actionProfileName() {
         if (checkUser(true)) {
-            startActivity(ExProfileInfoActivity.class);
+            startActivity(DTDProfileInfoActivity.class);
         }
     }
 
     @Action(R.id.avatar_image_view)
     public void actionAvatarImageView() {
         if (checkUser(true)) {
-            startActivity(ExProfileInfoActivity.class);
+            startActivity(DTDProfileInfoActivity.class);
         }
     }
 
     @Action(R.id.profile_avatar_item)
     public void actionOnAvatarView() {
         if (checkUser(true)) {
-            startActivity(ExProfileInfoActivity.class);
+            startActivity(DTDProfileInfoActivity.class);
         }
     }
 
     @Action(R.id.balance_layout)
     public void actionOnBalance() {
-
+        if (checkUser(true)) {
+            startActivity(DTDBalanceActivity.class);
+        }
     }
 }

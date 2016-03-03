@@ -24,7 +24,7 @@ import org.mini.frame.pay.wxpay.WXPayParam;
  * Created by Wuquancheng on 15/10/25.
  * 支付页面
  */
-public class ExPayActivity extends MNActivityBase {
+public class DTDPayActivity extends MNActivityBase {
 
     private City city = null;
 
