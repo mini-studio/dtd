@@ -15,58 +15,57 @@ import com.tencent.mm.sdk.openapi.WXAPIFactory;
 
 public class WXPayEntryActivity extends MNActivityBase implements IWXAPIEventHandler {
 
-  private IWXAPI api;
+    private IWXAPI api;
 
-  @Override
-  protected void loadView() {
-    this.setContentView(R.layout.activity_title);
-    api = WXAPIFactory.createWXAPI(this, WXPay.WX_APPID);
-    api.handleIntent(getIntent(), this);
-  }
-
-  @Override
-  protected void onResume() {
-    super.onResume();
-  }
-
-  @Override
-  protected void onPause() {
-    super.onPause();
-  }
-
-  @Override
-  protected void onNewIntent(Intent intent) {
-    super.onNewIntent(intent);
-
-    setIntent(intent);
-    api.handleIntent(intent, this);
-  }
-
-  @Override
-  public void onReq(BaseReq req) {
-
-  }
-
-  @Override
-  public void onResp(BaseResp resp) {
-    //支付回调成功
-    if (WXPay.sharedInstance().listener != null) {
-
-      if (resp.errCode == 0) {
-          WXPay.sharedInstance().listener.onPayCompleted(PayConstants.kCHPayTypeWeixin, PayConstants.kCHPayResultSuccess, resp.errCode, null);
-      } else {
-          String errStr = resp.errStr;
-          if (errStr == null) {
-              if (resp.errCode == -2) {
-                  errStr = "您取消了支付";
-              }
-              else {
-                  errStr = "支付未能成功,请您稍后再尝试支付";
-              }
-          }
-          WXPay.sharedInstance().listener.onPayCompleted(PayConstants.kCHPayTypeWeixin, PayConstants.kCHPayResultFailure, resp.errCode, errStr);
-      }
+    @Override
+    protected void loadView() {
+        this.setContentView(R.layout.activity_title);
+        api = WXAPIFactory.createWXAPI(this, WXPay.WX_APPID);
+        api.handleIntent(getIntent(), this);
     }
-    finish();
-  }
+
+    @Override
+    protected void onResume() {
+    super.onResume();
+    }
+
+    @Override
+    protected void onPause() {
+    super.onPause();
+    }
+
+    @Override
+    protected void onNewIntent(Intent intent) {
+        super.onNewIntent(intent);
+
+        setIntent(intent);
+        api.handleIntent(intent, this);
+    }
+
+    @Override
+    public void onReq(BaseReq req) {
+
+    }
+
+    @Override
+    public void onResp(BaseResp resp) {
+        //支付回调成功
+        if (WXPay.sharedInstance().listener != null) {
+            if (resp.errCode == 0) {
+                WXPay.sharedInstance().listener.onPayCompleted(PayConstants.kCHPayTypeWeixin, PayConstants.kCHPayResultSuccess, resp.errCode, null);
+            } else {
+                String errStr = resp.errStr;
+                if (errStr == null) {
+                    if (resp.errCode == -2) {
+                      errStr = "您取消了支付";
+                    }
+                    else {
+                      errStr = "支付未能成功,请您稍后再尝试支付";
+                    }
+                }
+                WXPay.sharedInstance().listener.onPayCompleted(PayConstants.kCHPayTypeWeixin, PayConstants.kCHPayResultFailure, resp.errCode, errStr);
+            }
+        }
+        finish();
+    }
 }

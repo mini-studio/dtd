@@ -41,9 +41,12 @@ public class AliPay {
 							listener.onPayCompleted(PayConstants.kCHPayTypeAlipay, PayConstants.kCHPayResultSuccess, Integer.parseInt(resultStatus), resultInfo);
 					} 
 					else {
-						if (listener != null)
-							listener.onPayCompleted(PayConstants.kCHPayTypeAlipay, PayConstants.kCHPayResultFailure, Integer.parseInt(resultStatus), resultInfo);
-						
+						if (listener != null) {
+                            if (TextUtils.isEmpty(resultInfo)) {
+                                resultInfo = "支付未能成功,请您稍后再支付";
+                            }
+                            listener.onPayCompleted(PayConstants.kCHPayTypeAlipay, PayConstants.kCHPayResultFailure, Integer.parseInt(resultStatus), resultInfo);
+                        }
 						// 判断resultStatus 为非“9000”则代表可能支付失败
 						// “8000”代表支付结果因为支付渠道原因或者系统原因还在等待支付结果确认，最终交易是否成功以服务端异步通知为准（小概率状态）
 						// 其他值就可以判断为支付失败，包括用户主动取消支付，或者系统返回的错误
@@ -86,7 +89,8 @@ public class AliPay {
             sign = URLEncoder.encode(sign, "UTF-8");
         }
         catch (Exception e) {
-            throw new PayException("编码错误");
+            listener.onPayCompleted(PayConstants.kCHPayTypeAlipay, PayConstants.kCHPayResultFailure,-10000, "签名错误");
+            return;
         }
         String payInfo = orderInfo + "&sign=\"" + sign + "\"&sign_type=\"RSA\"";
         pay(context, payInfo, listener);
