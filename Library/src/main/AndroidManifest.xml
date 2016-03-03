@@ -87,10 +87,6 @@
             android:screenOrientation="portrait" />
 
         <activity
-            android:name=".activity.mess.ExMessActivity"
-            android:screenOrientation="portrait" />
-
-        <activity
             android:name=".activity.profile.ExProfileActivity"
             android:screenOrientation="portrait" />
 
@@ -253,7 +249,8 @@
         <activity
             android:name="org.mini.frame.activity.MiniPhotoViewActivity"
             android:screenOrientation="portrait"/>
-
+        <!--支付配置开始-->
+        <!--支付宝支付-->
         <activity
             android:name="com.alipay.sdk.app.H5PayActivity"
             android:configChanges="orientation|keyboardHidden|navigation"
@@ -265,6 +262,13 @@
             android:configChanges="orientation|keyboardHidden|navigation"
             android:exported="false"
             android:screenOrientation="behind" />
+
+        <!--微信支付-->
+        <activity
+            android:name="com.dtdinc.dtd.wxapi.WXPayEntryActivity"
+            android:exported="true"
+            android:launchMode="singleTop" />
+        <!--支付配置结束-->
 
         <receiver
             android:name=".core.service.CEStartService"
