@@ -51,12 +51,19 @@ public class WXPayEntryActivity extends MNActivityBase implements IWXAPIEventHan
   public void onResp(BaseResp resp) {
     //支付回调成功
     if (WXPay.sharedInstance().listener != null) {
-      String errStr = resp.errStr;
-      if (errStr == null)
-        errStr = "";
+
       if (resp.errCode == 0) {
-          WXPay.sharedInstance().listener.onPayCompleted(PayConstants.kCHPayTypeWeixin, PayConstants.kCHPayResultSuccess, resp.errCode, errStr);
+          WXPay.sharedInstance().listener.onPayCompleted(PayConstants.kCHPayTypeWeixin, PayConstants.kCHPayResultSuccess, resp.errCode, null);
       } else {
+          String errStr = resp.errStr;
+          if (errStr == null) {
+              if (resp.errCode == -2) {
+                  errStr = "您取消了支付";
+              }
+              else {
+                  errStr = "支付未能成功,请您稍后再尝试支付";
+              }
+          }
           WXPay.sharedInstance().listener.onPayCompleted(PayConstants.kCHPayTypeWeixin, PayConstants.kCHPayResultFailure, resp.errCode, errStr);
       }
     }

@@ -8,12 +8,17 @@ import com.mini.R;
 import com.mini.core.api.data.City;
 import com.mini.core.api.data.PackageInfo;
 import com.mini.core.api.engine.CEApi;
+import com.mini.core.exception.CEDataException;
+
+import org.mini.frame.http.request.MiniDataListener;
 import org.mini.frame.pay.PayConstants;
 import org.mini.frame.pay.PayListener;
 import org.mini.frame.pay.alipay.AliPay;
 import org.mini.frame.pay.alipay.AliPayParam;
 
 import org.mini.frame.annotation.Action;
+import org.mini.frame.pay.wxpay.WXPay;
+import org.mini.frame.pay.wxpay.WXPayParam;
 
 /**
  * Created by Wuquancheng on 15/10/25.
@@ -101,32 +106,68 @@ public class ExPayActivity extends MNActivityBase {
     @Action(R.id.button_pay)
     public void actionPay() {
         if (0 == payMethod) { //微信支付
-
+            showWaiting();
+            api.wxPayInfo(this.packageInfo.getOrder_number(), new MiniDataListener<WXPayParam>() {
+                @Override
+                public void onResponse(WXPayParam data, CEDataException error) {
+                    dismissWaiting();
+                    if (error == null) {
+                        wxPayment(data);
+                    }
+                    else {
+                        showError(error);
+                    }
+                }
+            });
         }
         else  { //支付宝支付
-            AliPayParam order = new AliPayParam();
-            order.setProductName("当天到快件订单");
-            order.setProductDescription("当天到快件订单("+this.packageInfo.getSource_city()+"-"+this.packageInfo.getDestination_city()+")");
-            order.setAmount("0.01");
-            order.setTradeNO(this.packageInfo.getOrder_number());
-            order.setNotifyURL("http://api.dtd.la/index.php/gindex/alipay");
-            try {
-                new AliPay().pay(this, order, new PayListener() {
-                    @Override
-                    public void onPayCompleted(int type, int result, int errcode, String desc) {
-                        if (result == PayConstants.kCHPayResultSuccess) {
-                            showMessage("支付成功");
-                        }
-                        else {
-                            showMessage(desc);
-                        }
-                    }
-                });
-            }
-            catch (Exception e) {
-                showError(e);
-            }
+            aliPayment();
         }
     }
 
+    /**
+     * 微信支付
+     * @param data
+     */
+    private void wxPayment(WXPayParam data) {
+        WXPay.sharedInstance().pay(this, data, new PayListener() {
+            @Override
+            public void onPayCompleted(int type, int result, int errcode, String desc) {
+                if (result == PayConstants.kCHPayResultSuccess) {
+                    showMessage("支付成功");
+                }
+                else {
+                    showMessage(desc);
+                }
+            }
+        });
+    }
+
+    /**
+     * 阿里支付
+     */
+    public void aliPayment() {
+        AliPayParam order = new AliPayParam();
+        order.setProductName("当天到快件订单");
+        order.setProductDescription("当天到快件订单("+this.packageInfo.getSource_city()+"-"+this.packageInfo.getDestination_city()+")");
+        order.setAmount("0.01");
+        order.setTradeNO(this.packageInfo.getOrder_number());
+        order.setNotifyURL("http://api.dtd.la/index.php/gindex/alipay");
+        try {
+            new AliPay().pay(this, order, new PayListener() {
+                @Override
+                public void onPayCompleted(int type, int result, int errcode, String desc) {
+                    if (result == PayConstants.kCHPayResultSuccess) {
+                        showMessage("支付成功");
+                    }
+                    else {
+                        showMessage(desc);
+                    }
+                }
+            });
+        }
+        catch (Exception e) {
+            showError(e);
+        }
+    }
 }
