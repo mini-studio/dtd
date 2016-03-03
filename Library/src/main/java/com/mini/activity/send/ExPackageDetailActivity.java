@@ -180,7 +180,7 @@ public class ExPackageDetailActivity extends MNActivityBase {
             }
             else if ("1".equals(status)) { //订单已经生成，还没有人接单
                 message = "提示：您的快件已生成，请耐心等待送件人联系您。";
-                this.findViewById(R.id.status_e_0).setVisibility(View.VISIBLE);
+                //this.findViewById(R.id.status_e_0).setVisibility(View.VISIBLE);
             }
             else if ("2".equals(status)) { //已接单，需付费
                 message = "提示：请联系您的送件人后尽快付费";

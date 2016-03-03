@@ -44,6 +44,7 @@ public class ExProfileActivity extends MNActivityBase {
     private void initView() {
         this.findViewById(R.id.profile_layout, this);
         this.findViewById(R.id.become_dispatcher_layout, this);
+        this.findViewById(R.id.balance_layout, this);
         this.findViewById(R.id.order_list_layout, this);
         this.findViewById(R.id.layout_contact_waiter, this);
         this.findViewById(R.id.setting_layout, this);
@@ -197,5 +198,10 @@ public class ExProfileActivity extends MNActivityBase {
         if (checkUser(true)) {
             startActivity(ExProfileInfoActivity.class);
         }
+    }
+
+    @Action(R.id.balance_layout)
+    public void actionOnBalance() {
+
     }
 }
