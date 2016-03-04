@@ -8,6 +8,7 @@ import com.mini.core.api.data.City;
 import com.mini.core.api.data.PackageDetailWrapper;
 import com.mini.core.api.data.PackageInfoWrapper;
 import com.mini.core.api.data.User;
+import com.mini.core.api.info.REQBalanceInfo;
 import com.mini.core.api.info.REQChangeMobileInfo;
 import com.mini.core.api.info.REQChangeNicknameInfo;
 import com.mini.core.api.info.REQFeedbackInfo;
@@ -338,6 +339,17 @@ public class CEApi {
     public void feedback(String text, MiniDataListener<String> listener) {
         REQFeedbackInfo info = new REQFeedbackInfo(text);
         MiniRequest request = new MiniRequest(String.class, listener, info);
+        this.requestQueue.add(request);
+    }
+
+    /**
+     * 获取当前余额
+     * @param phone
+     * @param listener
+     */
+    public void balanceInfo(String phone, MiniDataListener<String> listener) {
+        REQBalanceInfo balanceInfo = new REQBalanceInfo(phone);
+        MiniRequest request = new MiniRequest(String.class, listener, balanceInfo);
         this.requestQueue.add(request);
     }
 }
