@@ -1,7 +1,7 @@
 package com.dtdinc.dtd.wxapi;
 
-import com.mini.activity.comm.MNActivityBase;
-import com.mini.core.share.CEWeiXinShareParams;
+import com.dtdinc.dtd.activity.comm.MNActivityBase;
+import com.dtdinc.dtd.core.share.CEWeiXinShareParams;
 import com.tencent.mm.sdk.modelbase.BaseReq;
 import com.tencent.mm.sdk.modelbase.BaseResp;
 import com.tencent.mm.sdk.openapi.IWXAPI;

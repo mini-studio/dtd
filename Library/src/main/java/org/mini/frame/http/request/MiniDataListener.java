@@ -1,6 +1,6 @@
 package org.mini.frame.http.request;
 
-import com.mini.core.exception.CEDataException;
+import com.dtdinc.dtd.core.exception.CEDataException;
 
 /**
  * Created by Wuquancheng on 15/4/1.

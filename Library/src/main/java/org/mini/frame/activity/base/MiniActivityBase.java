@@ -51,7 +51,6 @@ import org.mini.frame.view.MiniActionSheetDialog;
 import org.mini.frame.view.MiniRotateImageUtil;
 
 import java.io.File;
-import java.io.Serializable;
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Method;
 import java.net.URI;

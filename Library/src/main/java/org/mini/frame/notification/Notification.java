@@ -1,6 +1,6 @@
 package org.mini.frame.notification;
 
-import com.mini.core.define.CEConst;
+import com.dtdinc.dtd.core.define.CEConst;
 
 import java.util.HashMap;
 import java.util.Map;

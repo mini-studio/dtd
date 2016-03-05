@@ -12,7 +12,7 @@ import android.text.util.Linkify;
 import android.view.View;
 import android.widget.TextView;
 
-import com.mini.activity.comm.MNWebViewActivity;
+import com.dtdinc.dtd.activity.comm.MNWebViewActivity;
 
 import java.util.regex.Pattern;
 

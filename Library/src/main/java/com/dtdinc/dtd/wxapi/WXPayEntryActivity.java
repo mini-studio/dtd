@@ -3,7 +3,7 @@ package com.dtdinc.dtd.wxapi;
 import android.content.Intent;
 
 import com.mini.R;
-import com.mini.activity.comm.MNActivityBase;
+import com.dtdinc.dtd.activity.comm.MNActivityBase;
 
 import org.mini.frame.pay.PayConstants;
 import org.mini.frame.pay.wxpay.WXPay;

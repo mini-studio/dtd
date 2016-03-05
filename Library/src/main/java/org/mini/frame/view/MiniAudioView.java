@@ -21,7 +21,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.mini.R;
-import com.mini.core.exception.CEDataException;
+import com.dtdinc.dtd.core.exception.CEDataException;
 
 /**
  * Created by Wuquancheng on 15/4/19.

@@ -3,7 +3,7 @@ package org.mini.frame.toolkit;
 import android.content.Context;
 import android.view.WindowManager;
 
-import com.mini.app.CEApplication;
+import com.dtdinc.dtd.app.CEApplication;
 
 /**
  * Created by Wuquancheng on 15/4/5.

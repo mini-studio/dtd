@@ -7,7 +7,7 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.widget.Toast;
 
-import com.mini.app.CEApplication;
+import com.dtdinc.dtd.app.CEApplication;
 
 import org.mini.frame.activity.base.MiniActivityBase;
 import org.mini.frame.annotation.ActivityResult;

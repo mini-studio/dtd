@@ -32,9 +32,9 @@
     <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES" />
 
     <application
-        android:name="com.mini.app.CEApplication"
+        android:name="com.dtdinc.dtd.app.CEApplication"
         android:allowBackup="true"
-        android:icon="@mipmap/teacher_icon"
+        android:icon="@drawable/icon"
         android:hardwareAccelerated="true"
         android:label="@string/app_name"
         android:theme="@style/StyledIndicators"
@@ -53,7 +53,7 @@
         <meta-data android:name="TencentMapSDK" android:value="6XNBZ-EO2WS-CHEOQ-6NLM6-PYHE3-6ZBS4"/>
 
         <activity
-            android:name=".activity.main.MNMainActivity"
+            android:name="com.dtdinc.dtd.activity.main.MNMainActivity"
             android:label="@string/app_name"
             android:screenOrientation="portrait">
             <intent-filter>
@@ -63,127 +63,127 @@
         </activity>
 
         <activity
-            android:name=".activity.main.MNRegisterResultActivity"
+            android:name="com.dtdinc.dtd.activity.main.MNRegisterResultActivity"
             android:screenOrientation="portrait" />
 
         <activity
-            android:name=".activity.main.MNSigninActivity"
+            android:name="com.dtdinc.dtd.activity.main.MNSigninActivity"
             android:screenOrientation="portrait" />
 
         <activity
-            android:name=".activity.main.MNRegisterActivity"
+            android:name="com.dtdinc.dtd.activity.main.MNRegisterActivity"
             android:screenOrientation="portrait" />
 
         <activity
-            android:name=".activity.main.MNMainTabActivity"
+            android:name="com.dtdinc.dtd.activity.main.MNMainTabActivity"
             android:screenOrientation="portrait" />
 
         <activity
-            android:name=".activity.comm.MNPushRouteActivity"
+            android:name="com.dtdinc.dtd.activity.comm.MNPushRouteActivity"
             android:screenOrientation="portrait" />
 
         <activity
-            android:name=".activity.comm.MNWebViewActivity"
+            android:name="com.dtdinc.dtd.activity.comm.MNWebViewActivity"
             android:screenOrientation="portrait" />
 
         <activity
-            android:name=".activity.profile.DTDProfileActivity"
+            android:name="com.dtdinc.dtd.activity.profile.DTDProfileActivity"
             android:screenOrientation="portrait" />
 
         <activity
-            android:name=".activity.post.DTDPostActivity"
+            android:name="com.dtdinc.dtd.activity.post.DTDPostActivity"
             android:screenOrientation="portrait" />
 
         <activity
-            android:name=".activity.send.DTDSendActivity"
+            android:name="com.dtdinc.dtd.activity.deliver.DTDDeliverActivity"
             android:screenOrientation="portrait" />
 
         <activity
-            android:name=".activity.profile.DTDProfileInfoActivity"
+            android:name="com.dtdinc.dtd.activity.profile.DTDProfileInfoActivity"
             android:screenOrientation="portrait" />
 
         <activity
-            android:name=".activity.profile.DTDBecomeDispatcherActivity"
+            android:name="com.dtdinc.dtd.activity.profile.DTDBecomeDispatcherActivity"
             android:screenOrientation="portrait" />
 
         <activity
-            android:name=".activity.order.DTDOrderListIndexActivity"
+            android:name="com.dtdinc.dtd.activity.order.DTDOrderListIndexActivity"
             android:screenOrientation="portrait" />
 
         <activity
-            android:name=".activity.order.DTDOrderListActivity"
+            android:name="com.dtdinc.dtd.activity.order.DTDOrderListActivity"
             android:screenOrientation="portrait" />
 
         <activity
-            android:name=".activity.profile.DTDSettingActivity"
+            android:name="com.dtdinc.dtd.activity.profile.DTDSettingActivity"
             android:screenOrientation="portrait" />
 
         <activity
-            android:name=".activity.profile.DTDLinesActivity"
+            android:name="com.dtdinc.dtd.activity.profile.DTDLinesActivity"
             android:screenOrientation="portrait" />
 
         <activity
-            android:name=".activity.profile.DTDLinesSetActivity"
+            android:name="com.dtdinc.dtd.activity.profile.DTDLinesSetActivity"
             android:screenOrientation="portrait" />
 
         <activity
-            android:name=".activity.profile.DTDBalanceActivity"
+            android:name="com.dtdinc.dtd.activity.profile.DTDBalanceActivity"
             android:screenOrientation="portrait" />
 
         <activity
-            android:name=".activity.profile.DTDAboutActivity"
+            android:name="com.dtdinc.dtd.activity.profile.DTDAboutActivity"
             android:screenOrientation="portrait" />
 
         <activity
-            android:name=".activity.profile.DTDTakeCashActivity"
+            android:name="com.dtdinc.dtd.activity.profile.DTDTakeCashActivity"
             android:screenOrientation="portrait" />
 
         <activity
-            android:name=".activity.comm.MNCityPickerActivity"
+            android:name="com.dtdinc.dtd.activity.comm.MNCityPickerActivity"
             android:screenOrientation="portrait" />
 
         <activity
-            android:name=".activity.send.DTDPackageDetailActivity"
+            android:name="com.dtdinc.dtd.activity.deliver.DTDPackageDetailActivity"
             android:screenOrientation="portrait" />
 
         <activity
-            android:name=".activity.main.MNForgotPasswdActivity"
+            android:name="com.dtdinc.dtd.activity.main.MNForgotPasswdActivity"
             android:screenOrientation="portrait" />
 
         <activity
-            android:name=".activity.main.MNVCodeActivity"
+            android:name="com.dtdinc.dtd.activity.main.MNVCodeActivity"
             android:screenOrientation="portrait" />
 
         <activity
-            android:name=".activity.main.MNRestPasswdActivity"
+            android:name="com.dtdinc.dtd.activity.main.MNRestPasswdActivity"
             android:screenOrientation="portrait" />
 
         <activity
-            android:name=".activity.profile.DTDChangeMobileActivity"
+            android:name="com.dtdinc.dtd.activity.profile.DTDChangeMobileActivity"
             android:screenOrientation="portrait" />
 
         <activity
-            android:name=".activity.profile.DTDChangeNicknameActivity"
+            android:name="com.dtdinc.dtd.activity.profile.DTDChangeNicknameActivity"
             android:screenOrientation="portrait" />
 
         <activity
-            android:name=".activity.profile.DTDChangePasswdActivity"
+            android:name="com.dtdinc.dtd.activity.profile.DTDChangePasswdActivity"
             android:screenOrientation="portrait" />
 
         <activity
-            android:name=".activity.send.DTDFeedbackActivity"
+            android:name="com.dtdinc.dtd.activity.deliver.DTDFeedbackActivity"
             android:screenOrientation="portrait" />
 
          <activity
-            android:name=".activity.post.DTDUserInfoEditorActivity"
+            android:name="com.dtdinc.dtd.activity.post.DTDUserInfoEditorActivity"
             android:screenOrientation="portrait" />
 
         <activity
-            android:name=".activity.post.DTDEditorActivity"
+            android:name="com.dtdinc.dtd.activity.post.DTDEditorActivity"
             android:screenOrientation="portrait" />
 
         <activity
-            android:name=".activity.comm.DTDPayActivity"
+            android:name="com.dtdinc.dtd.activity.comm.DTDPayActivity"
             android:screenOrientation="portrait" />
 
         <!--信鸽-->
@@ -236,7 +236,7 @@
                 <action android:name="com.mini.express.PUSH_ACTION" />
             </intent-filter>
         </service>
-        <receiver android:name="com.mini.receiver.MessageReceiver" >
+        <receiver android:name="com.dtdinc.dtd.receiver.MessageReceiver" >
             <intent-filter>
                 <!-- 接收消息透传 -->
                 <action android:name="com.tencent.android.tpush.action.PUSH_MESSAGE" />
@@ -284,7 +284,7 @@
         <!--支付配置结束-->
 
         <receiver
-            android:name=".core.service.CEStartService"
+            android:name="com.dtdinc.dtd.core.service.CEStartService"
             android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />

@@ -2,8 +2,8 @@ package org.mini.frame.toolkit.file;
 
 import android.os.Handler;
 
-import com.mini.app.CESystem;
-import com.mini.core.exception.CEDataException;
+import com.dtdinc.dtd.app.CESystem;
+import com.dtdinc.dtd.core.exception.CEDataException;
 
 import org.mini.frame.http.request.MiniDataListener;
 import org.mini.frame.log.MiniLogger;

@@ -9,7 +9,7 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 
 import com.mini.R;
-import com.mini.activity.comm.MNActivityBase;
+import com.dtdinc.dtd.activity.comm.MNActivityBase;
 
 import org.mini.frame.toolkit.file.MiniFileBrowser;
 import org.mini.frame.toolkit.file.MiniFileManager;

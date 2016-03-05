@@ -7,7 +7,7 @@
         android:layout_width="match_parent"
         android:layout_marginTop="48dp"
         android:layout_height="match_parent">
-        <com.mini.views.CEWebView
+        <com.dtdinc.dtd.views.CEWebView
             android:id="@+id/common_webView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"/>

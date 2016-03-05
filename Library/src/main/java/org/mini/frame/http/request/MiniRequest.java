@@ -12,10 +12,10 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.HttpHeaderParser;
 import com.android.volley.toolbox.StringRequest;
 import com.google.gson.Gson;
-import com.mini.app.CEApplication;
-import com.mini.app.CESystem;
-import com.mini.core.cache.CECache;
-import com.mini.core.exception.CEDataException;
+import com.dtdinc.dtd.app.CEApplication;
+import com.dtdinc.dtd.app.CESystem;
+import com.dtdinc.dtd.core.cache.CECache;
+import com.dtdinc.dtd.core.exception.CEDataException;
 
 import org.mini.frame.http.request.data.MiniDataWrapper;
 import org.mini.frame.http.request.info.MiniREQBaseInfo;

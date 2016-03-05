@@ -1,10 +1,7 @@
 package org.mini.frame.http.request.info;
 
-import android.app.DownloadManager;
-
 import com.android.volley.Request;
-import com.mini.app.CEAppConfig;
-import com.mini.app.CESystem;
+import com.dtdinc.dtd.app.CESystem;
 
 import org.mini.frame.application.MiniApplication;
 

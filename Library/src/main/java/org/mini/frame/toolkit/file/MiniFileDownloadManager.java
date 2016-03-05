@@ -5,7 +5,7 @@ import android.os.Handler;
 import android.text.TextUtils;
 import android.view.View;
 
-import com.mini.core.exception.CEDataException;
+import com.dtdinc.dtd.core.exception.CEDataException;
 
 import org.mini.frame.file.MiniFileManagementActivity;
 import org.mini.frame.http.request.MiniDataListener;

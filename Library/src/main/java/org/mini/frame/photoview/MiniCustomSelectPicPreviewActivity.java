@@ -9,8 +9,8 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.mini.R;
-import com.mini.activity.comm.MNActivityBase;
-import com.mini.core.define.CEConst;
+import com.dtdinc.dtd.activity.comm.MNActivityBase;
+import com.dtdinc.dtd.core.define.CEConst;
 
 import org.mini.frame.annotation.Action;
 import org.mini.frame.notification.Notification;
