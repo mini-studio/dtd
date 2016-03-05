@@ -31,7 +31,7 @@ public class REQTakeCashInfo extends MiniREQBaseInfo {
         map.put("phone",WHO().getPhone());
         map.put("sid", WHO().getSid());
         map.put("money", money);
-        return null;
+        return map;
     }
 
     @Override

@@ -1,5 +1,6 @@
 package com.mini.activity.profile;
 
+import android.widget.EditText;
 import android.widget.TextView;
 
 import com.mini.R;
@@ -18,7 +19,7 @@ import static com.mini.app.CESystem.WHO;
 public class DTDTakeCashActivity extends MNActivityBase {
 
     private TextView message_view;
-    private TextView take_cash_text_view;
+    private EditText take_cash_text_view;
     private float total = 0;
     @Override
     protected void loadView() {
@@ -36,7 +37,7 @@ public class DTDTakeCashActivity extends MNActivityBase {
     private void initView() {
         this.setNaivLeftBackAction();
         this.message_view = (TextView)findViewById(R.id.message_view);
-        this.take_cash_text_view = (TextView)findViewById(R.id.take_cash_text_view);
+        this.take_cash_text_view = (EditText)findViewById(R.id.take_cash_text_view);
         this.message_view.setText("当前最高可提现金额" + total + "元，申请提现后将在三个工作日内打入您预先设置的银行卡。");
         this.findViewById(R.id.take_cash_button, this);
     }
