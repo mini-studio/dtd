@@ -6,6 +6,7 @@ import com.mini.R;
 import com.mini.activity.comm.MNActivityBase;
 import com.mini.core.exception.CEDataException;
 
+import org.mini.frame.annotation.Action;
 import org.mini.frame.http.request.MiniDataListener;
 
 import static com.mini.app.CESystem.WHO;
@@ -17,6 +18,7 @@ import static com.mini.app.CESystem.WHO;
 public class DTDBalanceActivity extends MNActivityBase {
 
     private TextView text_balance_view;
+    private String money;
     @Override
     protected void loadView() {
         this.setContentView(R.layout.activity_balance);
@@ -28,6 +30,7 @@ public class DTDBalanceActivity extends MNActivityBase {
     private void initView() {
         this.setNaivLeftBackAction();
         this.text_balance_view = (TextView)findViewById(R.id.text_balance_view);
+        this.findViewById(R.id.take_cash_button, this);
     }
 
     private void loadData() {
@@ -35,9 +38,15 @@ public class DTDBalanceActivity extends MNActivityBase {
             @Override
             public void onResponse(String data, CEDataException error) {
                 if (error == null) {
+                    money = data;
                     text_balance_view.setText(data);
                 }
             }
         });
+    }
+
+    @Action(R.id.take_cash_button)
+    public void takeCashButton() {
+        startActivity(DTDTakeCashActivity.class,money);
     }
 }

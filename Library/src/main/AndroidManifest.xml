@@ -135,6 +135,10 @@
             android:screenOrientation="portrait" />
 
         <activity
+            android:name=".activity.profile.DTDTakeCashActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
             android:name=".activity.comm.MNCityPickerActivity"
             android:screenOrientation="portrait" />
 

@@ -52,7 +52,7 @@
             </LinearLayout>
 
             <Button
-                android:id="@+id/text"
+                android:id="@+id/take_cash_button"
                 android:layout_width="fill_parent"
                 android:layout_height="48dp"
                 android:layout_marginLeft="30dp"

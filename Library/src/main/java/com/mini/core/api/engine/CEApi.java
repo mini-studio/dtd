@@ -27,6 +27,7 @@ import com.mini.core.api.info.REQPostKeyInfo;
 import com.mini.core.api.info.REQPriceInfo;
 import com.mini.core.api.info.REQPublishOrderInfo;
 import com.mini.core.api.info.REQRegisterInfo;
+import com.mini.core.api.info.REQTakeCashInfo;
 import com.mini.core.api.info.REQUpdatePasswdInfo;
 import com.mini.core.api.info.REQUploadTokenInfo;
 import com.mini.core.api.info.REQVCodeInfo;
@@ -352,4 +353,16 @@ public class CEApi {
         MiniRequest request = new MiniRequest(String.class, listener, balanceInfo);
         this.requestQueue.add(request);
     }
+
+    /**
+     * 发起提取余额的申请
+     * @param money
+     * @param listener
+     */
+    public void takeCash(String money, MiniDataListener<String> listener) {
+        REQTakeCashInfo info = new REQTakeCashInfo(money);
+        MiniRequest request = new MiniRequest(String.class, listener, info);
+        this.requestQueue.add(request);
+    }
+
 }
