@@ -4,7 +4,8 @@
     android:background="#0c1623"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <LinearLayout android:layout_height="fill_parent"
+    <LinearLayout android:id="@+id/default_image"
+                  android:layout_height="fill_parent"
                   android:layout_width="fill_parent"
                   android:background="@drawable/default_border"
                   android:orientation="vertical"

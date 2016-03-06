@@ -34,6 +34,8 @@ public class MNMainActivity extends Activity {
 
     private ImageView mSplashImage = null;
 
+    private View default_image;
+
     private ViewPager mViewPager;
 
     private List<View> imageViews = new ArrayList<View>(0);
@@ -44,6 +46,7 @@ public class MNMainActivity extends Activity {
         super.onCreate(savedInstanceState);
         this.setContentView(R.layout.activity_main);
         mSplashImage = (ImageView) findViewById(R.id.splash_image);
+        this.default_image = findViewById(R.id.default_image);
         mSplashImage.setImageResource(R.drawable.default_image);
         mViewPager = (ViewPager)findViewById(R.id.splash_viewpager);
         handler = new Handler();
@@ -59,7 +62,7 @@ public class MNMainActivity extends Activity {
     private void dispatch() {
         int showSplash = MiniSharedPreferences.instance().getInt("first_run",0);
         if (showSplash == 0) {
-            mSplashImage.setVisibility(View.GONE);
+            default_image.setVisibility(View.GONE);
             mViewPager.setVisibility(View.VISIBLE);
             initImageViews();
             mViewPager.setAdapter(new ViewPagerAdapter());
