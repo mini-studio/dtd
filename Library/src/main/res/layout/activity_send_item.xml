@@ -36,7 +36,7 @@
                                       android:layout_gravity="center_vertical"
                                       android:text="点击加载更多"
                                       android:gravity="center"
-                                      android:textColor="@color/blue"
+                                      android:textColor="#F9CB33"
                                       android:textSize="18sp"/>
                         </LinearLayout>
                         <!--包裹的信息内容部分-->

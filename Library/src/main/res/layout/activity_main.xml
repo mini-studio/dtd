@@ -4,13 +4,19 @@
     android:background="#0c1623"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <org.mini.frame.view.MiniSmartImageView
-        android:id="@+id/splash_image"
-        android:background="@color/translucent"
-        android:layout_width="wrap_content"
-        android:layout_height="fill_parent"
-        android:layout_gravity="center"
-        android:scaleType="fitXY"/>
+    <LinearLayout android:layout_height="fill_parent"
+                  android:layout_width="fill_parent"
+                  android:background="@drawable/default_border"
+                  android:orientation="vertical"
+        >
+        <org.mini.frame.view.MiniSmartImageView
+            android:id="@+id/splash_image"
+            android:background="@color/translucent"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center"
+            android:scaleType="fitXY"/>
+    </LinearLayout>
     <android.support.v4.view.ViewPager
         android:id="@+id/splash_viewpager"
         android:layout_width="match_parent"
