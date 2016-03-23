@@ -200,13 +200,17 @@ public class CEApi {
      * 定位当前的城市
      * @param listener
      */
-    public void currentCity(Double lng, Double lat, final MiniDataListener<City> listener) {
+    public void currentCity(final Double lng, final Double lat, final MiniDataListener<City> listener) {
         REQLocationInfo info = new REQLocationInfo(lng, lat);
         MiniRequest request = new MiniRequest(String.class, new MiniDataListener<String>() {
             @Override
             public void onResponse(String data, CEDataException error) {
                 if (error == null && data != null) {
                     City city = City.cityWithName(data);
+                    if (city != null) {
+                        city.setLatitude(lat);
+                        city.setLongitude(lng);
+                    }
                     MiniSharedPreferences.instance().setObject("city", city);
                     CESystem.instance().setCurrentCity(city);
                     listener.onResponse(city, null);

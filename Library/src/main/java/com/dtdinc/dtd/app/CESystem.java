@@ -150,6 +150,8 @@ public class CESystem implements Serializable {
 
     public void setCurrentCity(City currentCity) {
         this.currentCity = currentCity;
+        this.setLongitude(this.currentCity.getLongitude());
+        this.setLatitude(this.currentCity.getLatitude());
     }
 
     public Double getLongitude() {

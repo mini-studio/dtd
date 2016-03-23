@@ -53,7 +53,9 @@ public class DTDPostActivity extends MNActivityBase {
     private TextView recipientInfoNameView;
     private TextView recipientInfoMobileView;
     private TextView recipientInfoAddressView;
+    private TextView add_image_text_view;
     private TextView package_price_text_view;
+
 
 
     private static final int REQ_CODE_FOR_CITY = 200;
@@ -76,6 +78,7 @@ public class DTDPostActivity extends MNActivityBase {
         this.findViewById(R.id.package_name, this);
         this.findViewById(R.id.package_weight, this);
         this.findViewById(R.id.next_button, this);
+        this.findViewById(R.id.add_image_layout, this);
         this.packageNameTextView = (TextView)this.findViewById(R.id.package_name_text_view);
         this.packageWeightTextView = (TextView)this.findViewById(R.id.package_weight_text_view);
 
@@ -91,7 +94,20 @@ public class DTDPostActivity extends MNActivityBase {
         recipientInfoMobileView =(TextView)this.findViewById(R.id.recipient_info_mobile) ;
         recipientInfoAddressView =(TextView)this.findViewById(R.id.recipient_info_address) ;
 
+        add_image_text_view = (TextView)this.findViewById(R.id.add_image_text_view);
+        add_image_text_view.setText("未添加");
         this.package_price_text_view = (TextView)this.findViewById(R.id.package_price_text_view);
+    }
+
+    @Action(R.id.add_image_layout)
+    public void actionAddImage() {
+        this.pickImage(new MiniPickImageListener() {
+            @Override
+            public void onPickImage(String file) {
+                postPackageInfo.setImagePath(file);
+                add_image_text_view.setText("已添加");
+            }
+        });
     }
 
     @Action(R.id.poster_info)

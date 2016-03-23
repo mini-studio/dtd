@@ -1,5 +1,7 @@
 package com.dtdinc.dtd.core.model;
 
+import android.graphics.Bitmap;
+
 /**
  * Created by Wuquancheng on 15/12/13.
  */
@@ -24,6 +26,16 @@ public class PostPackageInfo {
      * 物品质量
      */
     private String packageWeight;
+
+    /**
+     * 物品照片
+     */
+    private Bitmap image;
+
+    /**
+     * 物品照片路径
+     */
+    private String imagePath;
 
     /**
      * 价格
@@ -86,5 +98,21 @@ public class PostPackageInfo {
 
     public void setPrice(String price) {
         this.price = price;
+    }
+
+    public Bitmap getImage() {
+        return image;
+    }
+
+    public void setImage(Bitmap image) {
+        this.image = image;
+    }
+
+    public String getImagePath() {
+        return imagePath;
+    }
+
+    public void setImagePath(String imagePath) {
+        this.imagePath = imagePath;
     }
 }

@@ -19,7 +19,7 @@ public class LocationKit {
     public void locate(final LocationListener locationListener) {
         MiniTLocationManager.MiniTLocationListener listener = new MiniTLocationManager.MiniTLocationListener() {
             @Override
-            public void onLocation(final MiniTLocationManager manager, final MiniTLocationManager.MiniTLocationListener listener, Double longitude, Double latitude, int error, String reason) {
+            public void onLocation(final MiniTLocationManager manager, final MiniTLocationManager.MiniTLocationListener listener, final Double longitude, final Double latitude, int error, String reason) {
                 if (manager.hasError(error)) {
                     locationListener.locateCity(null, manager.errorReason(error));
                 }
@@ -28,6 +28,8 @@ public class LocationKit {
                         @Override
                         public void onResponse(City data, CEDataException error) {
                             if (data != null) {
+                                data.setLatitude(latitude);
+                                data.setLongitude(longitude);
                                 locationListener.locateCity(data, null);
                             }
                             manager.stop();

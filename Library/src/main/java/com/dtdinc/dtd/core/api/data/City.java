@@ -10,6 +10,9 @@ public class City {
     private String name;
     private String code;
 
+    private Double longitude;
+    private Double latitude;
+
     public static List<String> cityList = Arrays.asList(new String[]{
             "安徽省", "北京市", "重庆市", "福建省", "甘肃省", "广东省", "广西壮族自治区",
             "贵州省", "海南省", "河北省", "河南省", "黑龙江省", "湖北省",
@@ -46,5 +49,21 @@ public class City {
 
     public boolean isInvalid() {
         return ("-1".equals(this.getCode()));
+    }
+
+    public Double getLongitude() {
+        return longitude;
+    }
+
+    public void setLongitude(Double longitude) {
+        this.longitude = longitude;
+    }
+
+    public Double getLatitude() {
+        return latitude;
+    }
+
+    public void setLatitude(Double latitude) {
+        this.latitude = latitude;
     }
 }

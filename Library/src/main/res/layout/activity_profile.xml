@@ -39,13 +39,13 @@
                       android:text="@string/app_name"/>
         </RelativeLayout>
 
-        <View android:layout_height="20dp"
+        <View android:layout_height="10dp"
               android:layout_width="match_parent"/>
 
         <LinearLayout
             android:id="@+id/become_dispatcher_layout"
             android:layout_width="fill_parent"
-            android:layout_height="60dp"
+            android:layout_height="46dp"
             android:orientation="vertical"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
@@ -84,12 +84,12 @@
                 android:layout_height="0.5dp"
                 android:background="@color/common_line_color" />
         </LinearLayout>
-        <View android:layout_height="20dp"
+        <View android:layout_height="10dp"
               android:layout_width="match_parent"/>
         <!--账户余额-->
         <LinearLayout
             android:layout_width="fill_parent"
-            android:layout_height="60dp"
+            android:layout_height="46dp"
             android:orientation="vertical"
             android:id="@+id/balance_layout"
             android:layout_marginLeft="10dp"
@@ -128,11 +128,11 @@
                 android:layout_height="0.5dp"
                 android:background="@color/common_line_color" />
         </LinearLayout>
-        <View android:layout_height="20dp"
+        <View android:layout_height="10dp"
               android:layout_width="match_parent"/>
         <LinearLayout
             android:layout_width="fill_parent"
-            android:layout_height="60dp"
+            android:layout_height="46dp"
             android:orientation="vertical"
             android:id="@+id/order_list_layout"
             android:layout_marginLeft="10dp"
@@ -171,12 +171,12 @@
                 android:layout_height="0.5dp"
                 android:background="@color/common_line_color" />
         </LinearLayout>
-        <View android:layout_height="20dp"
+        <View android:layout_height="10dp"
               android:layout_width="match_parent"/>
         <!--联系客服-->
         <LinearLayout
             android:layout_width="fill_parent"
-            android:layout_height="60dp"
+            android:layout_height="46dp"
             android:orientation="vertical"
             android:id="@+id/layout_contact_waiter"
             android:layout_marginLeft="10dp"
@@ -229,11 +229,11 @@
                 android:layout_height="0.5dp"
                 android:background="@color/common_line_color" />
         </LinearLayout>
-        <View android:layout_height="20dp"
+        <View android:layout_height="10dp"
               android:layout_width="match_parent"/>
         <LinearLayout
             android:layout_width="fill_parent"
-            android:layout_height="60dp"
+            android:layout_height="46dp"
             android:orientation="vertical"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
@@ -272,7 +272,7 @@
                 android:layout_height="0.5dp"
                 android:background="@color/common_line_color" />
         </LinearLayout>
-        <View android:layout_height="20dp"
+        <View android:layout_height="10dp"
               android:layout_width="match_parent"/>
         <LinearLayout
             android:layout_width="fill_parent"
@@ -288,7 +288,7 @@
                     android:background="@drawable/btn_gray"
                     android:textColor="#979797"/>
         </LinearLayout>
-        <View android:layout_height="20dp"
+        <View android:layout_height="10dp"
               android:layout_width="match_parent"/>
     </LinearLayout>
   </ScrollView>
