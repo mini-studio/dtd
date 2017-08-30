@@ -96,7 +96,7 @@
                     android:layout_height="0.5dp"
                     android:background="@color/common_line_color" />
             </LinearLayout>
-            <View android:layout_height="20dp"
+            <View android:layout_height="10dp"
                   android:layout_width="fill_parent"/>
 
             <LinearLayout
@@ -184,7 +184,7 @@
                     android:layout_height="0.5dp"
                     android:background="@color/common_line_color" />
             </LinearLayout>
-            <View android:layout_height="20dp"
+            <View android:layout_height="10dp"
                   android:layout_width="fill_parent"/>
             <LinearLayout
                 android:id="@+id/package_name"
@@ -241,7 +241,7 @@
                     android:layout_height="0.5dp"
                     android:background="@color/common_line_color" />
             </LinearLayout>
-            <View android:layout_height="20dp"
+            <View android:layout_height="10dp"
                   android:layout_width="fill_parent"/>
             <LinearLayout
                 android:id="@+id/package_weight"
@@ -301,7 +301,7 @@
                     android:layout_height="0.5dp"
                     android:background="@color/common_line_color" />
             </LinearLayout>
-            <View android:layout_height="20dp"
+            <View android:layout_height="10dp"
                   android:layout_width="fill_parent"/>
             <LinearLayout
                 android:id="@+id/add_image_layout"
@@ -361,7 +361,7 @@
                     android:layout_height="0.5dp"
                     android:background="@color/common_line_color" />
             </LinearLayout>
-            <View android:layout_height="20dp"
+            <View android:layout_height="10dp"
                   android:layout_width="fill_parent"/>
             <LinearLayout
                 android:id="@+id/package_price"
@@ -416,7 +416,7 @@
                     android:layout_height="0.5dp"
                     android:background="@color/common_line_color" />
             </LinearLayout>
-            <View android:layout_height="20dp"
+            <View android:layout_height="10dp"
                   android:layout_width="fill_parent"/>
             <LinearLayout android:id="@+id/layout_next_button"
                           android:layout_height="wrap_content"
